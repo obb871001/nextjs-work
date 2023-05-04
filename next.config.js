@@ -5,10 +5,10 @@ const nextConfig = {
   reactStrictMode: true,
   output: "out",
   trailingSlash: true,
-  assetPrefix: "https://chatsys2.v888.bz/",
+  assetPrefix: "https://egslot.net",
   images: {
-    domains: ["chatsys2.v888.bz"],
-    path: "https://chatsys2.v888.bz/",
+    domains: ["egslot.net"],
+    path: "https://egslot.net",
     loader: "imgix",
     minimumCacheTTL: 60,
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
