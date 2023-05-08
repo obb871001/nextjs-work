@@ -31,7 +31,7 @@ const Header = () => {
     >
       <nav className="flex items-center justify-between h-full container mx-auto lg:px-[0] md:px-[20px] max-[640px]:px-[20px]">
         <Link className="text-4xl font-bold text-white cursor-pointer" href="/">
-          LOGO
+        <img src="Images/logo/EG_400x160-white.png" alt="LOGO" className="w-[76px] h-[60px]" />
         </Link>
         <div>
           <RxHamburgerMenu
