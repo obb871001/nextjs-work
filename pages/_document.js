@@ -5,7 +5,7 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>WorthySky Play</title>
+        <title>Eazy Gaming</title>
       </Head>
       <body>
         <Main />

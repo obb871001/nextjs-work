@@ -50,7 +50,7 @@ const About = () => {
               關於我們
             </p>
             <p className="w-[450px] max-[640px]:text-sm max-[640px]:w-auto">
-              WorthySky
+            Eaze Gaming
               由一群充滿經驗及熱誠的業界菁英創立，致力研發優質的老虎機遊戲，把轉輪的樂趣帶給全世界的玩家。此外，我們亦備有刺激的捕魚遊戲，為線上娛樂營運商提供豐富的遊戲選擇。
             </p>
           </div>
@@ -65,7 +65,7 @@ const About = () => {
         <section className="container mx-auto text-white flex flex-col items-center">
           <BoxTitle
             title="我們的團隊"
-            content="WorthySky
+            content="Eazy Gaming
             的團隊集合業界各個領域中經驗最豐富的專業人士。團隊有熱誠、有遠見，矢志將遊戲玩樂提升至另一個層次。我們能為客戶創造源源不絕的商機，提高收益，絕對是開發拓展市場的首選！"
           />
           <section className="grid lg:grid-cols-3 md:grid-cols-2 mx-auto">
@@ -87,7 +87,7 @@ const About = () => {
           <div className="text-white flex flex-col items-center">
             <BoxTitle
               title="國際認證"
-              content="WorthySky
+              content="Eazy Gaming
             我們所有的 RNG 遊戲均已取得全球經驗最豐富的第三方遊戲測試機構 BMM
             在歐洲大部分司法管轄區的認證，合乎相關的法律及技術要求。"
             />

@@ -32,7 +32,7 @@ const Events = () => {
           <BoxTitle
             white
             title="活動消息"
-            content="查閱所有 WorthySky 參與過的展覽活動或舉辦過的推廣活動"
+            content="查閱所有 Eazy Gaming 參與過的展覽活動或舉辦過的推廣活動"
           />
           <div className="h-[3px] w-full bg-red-500 my-[40px]"></div>
           <section className="grid grid-cols-3 max-[640px]:grid-cols-1 gap-4 w-full my-[40px]">

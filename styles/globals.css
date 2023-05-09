@@ -20,7 +20,7 @@
   background-color: #ef3340 !important;
 }
 .text-myself-shadow {
-  text-shadow: 0 3px 3px #000;
+  text-shadow: 2px 3px 5px #000;
 }
 .contact-after::after {
   content: "";

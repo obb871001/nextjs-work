@@ -35,7 +35,7 @@ const ContactUs = () => {
           );
         })}
       </section>
-      <section className="flex items-center justify-center mb-[40px] max-[640px]:flex-col">
+      {/* <section className="flex items-center justify-center mb-[40px] max-[640px]:flex-col">
         <p className="text-[#848484] mr-[10px] max-[640px]:mb-[20px] max-[640px]:text-lg">
           訂閱電子通訊
         </p>
@@ -53,7 +53,7 @@ const ContactUs = () => {
             訂閱
           </Button>
         </div>
-      </section>
+      </section> */}
       <section className="flex items-center justify-center mb-[40px]">
         {CONTACT_ICON.map((icon, index) => {
           return (
@@ -79,7 +79,7 @@ const ContactUs = () => {
         })}
       </section>
       <p className="text-[#848484] text-xs text-center my-[40px]">
-        Copyright © 2023 WorthySky. All Rights Reserved.
+        Copyright © 2023 Eazy Gaming. All Rights Reserved.
       </p>
       <section>
         <section className="bg-[#ff4d4f] rounded-3xl flex">

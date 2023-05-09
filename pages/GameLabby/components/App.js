@@ -6,7 +6,7 @@ const App = () => {
     <div className="w-full flex lg:flex-row flex-col-reverse items-center justify-between max-[640px]:px-[20px]">
       <div className="text-white mb-[20px] max-w-[400px] relative z-[10] lg:text-left text-center">
         <p className="text-[45px] max-[640px]:text-xl font-medium barcarat-text-left mb-[40px]">
-          WorthySky APP
+        Eazy Gaming APP
         </p>
         <p className="max-[640px]:text-sm">
           SimplePlay APP

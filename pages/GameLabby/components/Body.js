@@ -10,7 +10,7 @@ const Body = () => {
       <BoxTitle
         white
         title="遊戲大廳"
-        content="WorthySky 的遊戲大廳將我們全部遊戲統一整合顯示，供玩家隨意選擇遊玩。大廳各種功能一應俱全，玩家可輕易找到所需的功能。"
+        content="Eazy Gaming 的遊戲大廳將我們全部遊戲統一整合顯示，供玩家隨意選擇遊玩。大廳各種功能一應俱全，玩家可輕易找到所需的功能。"
       />
       <div
         ref={ref}

@@ -78,7 +78,7 @@ const Skill = () => {
           </svg>
         }
         title="屏幕旋轉"
-        content="WorthySky APP 支援橫向及縱向模式，玩家可隨時旋轉屏幕遊玩。"
+        content="Eazy Gaming APP 支援橫向及縱向模式，玩家可隨時旋轉屏幕遊玩。"
       />
       <Tip
         SVG={
@@ -246,7 +246,7 @@ const Skill = () => {
           </svg>
         }
         title="圖案登錄"
-        content="WorthySky APP 提供圖案登錄，玩家可畫圖案登入"
+        content="Eazy Gaming APP 提供圖案登錄，玩家可畫圖案登入"
       />
     </section>
   );
