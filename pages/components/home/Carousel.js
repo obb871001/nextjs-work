@@ -13,20 +13,42 @@ import { Button } from "antd";
 
 const CarouselList = [
   {
-    background: "/Images/carousel/carousel1.jpeg",
-    titleImage: "/Images/carousel/carousel1Title.png",
+    background: "/Images/carousel/carousel4.png",
+    titleImage: "/Images/carousel/carousel4Title.png",
     content: "開拓遊戲新階段　贏取獎金不間斷",
   },
   {
-    background: "/Images/carousel/carousel2.jpeg",
-    titleImage: "/Images/carousel/carousel2Title.png",
-    content: "無與倫比的主題遊戲",
+    background: "/Images/carousel/carousel4.png",
+    titleImage: "/Images/carousel/carousel4Title.png",
+    content: "開拓遊戲新階段　贏取獎金不間斷",
   },
-  {
-    background: "/Images/carousel/carousel3.jpeg",
-    titleImage: "/Images/carousel/carousel3Title.png",
-    content: "您的美麗　是贏獎金的助力",
-  },
+  // {
+  //   background: "/Images/carousel/carousel1-3.jpg",
+  //   content: "開拓遊戲新階段　贏取獎金不間斷",
+  // },
+  // {
+  //   background: "/Images/carousel/carousel2-3.jpg",
+  //   content: "無與倫比的主題遊戲",
+  // },
+  // {
+  //   background: "/Images/carousel/carousel3-3.jpg",
+  //   content: "您的美麗　是贏獎金的助力",
+  // },
+  // {
+  //   background: "/Images/carousel/carousel1.jpeg",
+  //   titleImage: "/Images/carousel/carousel1Title.png",
+  //   content: "開拓遊戲新階段　贏取獎金不間斷",
+  // },
+  // {
+  //   background: "/Images/carousel/carousel2.jpeg",
+  //   titleImage: "/Images/carousel/carousel2Title.png",
+  //   content: "無與倫比的主題遊戲",
+  // },
+  // {
+  //   background: "/Images/carousel/carousel3.jpeg",
+  //   titleImage: "/Images/carousel/carousel3Title.png",
+  //   content: "您的美麗　是贏獎金的助力",
+  // },
 ];
 
 const Carousel = () => {
@@ -63,7 +85,7 @@ const Carousel = () => {
                   <p className="lg:text-[40px] md:text-[30px] text-center text-white text-myself-shadow mb-[20px] max-[640px]:mt-[50%]">
                     {carousel.content}
                   </p>
-                  <Button
+                  {/* <Button
                     size="large"
                     type="primary"
                     className="w-[250px]"
@@ -71,7 +93,7 @@ const Carousel = () => {
                     danger
                   >
                     了解更多
-                  </Button>
+                  </Button> */}
                 </article>
               </section>
             </SwiperSlide>
