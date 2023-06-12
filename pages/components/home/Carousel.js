@@ -1,6 +1,6 @@
 import { useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper";
+import { Pagination, Navigation, Autoplay } from "swiper";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -13,15 +13,33 @@ import { Button } from "antd";
 
 const CarouselList = [
   {
-    background: "/Images/carousel/carousel4.png",
-    titleImage: "/Images/carousel/carousel4Title.png",
-    content: "開拓遊戲新階段　贏取獎金不間斷",
+    background: "/Images/carousel/bg1.png",
+    titleImage: "/Images/carousel/neko-1.png",
+    gameType: "Hot game - Slot",
+    gameTitle: "NEKO MAID",
+    gameIntro: "You must stay alive in this horror/puzzle adventure.Try to survive the vengeful toys waiting for you in the abandoned toy factory. Use your GrabPack to hack electrical circuits or nab anything.",
+    playLink: "",
+    addFavorite: "",
   },
   {
-    background: "/Images/carousel/carousel4.png",
-    titleImage: "/Images/carousel/carousel4Title.png",
-    content: "開拓遊戲新階段　贏取獎金不間斷",
+    background: "/Images/carousel/bg1.png",
+    titleImage: "/Images/carousel/simbad.png",
+    gameType: "Hot game - Egames",
+    gameTitle: "ADVENTURE OF SIMBAD",
+    gameIntro: "You must stay alive in this horror/puzzle adventure.Try to survive the vengeful toys waiting for you in the abandoned toy factory. Use your GrabPack to hack electrical circuits or nab anything.",
+    playLink: "",
+    addFavorite: "",
   },
+  // {
+  //   background: "/Images/carousel/carousel1-2.jpg",
+  //   titleImage: "/Images/carousel/carousel1Title-2.png",
+  //   content: "CASINO",
+  // },
+  // {
+  //   background: "/Images/carousel/carousel4.png",
+  //   titleImage: "/Images/carousel/carousel4Title.png",
+  //   content: "開拓遊戲新階段　贏取獎金不間斷",
+  // },
   // {
   //   background: "/Images/carousel/carousel1-3.jpg",
   //   content: "開拓遊戲新階段　贏取獎金不間斷",
@@ -53,38 +71,64 @@ const CarouselList = [
 
 const Carousel = () => {
   return (
-    <section className="w-screen lg:h-screen md:h-[590px] max-[640px]:h-[422px]">
+    <section className="w-screen lg:h-screen md:h-[590px]">
       <Swiper
         className="mySwiper h-full w-full"
         loop={true}
-        pagination={{
-          type: "bullets",
-          clickable: true,
-        }}
+        navigation={true}
+        // pagination={{
+        //   type: "bullets",
+        //   clickable: true,
+        // }}
         autoplay={{
           delay: 7000,
           disableOnInteraction: false,
         }}
         onSwiper={(swiper) => swiper}
-        modules={[Autoplay, Pagination]}
+        modules={[Autoplay, Navigation]}
         effect="fade"
       >
         {CarouselList.map((carousel, index) => {
           return (
             <SwiperSlide key={index} className="">
               <section
-                className="w-full h-full relative flex bg-no-repeat bg-center bg-cover max-[640px]:bg-[30%]"
+                className="w-full h-full relative flex justify-center bg-no-repeat bg-center bg-cover max-[640px]:bg-[30%] p-28 pb-0"
                 style={{ backgroundImage: `url(${carousel.background})` }}
               >
-                <article className="flex flex-col items-center self-center ml-[60%] max-[640px]:mx-auto cursor-pointer">
+                <article className="flex justify-center items-start self-center max-w-[1200px] ml-[0%] max-[640px]:mx-auto">
+                  <div className="pt-32">
+                    <p className="lg:text-base md:text-[20px] text-left text-white mb-[15px] max-[640px]:mt-[50%]">
+                      {carousel.gameType}
+                    </p>
+                    <p className="lg:text-7xl md:text-[30px] text-left text-white text-myself-shadow mb-[25px] max-[640px]:mt-[50%]"
+                    style={{ fontFamily: 'TitleBoldFont', fontWeight: 'bold' }}>
+                      {carousel.gameTitle}
+                    </p>
+                    <p className="lg:text-base md:text-[20px] text-left text-white mb-[30px] max-[640px]:mt-[50%]">
+                      {carousel.gameIntro}
+                    </p>
+                    <div className="flex items-center">
+                      <div className="flex items-center justify-center bg-white rounded-lg btn-shadow px-4 py-3 mr-2 cursor-pointer h-[50px]"
+                      style={{ fontFamily: 'TitleFont', fontWeight: 'bold' }}>
+                        PlayNow
+                        <img
+                        className="w-[32px] ml-2"
+                        src="/Images/carousel/play now-icon.png"
+                        alt="PlayNow"
+                        />
+                      </div>
+                      <div className="border border-white text-white rounded-lg px-4 py-3 mr-2 cursor-pointer">
+                        Add for favorite
+                      </div>
+                    </div>
+                  </div>
+                  
                   <img
                     alt="image"
                     src={carousel.titleImage}
-                    className="w-[650px] object-contain mb-[10px] hover:scale-110 transition deration-500 max-[640px]:hidden"
+                    className="w-[auto] max-w-[700px] h-screen object-cover hover:scale-110 transition deration-500 max-[640px]:hidden"
                   />
-                  <p className="lg:text-[40px] md:text-[30px] text-center text-white text-myself-shadow mb-[20px] max-[640px]:mt-[50%]">
-                    {carousel.content}
-                  </p>
+                  
                   {/* <Button
                     size="large"
                     type="primary"

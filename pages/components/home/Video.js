@@ -3,7 +3,7 @@ import ToDownScroll from "./ToDownScroll";
 const Video = () => {
   const videoRef = useRef();
   return (
-    <section className="min-w-screen  max-[640px]:min-h-[90vh] object-cover relative md:bg-none bg-cover bg-center bg-[url(/Images/video/mobile-banner.png)]">
+    <section className="min-w-screen  max-[640px]:min-h-[100vh] object-cover relative md:bg-none bg-cover bg-center bg-[url(/Images/video/mobile-banner.png)]">
       <img
       className="w-full h-full max-[640px]:hidden"
       src="/Images/video/pc-banner.png"
