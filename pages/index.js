@@ -7,20 +7,20 @@ import Video from "./components/home/Video";
 import ToDownScroll from "./components/home/ToDownScroll";
 import Carousel from "./components/home/Carousel";
 import GameTypeChoose from "./components/home/GameTypeChoose";
-import Footer from "./components/Footer/Footer";
+import FooterNew from "./components/Footer/FooterNew";
 // const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <>
       <Header />
-      <HomePage />
+      {/* <HomePage /> */}
       {/* <Body /> */}
       {/* <Video /> */}
       {/* <ToDownScroll /> */}
       <Carousel />
-      {/* <GameTypeChoose />
-      <Footer /> */}
+      {/* <GameTypeChoose />*/}
+      
     </>
   );
 }

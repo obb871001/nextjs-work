@@ -1,7 +1,8 @@
 import { useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation, Autoplay } from "swiper";
-
+import SwiperCore, { Pagination, Navigation, Autoplay } from "swiper";
+import CarouselNavigation from "./CarouselNavigation";
+import FooterNew from "./../Footer/FooterNew";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -10,6 +11,7 @@ import "swiper/css/effect-fade";
 import "swiper/css/autoplay";
 import "swiper/css";
 import { Button } from "antd";
+SwiperCore.use([Navigation, Autoplay]);
 
 const CarouselList = [
   {
@@ -71,11 +73,14 @@ const CarouselList = [
 
 const Carousel = () => {
   return (
-    <section className="w-screen lg:h-screen md:h-[590px]">
+    <section className="w-screen lg:h-screen md:h-[590px] flex">
       <Swiper
         className="mySwiper h-full w-full"
         loop={true}
-        navigation={true}
+        navigation={{
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        }}
         // pagination={{
         //   type: "bullets",
         //   clickable: true,
@@ -84,8 +89,7 @@ const Carousel = () => {
           delay: 7000,
           disableOnInteraction: false,
         }}
-        onSwiper={(swiper) => swiper}
-        modules={[Autoplay, Navigation]}
+        modules={[Autoplay]}
         effect="fade"
       >
         {CarouselList.map((carousel, index) => {
@@ -113,7 +117,7 @@ const Carousel = () => {
                         PlayNow
                         <img
                         className="w-[32px] ml-2"
-                        src="/Images/carousel/play now-icon.png"
+                        src="/Images/carousel/playNow-icon.png"
                         alt="PlayNow"
                         />
                       </div>
@@ -143,7 +147,9 @@ const Carousel = () => {
             </SwiperSlide>
           );
         })}
+        <CarouselNavigation />
       </Swiper>
+      <FooterNew />
     </section>
   );
 };
