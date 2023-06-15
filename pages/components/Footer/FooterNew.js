@@ -11,5 +11,4 @@ const FooterNew = () => {
   );
 };
 
-export default FooterNew
-;
+export default FooterNew;

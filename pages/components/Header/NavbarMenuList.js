@@ -13,60 +13,95 @@ import { AiFillHome, AiFillHeart,  } from "react-icons/ai";
 import { BsFire, BsDice5Fill } from "react-icons/bs";
 import { FaFish } from "react-icons/fa";
 import { TbSquareRoundedNumber7Filled } from "react-icons/tb";
-import { CgMenuLeft } from "react-icons/cg";
+import { CgMenu, CgMenuLeft } from "react-icons/cg";
 const NavbarMenuList = () => {
-  const [more, setMore] = useState();
+  const [isMenuOpen, setMenuOpen] = useState(false);
   const router = useRouter();
-  
+
+  const navigationItems = [
+    {
+      icon: <AiFillHome className="text-white text-3xl" />,
+      label: "Home",
+      href: "/#",
+    },
+    {
+      icon: <BsFire className="text-white text-3xl" />,
+      label: "Hot",
+      href: "/HotGame",
+    },
+    {
+      icon: <AiFillHeart className="text-white text-3xl" />,
+      label: "Favorite",
+      href: "/#",
+    },
+    {
+      icon: <TbSquareRoundedNumber7Filled className="text-white text-3xl" />,
+      label: "Slot",
+      href: "/#",
+    },
+    {
+      icon: <BsDice5Fill className="text-white text-3xl" />,
+      label: "BeABanker",
+      href: "/#",
+    },
+    {
+      icon: <FaFish className="text-white text-3xl" />,
+      label: "Fish",
+      href: "/#",
+    },
+  ];
+  const toggleMenu = () => {
+    setMenuOpen(!isMenuOpen);
+  };
+
   return (
     <AnimatePresence>
-        <div className="absolute mt-[30%] flex flex-col items-center justify-center h-full">
-            
-            <section className="h-full w-full flex flex-col items-center justify-center">
-                <div class="navigation-body">
-                    <div class="navigation-group-wrap">
-                        <div class="navigation-group">
-                            <div class="navigation-item flex items-center">
-                                <Link href="/#" className="flex items-center cursor-pointer text-base !text-dark-grey-text p-3 py-4">
-                                    <AiFillHome className="text-white text-3xl"/>
-                                    <div className="hover-box text-white px-4" style={{ fontFamily: 'TitleFont' }}>Home</div>
-                                </Link>
-                            </div>
-                            <div class="navigation-item flex items-center">
-                                <Link href="/#" className="flex items-center cursor-pointer text-base !text-dark-grey-text p-3 py-4">
-                                    <BsFire className="text-white text-3xl"/>
-                                    <div className="hover-box text-white px-4" style={{ fontFamily: 'TitleFont' }}>Hot</div>
-                                </Link>
-                            </div>
-                            <div class="navigation-item flex items-center">
-                                <Link href="/#" className="flex items-center cursor-pointer text-base !text-dark-grey-text p-3 py-4">
-                                    <AiFillHeart className="text-white text-3xl"/>
-                                    <div className="hover-box text-white px-4" style={{ fontFamily: 'TitleFont' }}>Favorite</div>
-                                </Link>
-                            </div>
-                            <div class="navigation-item flex items-center">
-                                <Link href="/#" className="flex items-center cursor-pointer text-base !text-dark-grey-text p-3 py-4">
-                                    <TbSquareRoundedNumber7Filled className="text-white text-3xl"/>
-                                    <div className="hover-box text-white px-4" style={{ fontFamily: 'TitleFont' }}>Slot</div>
-                                </Link>
-                            </div>
-                            <div class="navigation-item flex items-center">
-                                <Link href="/#" className="flex items-center cursor-pointer text-base !text-dark-grey-text p-3 py-4">
-                                    <BsDice5Fill className="text-white text-3xl"/>
-                                    <div className="hover-box text-white px-4" style={{ fontFamily: 'TitleFont' }}>BeABanker</div>
-                                </Link>
-                            </div>
-                            <div class="navigation-item flex items-center">
-                                <Link href="/#" className="flex items-center cursor-pointer text-base !text-dark-grey-text p-3 py-4">
-                                    <FaFish className="text-white text-3xl"/>
-                                    <div className="hover-box text-white px-4" style={{ fontFamily: 'TitleFont' }}>Fish</div>
-                                </Link>
-                            </div>
+        <div className="fixed h-full left-0 top-0 z-10 w-[12%]"
+        style={{ backgroundColor: isMenuOpen ? "#411f51" : "transparent" }}>
+            <div className="flex items-center justify-center p-4">
+                {isMenuOpen ? (
+                    <CgMenu
+                        onClick={toggleMenu}
+                        className="text-white text-4xl cursor-pointer"
+                    />
+                    ) : (
+                    <CgMenuLeft
+                        onClick={toggleMenu}
+                        className="text-white text-4xl cursor-pointer"
+                    />
+                )}
+            </div>
+            <div
+                className={`absolute top-0 left-0 flex flex-col items-center justify-center w-full mt-40`}
+                
+            >
+                <section className="h-full w-full flex flex-col items-center justify-center">
+                <div className="navigation-body">
+                    <div className="navigation-group-wrap">
+                    <div className="navigation-group flex flex-col items-start justify-start">
+                        {navigationItems.map((item, index) => (
+                        <div key={index} className="navigation-item flex items-center">
+                        <Link href={item.href} passHref className={`flex items-center cursor-pointer text-base !text-dark-grey-text 
+                        ${isMenuOpen ? "px-10 py-4" : "p-4"}`
+                        }>
+                                {item.icon}
+                                {isMenuOpen && (
+                                    <div
+                                    className="hover-box text-white px-4"
+                                    style={{ fontFamily: "TitleFont" }}
+                                    >
+                                    {item.label}
+                                    </div>
+                                )}
+                            </Link>
                         </div>
+                        ))}
+                    </div>
                     </div>
                 </div>
-            </section>
-        </div>
+                </section>
+            </div>
+      </div>
     </AnimatePresence>
   );
 };

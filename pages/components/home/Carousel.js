@@ -96,15 +96,15 @@ const Carousel = () => {
           return (
             <SwiperSlide key={index} className="">
               <section
-                className="w-full h-full relative flex justify-center bg-no-repeat bg-center bg-cover max-[640px]:bg-[30%] p-28 pb-0"
+                className="w-[full] h-full relative flex justify-center bg-no-repeat bg-center bg-cover max-[640px]:bg-[30%] p-28 pb-0"
                 style={{ backgroundImage: `url(${carousel.background})` }}
               >
-                <article className="flex justify-center items-start self-center max-w-[1200px] ml-[0%] max-[640px]:mx-auto">
+                <article className="flex w-[80%] justify-center items-start self-center max-w-[1200px] ml-[0%] max-[640px]:mx-auto">
                   <div className="pt-32">
                     <p className="lg:text-base md:text-[20px] text-left text-white mb-[15px] max-[640px]:mt-[50%]">
                       {carousel.gameType}
                     </p>
-                    <p className="lg:text-7xl md:text-[30px] text-left text-white text-myself-shadow mb-[25px] max-[640px]:mt-[50%]"
+                    <p className="lg:text-7xl md:text-[30px] text-left text-white mb-[25px] max-[640px]:mt-[50%]"
                     style={{ fontFamily: 'TitleBoldFont', fontWeight: 'bold' }}>
                       {carousel.gameTitle}
                     </p>
@@ -149,7 +149,7 @@ const Carousel = () => {
         })}
         <CarouselNavigation />
       </Swiper>
-      <FooterNew />
+      {/* <FooterNew /> */}
     </section>
   );
 };
