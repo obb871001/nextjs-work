@@ -3,7 +3,6 @@ const path = require("path");
 
 const nextConfig = {
   reactStrictMode: true,
-  output: "out",
   trailingSlash: true,
   assetPrefix: "https://egslot.net",
   // assetPrefix: "",
