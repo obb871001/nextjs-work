@@ -1,6 +1,5 @@
 import { useState, useEffect, memo, useMemo, useRef } from "react";
 import { motion } from "framer-motion";
-import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 // import {
 //   OpenNotice,
@@ -13,7 +12,6 @@ import { useNavigate } from "react-router";
 // import { actionEnterGame } from "../../../api/fetchFunc";
 // import { message } from "antd";
 import { IoIosSearch } from "react-icons/io";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const REPLACE_AIR = (str) => {
   return str?.replace(/ /g, "");
@@ -23,10 +21,8 @@ const REPLACE_AIR = (str) => {
 //   ? JSON.parse(localStorage.getItem("recentGame"))
 //   : [];
 
-const Search = memo(({ onClose, images }) => {
-//   const isGameData = useSelector((state) => state.isGameData);
-
-
+const Search = ({ onClose, images }) => {
+  //   const isGameData = useSelector((state) => state.isGameData);
 
   return (
     <motion.section
@@ -38,24 +34,26 @@ const Search = memo(({ onClose, images }) => {
     >
       <section className=" flex items-center justify-center pt-8 px-2">
         <div className="max-w-sm">
-        <div className="text-white mb-2">Looking for other game</div>
+          <div className="text-white mb-2">Looking for other game</div>
           <div className="flex items-center px-4 rounded-md border-1 border-gray-400 focus:outline-none focus:border-blue-500 bg-white">
             <input
               type="text"
               placeholder="Search..."
-            //   value={searchValue}
-            //   onChange={(event) => setSearchValue(event.target.value)}
+              //   value={searchValue}
+              //   onChange={(event) => setSearchValue(event.target.value)}
               className=" h-10 px-3 focus:outline-none focus:border-blue-500 bg-white text-gray"
             />
-            <IoIosSearch size={22} className="text-white bg-[#9a47bb] rounded-md p-1" />
+            <IoIosSearch
+              size={22}
+              className="text-white bg-[#9a47bb] rounded-md p-1"
+            />
           </div>
-         
-          <div className="my-6 overflow-auto py-2 grid grid-cols-3 gap-3 my-2 max-h-[600px]">
-          </div>
+
+          <div className="my-6 overflow-auto py-2 grid grid-cols-3 gap-3 my-2 max-h-[600px]"></div>
         </div>
       </section>
     </motion.section>
   );
-});
+};
 
 export default Search;
