@@ -4,7 +4,8 @@ const path = require("path");
 const nextConfig = {
   reactStrictMode: true,
   trailingSlash: true,
-  assetPrefix: "https://egslot.net",
+  assetPrefix: process.env.NODE_ENV === 'production' ? process.env.ASSET_PREFIX : '',
+  // assetPrefix: "https://egslot.net",
   // assetPrefix: "",
   images: {
     domains: ["egslot.net"],

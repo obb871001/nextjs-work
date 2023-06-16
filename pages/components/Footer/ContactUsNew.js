@@ -15,8 +15,8 @@ const socialMediaLinks = [
 
 const ContactUsNew = () => {
   return (
-    <section className="pt-[5.5rem] pb-[7.5rem] flex flex-col pl-28 max-[640px]:pb-[10px] max-[640px]:py-0 max-[640px]:pl-[20%]">
-      <section className="flex items-center justify-start mb-[0px] max-[640px]:justify-center">
+    <section className="pt-[5.5rem] pb-[7.5rem] flex flex-col pl-[50%] max-w-none max-[640px]:pb-[10px] max-[640px]:py-0 max-[640px]:pl-[20%]">
+      <section className="flex items-center justify-start mb-[0px] max-[640px]:justify-center ">
         <div className="flex">
         {socialMediaLinks.map((item) => {
             const IconComponent = item.icon; // 取得動態的元件名稱
@@ -27,7 +27,7 @@ const ContactUsNew = () => {
                 target="_blank"
                 rel="noopener noreferrer"
             >
-                <IconComponent className="cursor-pointer !w-[25px] text-4xl !text-dark-grey-text mx-2" />
+                <IconComponent className="cursor-pointer !w-[25px] text-4xl !text-dark-grey-text mx-2 hover:!text-light-yellow-text" />
             </a>
             );
         })}

@@ -123,7 +123,7 @@ const Carousel = () => {
                         />
                       </div>
                       <div className="border border-white text-white rounded-lg px-4 py-3 mr-2 cursor-pointer">
-                        Add for favorite
+                        Add to favorite
                       </div>
                     </div>
                   </div>
