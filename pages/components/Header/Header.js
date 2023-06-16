@@ -33,7 +33,7 @@ const Header = () => {
           <Link className="text-4xl font-bold text-white cursor-pointer mx-12" href="/">
             <img src="Images/logo/EG-LOGO.png" alt="LOGO" className="w-[155px] h-[48px]" />
           </Link>
-          <div className="flex">
+          <div className="flex max-[640px]:hidden">
             <Link href="/about">
               <div className="text-white text-xl px-4 py-2" style={{ fontFamily: 'TitleFont' }}>about</div>
             </Link>

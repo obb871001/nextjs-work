@@ -5,8 +5,8 @@ const nextConfig = {
   reactStrictMode: true,
   output: "out",
   trailingSlash: true,
-  // assetPrefix: "https://egslot.net",
-  assetPrefix: "",
+  assetPrefix: "https://egslot.net",
+  // assetPrefix: "",
   images: {
     domains: ["egslot.net"],
     path: "https://egslot.net",

@@ -96,19 +96,20 @@ const Carousel = () => {
           return (
             <SwiperSlide key={index} className="">
               <section
-                className="w-[full] h-full relative flex justify-center bg-no-repeat bg-center bg-cover max-[640px]:bg-[30%] p-28 pb-0"
+                className="w-[full] h-full relative flex justify-center bg-no-repeat bg-center bg-cover max-[640px]:p-2"
                 style={{ backgroundImage: `url(${carousel.background})` }}
               >
-                <article className="flex w-[80%] justify-center items-start self-center max-w-[1200px] ml-[0%] max-[640px]:mx-auto">
-                  <div className="pt-32">
-                    <p className="lg:text-base md:text-[20px] text-left text-white mb-[15px] max-[640px]:mt-[50%]">
+                <article className="flex w-[80%] justify-center items-start self-center max-w-[1200px] ml-[0%] 
+                max-[640px]:mx-auto max-[640px]:w-full max-[640px]:ml-auto max-[640px]:m-2 max-[640px]:h-[50%]">
+                  <div className="pt-32 max-[640px]:w-[40%]">
+                    <p className="lg:text-base md:text-[20px] text-left text-white mb-[15px] max-[640px]:mt-[10%] max-[640px]:pl-[10%]">
                       {carousel.gameType}
                     </p>
-                    <p className="lg:text-7xl md:text-[30px] text-left text-white mb-[25px] max-[640px]:mt-[50%]"
+                    <p className="lg:text-7xl md:text-[30px] text-left text-white mb-[25px] max-[640px]:mt-[10%] max-[640px]:pl-[10%]"
                     style={{ fontFamily: 'TitleBoldFont', fontWeight: 'bold' }}>
                       {carousel.gameTitle}
                     </p>
-                    <p className="lg:text-base md:text-[20px] text-left text-white mb-[30px] max-[640px]:mt-[50%]">
+                    <p className="lg:text-base md:text-[20px] text-left text-white mb-[30px] max-[640px]:mt-[10%] max-[640px]:pl-[10%]">
                       {carousel.gameIntro}
                     </p>
                     <div className="flex items-center">
@@ -130,7 +131,7 @@ const Carousel = () => {
                   <img
                     alt="image"
                     src={carousel.titleImage}
-                    className="w-[auto] max-w-[700px] h-screen object-cover hover:scale-110 transition deration-500 max-[640px]:hidden"
+                    className="w-[auto] max-w-[700px] h-screen object-cover hover:scale-110 transition deration-500 max-[640px]:w-[60%] max-[640px]:py-[20%]"
                   />
                   
                   {/* <Button
