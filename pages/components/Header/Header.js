@@ -24,14 +24,14 @@ const Header = () => {
     };
   }, []);
   return (
-    <header className={`fixed top-0 left-0 z-[9999] h-[90px] w-full ml-[12%] transition duration-500 
+    <header className={`fixed top-0 left-0 z-[9999] h-[90px] w-full ml-[12%] transition duration-500 max-[640px]:ml-0 max-[640px]:h-[68px]
     ${styles && "bg-[rgba(0,0,0,0.45)]"}`}>
       
       <div className="flex items-center justify-start h-full container">
-        <nav className="flex items-center justify-start h-full container mx-auto lg:px-[0] md:px-[20px] max-[640px]:px-[20px]">
+        <nav className="flex items-center justify-start h-full container mx-auto lg:px-[0] md:px-[20px] max-[640px]:px-0 max-[640px]:justify-center">
           {/* <NavbarList setOpenNav={setOpenNav} openNav={openNav} /> */}
           <Link className="text-4xl font-bold text-white cursor-pointer mx-12" href="/">
-            <img src="Images/logo/EG-LOGO.png" alt="LOGO" className="w-[155px] h-[48px]" />
+            <img src="Images/logo/EG-LOGO.png" alt="LOGO" className="w-[155px] h-[48px] max-[640px]:w-[100px] max-[640px]:h-[31px]" />
           </Link>
           <div className="flex max-[640px]:hidden">
             <Link href="/about">

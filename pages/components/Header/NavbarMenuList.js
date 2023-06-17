@@ -5,6 +5,7 @@ import { TfiClose } from "react-icons/tfi";
 import { CONTACT_LIST } from "@/constants";
 import Link from "next/link";
 import RightSidebar from "./RightSidebar";
+import Search from "./Search";
 import { AiFillHome, AiFillHeart } from "react-icons/ai";
 import { BsFire, BsDice5Fill } from "react-icons/bs";
 import { FaFish } from "react-icons/fa";
@@ -40,7 +41,7 @@ const NavbarMenuList = () => {
       href: "/#",
       onClick: (event) => {
         event.preventDefault(); // 阻止默認的頁面導航行為
-        handleItemClick("Favorite"); // 顯示右側選單，內容為「熱門遊戲」
+        handleItemClick("Favorite"); // 顯示右側選單
       },
     },
     {
@@ -78,8 +79,18 @@ const NavbarMenuList = () => {
 
   return (
     <AnimatePresence>
-        <div className="fixed h-full left-0 top-0 z-10 w-[12%]"
-        style={{ backgroundColor: isMenuOpen ? "#411f51" : "transparent" }}>
+      <motion.section
+          initial={{ opacity: 0, visibility: "visible" }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.2 }}
+        >
+        <div className={`fixed h-full left-0 top-0 z-10 w-[12%] max-[640px]:z-[9999] 
+        ${isMenuOpen ? 'max-[640px]:w-[70%]' : 'max-[640px]:w-[20%]'}`}
+        style={{
+          backgroundColor: isMenuOpen ? "#411f51f2" : "transparent",
+          boxShadow: isMenuOpen ? "2px 2px 2px rgba(20%,20%,40%,0.6),4px 4px 6px rgba(20%,20%,40%,0.4),6px 6px 12px rgba(20%,20%,40%,0.4)" : "unset"
+        }}>
             <div className="flex items-center justify-center p-4">
                 {isMenuOpen ? (
                     <CgMenu
@@ -94,21 +105,21 @@ const NavbarMenuList = () => {
                 )}
             </div>
             <div
-                className={`absolute top-0 left-0 flex flex-col items-center justify-center w-full mt-40 max-[640px]:hidden`}
+                className={`absolute top-0 left-0 flex flex-col items-center justify-center w-full mt-40  ${isMenuOpen ? 'max-[640px]:block' : 'max-[640px]:hidden'}`}
                 
             >
                 <section className="h-full w-full flex flex-col items-center justify-center">
-                  <div className="navigation-body">
-                      <div className="navigation-group-wrap">
+                  <div className="navigation-body max-[640px]:w-full">
+                      <div className="navigation-group-wrap w-full">
                         <div className="navigation-group flex flex-col items-start justify-start">
                             {navigationItems.map((item, index) => (
-                              <div key={index} className="navigation-item flex items-center">
+                              <div key={item.id} className="navigation-item flex items-center">
                                 <Link 
                                 href={item.href} 
                                 passHref>
                                   <div 
                                   onClick={item.onClick} 
-                                  className={`flex items-center cursor-pointer text-base !text-dark-grey-text 
+                                  className={`flex w-full items-center cursor-pointer text-base !text-dark-grey-text 
                                   ${isMenuOpen ? "px-10 py-4" : "p-4"}`}
                                   >
                                         {item.icon}
@@ -131,8 +142,12 @@ const NavbarMenuList = () => {
             </div>
             
       </div>
+      </motion.section>
       {selectedItem && (
-        <RightSidebar content={selectedItem} handleCloseSidebar={() => setSelectedItem(null)} />
+        <>
+          <RightSidebar content={selectedItem} handleCloseSidebar={() => setSelectedItem(null)} />
+          {/* <Search content={selectedItem} /> */}
+        </>
       )}
     </AnimatePresence>
   );

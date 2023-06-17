@@ -14,6 +14,7 @@ module.exports = {
         "second-color": "#FFFFFF",
         "third-color": "#323C3C",
         "rightsidebar-color": "rgb(255 255 255 / 45%)",
+        "add-favorite-btn": "rgb(17 17 17 / 40%)",
         "date-color": "#eaeaea",
         "extra-black": "#FAAB20",
         "common-border": "#FAAB20",

@@ -32,7 +32,7 @@ const CarouselNavigation = () => {
 
   return (
     <>
-    <div className="flex z-40 relative p-3 bottom-[20%] w-[140px] left-[85%] max-[640px]:absolute max-[640px]:bottom-[15%] z-[2] max-[640px]:left-[30%]">
+    <div className="flex z-40 relative p-3 bottom-[20%] w-[140px] left-[85%] max-[640px]:absolute max-[640px]:bottom-[20%] z-[2] max-[640px]:left-[35%]">
         <div className="!w-[50px] !h-[50px]">
           <IoCaretBackCircleOutline 
           onClick={handleSlideNext}

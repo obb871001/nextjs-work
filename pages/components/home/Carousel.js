@@ -9,20 +9,10 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/effect-fade";
 import "swiper/css/autoplay";
-import "swiper/css";
 import { Button } from "antd";
 SwiperCore.use([Navigation, Autoplay]);
 
 const CarouselList = [
-  {
-    background: "/Images/carousel/bg1.png",
-    titleImage: "/Images/carousel/neko-1.png",
-    gameType: "Hot game - Slot",
-    gameTitle: "NEKO MAID",
-    gameIntro: "You must stay alive in this horror/puzzle adventure.Try to survive the vengeful toys waiting for you in the abandoned toy factory. Use your GrabPack to hack electrical circuits or nab anything.",
-    playLink: "",
-    addFavorite: "",
-  },
   {
     background: "/Images/carousel/bg1.png",
     titleImage: "/Images/carousel/simbad.png",
@@ -32,6 +22,25 @@ const CarouselList = [
     playLink: "",
     addFavorite: "",
   },
+  {
+    background: "/Images/carousel/bg1.png",
+    titleImage: "/Images/carousel/magic-1.png",
+    gameType: "Hot game - Slot",
+    gameTitle: "Witch's Love",
+    gameIntro: "You must stay alive in this horror/puzzle adventure.Try to survive the vengeful toys waiting for you in the abandoned toy factory. Use your GrabPack to hack electrical circuits or nab anything.",
+    playLink: "",
+    addFavorite: "",
+  },
+  {
+    background: "/Images/carousel/bg1.png",
+    titleImage: "/Images/carousel/neko-2.png",
+    gameType: "Hot game - Slot",
+    gameTitle: "NEKO MAID",
+    gameIntro: "You must stay alive in this horror/puzzle adventure.Try to survive the vengeful toys waiting for you in the abandoned toy factory. Use your GrabPack to hack electrical circuits or nab anything.",
+    playLink: "",
+    addFavorite: "",
+  },
+  
   // {
   //   background: "/Images/carousel/carousel1-2.jpg",
   //   titleImage: "/Images/carousel/carousel1Title-2.png",
@@ -101,18 +110,19 @@ const Carousel = () => {
               >
                 <article className="flex w-[80%] justify-center items-start self-center max-w-[1200px] ml-[0%] 
                 max-[640px]:mx-auto max-[640px]:w-full max-[640px]:ml-auto max-[640px]:m-2 max-[640px]:h-[50%]">
-                  <div className="pt-32 max-[640px]:w-[40%]">
-                    <p className="lg:text-base md:text-[20px] text-left text-white mb-[15px] max-[640px]:mt-[10%] max-[640px]:pl-[10%]">
+                  <div className="pt-32 max-[640px]:w-[100%] max-[640px]:absolute max-[640px]:z-[99] max-[640px]:py-2 max-[640px]:mt-48 max-[640px]:bg-[#00000057]">
+                    <p className="lg:text-base md:text-[20px] text-left text-white mb-[15px] max-[640px]:mt-[5%] max-[640px]:pl-[10%]">
                       {carousel.gameType}
                     </p>
-                    <p className="lg:text-7xl md:text-[30px] text-left text-white mb-[25px] max-[640px]:mt-[10%] max-[640px]:pl-[10%]"
+                    <p className="lg:text-7xl md:text-[30px] text-left text-white mb-[25px] 
+                    max-[640px]:text-4xl max-[640px]:mt-[0%] max-[640px]:pl-[10%] max-[640px]:mb-[15px]"
                     style={{ fontFamily: 'TitleBoldFont', fontWeight: 'bold' }}>
                       {carousel.gameTitle}
                     </p>
-                    <p className="lg:text-base md:text-[20px] text-left text-white mb-[30px] max-[640px]:mt-[10%] max-[640px]:pl-[10%]">
+                    <p className="lg:text-base md:text-[20px] text-left text-white mb-[30px] max-[640px]:mt-[5%] max-[640px]:pl-[10%]">
                       {carousel.gameIntro}
                     </p>
-                    <div className="flex items-center">
+                    <div className="flex items-center max-[640px]:justify-center max-[640px]:mb-[5%]">
                       <div className="flex items-center justify-center bg-white rounded-lg btn-shadow px-4 py-3 mr-2 cursor-pointer h-[50px]"
                       style={{ fontFamily: 'TitleFont', fontWeight: 'bold' }}>
                         PlayNow
@@ -122,7 +132,7 @@ const Carousel = () => {
                         alt="PlayNow"
                         />
                       </div>
-                      <div className="border border-white text-white rounded-lg px-4 py-3 mr-2 cursor-pointer">
+                      <div className="border border-white text-white rounded-lg px-4 py-3 mr-2 cursor-pointer max-[640px]:bg-add-favorite-btn">
                         Add to favorite
                       </div>
                     </div>
@@ -131,7 +141,8 @@ const Carousel = () => {
                   <img
                     alt="image"
                     src={carousel.titleImage}
-                    className="w-[auto] max-w-[700px] h-screen object-cover hover:scale-110 transition deration-500 max-[640px]:w-[60%] max-[640px]:py-[20%]"
+                    className="w-[auto] max-w-[700px] h-screen object-cover hover:scale-110 transition deration-500 
+                    max-[640px]:w-[100%] max-[640px]:pb-[50%] max-[640px]:pt-[5%] max-[640px]:hover:scale-100 max-[640px]:transition-none"
                   />
                   
                   {/* <Button
