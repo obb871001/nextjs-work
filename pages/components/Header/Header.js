@@ -35,19 +35,19 @@ const Header = () => {
           </Link>
           <div className="flex max-[640px]:hidden">
             <Link href="/about">
-              <div className="text-white text-xl px-4 py-2" style={{ fontFamily: 'TitleFont' }}>about</div>
+              <div className="title-font text-white text-xl px-4 py-2">about</div>
             </Link>
             <Link href="/news">
-              <div className="text-white text-xl px-4 py-2" style={{ fontFamily: 'TitleFont' }}>news</div>
+              <div className="title-font text-white text-xl px-4 py-2">news</div>
             </Link>
             <Link href="/media">
-              <div className="text-white text-xl px-4 py-2" style={{ fontFamily: 'TitleFont' }}>media</div>
+              <div className="title-font text-white text-xl px-4 py-2">media</div>
             </Link>
             <Link href="/collaborate">
-              <div className="text-white text-xl px-4 py-2" style={{ fontFamily: 'TitleFont' }}>collaborate</div>
+              <div className="title-font text-white text-xl px-4 py-2">collaborate</div>
             </Link>
             <Link href="/service">
-              <div className="text-white text-xl px-4 py-2" style={{ fontFamily: 'TitleFont' }}>service</div>
+              <div className="title-font text-white text-xl px-4 py-2">service</div>
             </Link>
           </div>
         </nav>

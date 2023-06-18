@@ -15,7 +15,7 @@ const socialMediaLinks = [
 
 const ContactUsNew = () => {
   return (
-    <section className="pt-[5.5rem] pb-[7.5rem] flex flex-col pl-[50%] max-w-none max-[640px]:pb-[10px] max-[640px]:py-0 max-[640px]:pl-[20%]">
+    <section className="pt-[5.5rem] pb-[7.5rem] flex flex-col max-w-none max-[640px]:pb-[10px] max-[640px]:py-0 max-[640px]:pl-[20%]">
       <section className="flex items-center justify-start mb-[0px] max-[640px]:justify-center ">
         <div className="flex">
         {socialMediaLinks.map((item) => {
@@ -43,8 +43,7 @@ const ContactUsNew = () => {
           );
         })} */}
       </section>
-      <p className="text-[#848484] text-sm text-center my-[10px] text-dark-grey-text"
-      style={{ fontFamily: 'TitleFont' }}>
+      <p className="title-font text-[#848484] text-sm text-center my-[10px] text-dark-grey-text">
         Copyright © 2023 Eazy Gaming. All Rights Reserved.
       </p>
     </section>

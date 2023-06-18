@@ -18,14 +18,14 @@ const NavbarMenuList = () => {
 
   const navigationItems = [
     {
-      icon: <AiFillHome className="text-white text-3xl" />,
+      icon: <AiFillHome className="text-white text-3xl hover:!text-light-yellow-text" />,
       id: "Home",
       label: "Home",
       href: "/#",
       onClick: () => handleItemClick(null), // 不顯示右側選單，整頁跳轉
     },
     {
-      icon: <BsFire className="text-white text-3xl" />,
+      icon: <BsFire className="text-white text-3xl hover:!text-light-yellow-text" />,
       id: "HotGame",
       label: "Hot",
       href: "/HotGame",
@@ -35,7 +35,7 @@ const NavbarMenuList = () => {
       },
     },
     {
-      icon: <AiFillHeart className="text-white text-3xl" />,
+      icon: <AiFillHeart className="text-white text-3xl hover:!text-light-yellow-text" />,
       id: "Favorite",
       label: "Favorite",
       href: "/#",
@@ -45,25 +45,34 @@ const NavbarMenuList = () => {
       },
     },
     {
-      icon: <TbSquareRoundedNumber7Filled className="text-white text-3xl" />,
+      icon: <TbSquareRoundedNumber7Filled className="text-white text-3xl hover:!text-light-yellow-text" />,
       id: "Slot",
       label: "Slot",
       href: "/#",
-      onClick: () => handleItemClick(null), // 不顯示右側選單，整頁跳轉
+      onClick: (event) => {
+        event.preventDefault();
+        handleItemClick("Slot");
+      },
     },
     {
-      icon: <BsDice5Fill className="text-white text-3xl" />,
+      icon: <BsDice5Fill className="text-white text-3xl hover:!text-light-yellow-text" />,
       id: "BeABanker",
       label: "BeABanker",
       href: "/#",
-      onClick: () => handleItemClick(null), // 不顯示右側選單，整頁跳轉
+      onClick: (event) => {
+        event.preventDefault(); 
+        handleItemClick("BeABanker"); 
+      },
     },
     {
-      icon: <FaFish className="text-white text-3xl" />,
+      icon: <FaFish className="text-white text-3xl hover:!text-light-yellow-text" />,
       id: "Fish",
       label: "Fish",
       href: "/#",
-      onClick: () => handleItemClick(null), // 不顯示右側選單，整頁跳轉
+      onClick: (event) => {
+        event.preventDefault(); 
+        handleItemClick("Fish");
+      },
     },
   ];
   const toggleMenu = () => {
@@ -125,9 +134,7 @@ const NavbarMenuList = () => {
                                         {item.icon}
                                         {isMenuOpen && (
                                             <div
-                                            className="hover-box text-white px-4"
-                                            style={{ fontFamily: "TitleFont" }}
-                                            >
+                                            className="title-font hover-box text-white px-4">
                                             {item.label}
                                             </div>
                                         )}

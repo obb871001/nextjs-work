@@ -114,17 +114,15 @@ const Carousel = () => {
                     <p className="lg:text-base md:text-[20px] text-left text-white mb-[15px] max-[640px]:mt-[5%] max-[640px]:pl-[10%]">
                       {carousel.gameType}
                     </p>
-                    <p className="lg:text-7xl md:text-[30px] text-left text-white mb-[25px] 
-                    max-[640px]:text-4xl max-[640px]:mt-[0%] max-[640px]:pl-[10%] max-[640px]:mb-[15px]"
-                    style={{ fontFamily: 'TitleBoldFont', fontWeight: 'bold' }}>
+                    <p className="title-font-bold lg:text-7xl md:text-[30px] text-left text-white mb-[25px] 
+                    max-[640px]:text-4xl max-[640px]:mt-[0%] max-[640px]:pl-[10%] max-[640px]:mb-[15px]">
                       {carousel.gameTitle}
                     </p>
                     <p className="lg:text-base md:text-[20px] text-left text-white mb-[30px] max-[640px]:mt-[5%] max-[640px]:pl-[10%]">
                       {carousel.gameIntro}
                     </p>
                     <div className="flex items-center max-[640px]:justify-center max-[640px]:mb-[5%]">
-                      <div className="flex items-center justify-center bg-white rounded-lg btn-shadow px-4 py-3 mr-2 cursor-pointer h-[50px]"
-                      style={{ fontFamily: 'TitleFont', fontWeight: 'bold' }}>
+                      <div className="title-font-bold flex items-center justify-center bg-white rounded-lg btn-shadow px-4 py-3 mr-2 cursor-pointer h-[50px]">
                         PlayNow
                         <img
                         className="w-[32px] ml-2"

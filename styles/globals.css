@@ -79,6 +79,12 @@ box-shadow:2px 2px 2px rgba(20%,20%,40%,0.6),4px 4px 6px rgba(20%,20%,40%,0.4),6
     "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji", cursive;
 }
+.title-font {
+  font-family: "TitleFont", "Comfortaa", "Noto Sans TC", sans-serif, cursive;
+}
+.title-font-bold {
+  font-family: "TitleBoldFont", "Comfortaa", "Noto Sans TC", sans-serif, cursive;
+}
 .contact-us-text::after {
   content: "";
   margin: auto;

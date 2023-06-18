@@ -21,7 +21,7 @@ const REPLACE_AIR = (str) => {
 //   ? JSON.parse(localStorage.getItem("recentGame"))
 //   : [];
 
-const Search = ({ onClose, images, content }) => {
+const Search = ({ onClose, images }) => {
   //   const isGameData = useSelector((state) => state.isGameData);
 
   return (
@@ -50,9 +50,6 @@ const Search = ({ onClose, images, content }) => {
           </div>
 
           <div className="my-6 overflow-auto py-2 grid grid-cols-3 gap-3 my-2 max-h-[600px]"></div>
-        </div>
-        <div className=" flex items-center justify-center pt-8 px-2">
-            <h2>{content}</h2>
         </div>
       </section>
     </motion.section>
