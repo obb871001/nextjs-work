@@ -28,7 +28,7 @@ const Media = () => {
             return (
               <p
                 key={index}
-                className={`leading-[40px] mr-[30px] text-2xl max-[640px]:text-lg cursor-pointer footer-text-bottom ${
+                className={`leading-[40px] mr-[30px] text-2xl max-[1024px]:text-lg cursor-pointer footer-text-bottom ${
                   tab === year && "footer-text-bottom-show"
                 }`}
                 onClick={() => setTab(year)}

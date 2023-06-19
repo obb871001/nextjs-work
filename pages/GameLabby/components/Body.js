@@ -14,7 +14,7 @@ const Body = () => {
       />
       <div
         ref={ref}
-        className="grid lg:grid-cols-4 grid-cols-1 gap-4 w-full max-[640px]:px-[20px]"
+        className="grid lg:grid-cols-4 grid-cols-1 gap-4 w-full max-[1024px]:px-[20px]"
       >
         <Tip
           SVG={

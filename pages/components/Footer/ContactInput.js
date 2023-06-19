@@ -12,7 +12,7 @@ const INPUTLIST = [
 const ContactInput = () => {
   return (
     <section
-      className="h-screen max-[640px]:h-[auto] max-[640px]:py-[50px] w-screen relative md:!bg-[#BB3741] lg:!bg-no-repeat"
+      className="h-screen max-[1024px]:h-[auto] max-[1024px]:py-[50px] w-screen relative md:!bg-[#BB3741] lg:!bg-no-repeat"
       style={{
         backgroundImage:
           "linear-gradient(0deg, rgba(239, 51, 64, 0.7) 0%, rgba(239, 51, 64, 0.7) 100%), url(/Images/footer/mainfooterbg.jpeg)",
@@ -31,10 +31,10 @@ const ContactInput = () => {
           />
         </div>
         <div className="lg:max-w-[50%] md:max-w-[100%] w-full h-full flex flex-col items-center justify-center text-white">
-          <p className="text-[50px] contact-after mb-[40px] max-[640px]:text-xl">
+          <p className="text-[50px] contact-after mb-[40px] max-[1024px]:text-xl">
             聯絡我們
           </p>
-          <section className="lg:w-[400px] md:w-[500px] max-[640px]:w-full mx-auto px-[20px]">
+          <section className="lg:w-[400px] md:w-[500px] max-[1024px]:w-full mx-auto px-[20px]">
             {INPUTLIST.map((input, index) => {
               return (
                 <div className="mb-[20px]" key={index}>
@@ -42,12 +42,12 @@ const ContactInput = () => {
                   {input.textarea ? (
                     <Input.TextArea
                       rows={4}
-                      className="rounded-xl py-[0.375rem] px-[0.75rem] h-[40px] text-[1rem] max-[640px]:text-sm max-[640px]:py-[5px] text-[#848484]"
+                      className="rounded-xl py-[0.375rem] px-[0.75rem] h-[40px] text-[1rem] max-[1024px]:text-sm max-[1024px]:py-[5px] text-[#848484]"
                     />
                   ) : (
                     <Input
                       name="name"
-                      className="rounded-3xl py-[0.375rem] px-[0.75rem] h-[40px] text-[1rem] max-[640px]:text-sm max-[640px]:py-[5px] text-[#848484]"
+                      className="rounded-3xl py-[0.375rem] px-[0.75rem] h-[40px] text-[1rem] max-[1024px]:text-sm max-[1024px]:py-[5px] text-[#848484]"
                     />
                   )}
                 </div>

@@ -5,7 +5,7 @@ const PARTNER_LIST = ["", "", "", "", ""];
 const Cooperation = () => {
   return (
     <main
-      className="w-full lg:min-h-screen pb-[50px] bg-no-repeat bg-[#202123] max-[640px]:bg-cover max-[640px]:pt-[150px] max-[640px]:px-[20px] max-[640px]:!bg-none"
+      className="w-full lg:min-h-screen pb-[50px] bg-no-repeat bg-[#202123] max-[1024px]:bg-cover max-[1024px]:pt-[150px] max-[1024px]:px-[20px] max-[1024px]:!bg-none"
       style={{
         backgroundImage: "url(/Images/Cooperation/hand.jpeg)",
         backgroundPosition: "70% 0 ",
@@ -35,7 +35,7 @@ const Cooperation = () => {
           </motion.div>
         </section>
       </section>
-      <section className="container mx-auto grid grid-cols-5 max-[640px]:grid-cols-2 gap-4">
+      <section className="container mx-auto grid grid-cols-5 max-[1024px]:grid-cols-2 gap-4">
         {PARTNER_LIST.map((partner, index) => {
           return (
             <div

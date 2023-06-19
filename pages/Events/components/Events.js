@@ -27,7 +27,7 @@ const EVENTS_LIST = [
 const Events = () => {
   return (
     <>
-      <main className="min-h-screen w-full max-[640px]:pt-[100px] pt-[200px] pb-[50px] bg-[#202123]">
+      <main className="min-h-screen w-full max-[1024px]:pt-[100px] pt-[200px] pb-[50px] bg-[#202123]">
         <section className="container mx-auto flex flex-col items-center">
           <BoxTitle
             white
@@ -35,7 +35,7 @@ const Events = () => {
             content="查閱所有 Eazy Gaming 參與過的展覽活動或舉辦過的推廣活動"
           />
           <div className="h-[3px] w-full bg-red-500 my-[40px]"></div>
-          <section className="grid grid-cols-3 max-[640px]:grid-cols-1 gap-4 w-full my-[40px]">
+          <section className="grid grid-cols-3 max-[1024px]:grid-cols-1 gap-4 w-full my-[40px]">
             {EVENTS_LIST.map((events, index) => {
               return (
                 <EventBox

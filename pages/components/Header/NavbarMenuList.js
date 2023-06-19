@@ -34,16 +34,16 @@ const NavbarMenuList = () => {
         handleItemClick("HotGame"); // 顯示右側選單，內容為「熱門遊戲」
       },
     },
-    {
-      icon: <AiFillHeart className="text-white text-3xl hover:!text-light-yellow-text" />,
-      id: "Favorite",
-      label: "Favorite",
-      href: "/#",
-      onClick: (event) => {
-        event.preventDefault(); // 阻止默認的頁面導航行為
-        handleItemClick("Favorite"); // 顯示右側選單
-      },
-    },
+    // {
+    //   icon: <AiFillHeart className="text-white text-3xl hover:!text-light-yellow-text" />,
+    //   id: "Favorite",
+    //   label: "Favorite",
+    //   href: "/#",
+    //   onClick: (event) => {
+    //     event.preventDefault();
+    //     handleItemClick("Favorite");
+    //   },
+    // },
     {
       icon: <TbSquareRoundedNumber7Filled className="text-white text-3xl hover:!text-light-yellow-text" />,
       id: "Slot",
@@ -94,8 +94,8 @@ const NavbarMenuList = () => {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.2 }}
         >
-        <div className={`fixed h-full left-0 top-0 z-10 w-[12%] max-[640px]:z-[9999] 
-        ${isMenuOpen ? 'max-[640px]:w-[70%]' : 'max-[640px]:w-[20%]'}`}
+        <div className={`fixed h-full left-0 top-0 z-10 w-[12%] max-[1024px]:z-[9999] 
+        ${isMenuOpen ? 'max-[1024px]:w-[70%]' : 'max-[1024px]:w-[20%]'}`}
         style={{
           backgroundColor: isMenuOpen ? "#411f51f2" : "transparent",
           boxShadow: isMenuOpen ? "2px 2px 2px rgba(20%,20%,40%,0.6),4px 4px 6px rgba(20%,20%,40%,0.4),6px 6px 12px rgba(20%,20%,40%,0.4)" : "unset"
@@ -114,11 +114,11 @@ const NavbarMenuList = () => {
                 )}
             </div>
             <div
-                className={`absolute top-0 left-0 flex flex-col items-center justify-center w-full mt-40  ${isMenuOpen ? 'max-[640px]:block' : 'max-[640px]:hidden'}`}
+                className={`absolute top-0 left-0 flex flex-col items-center justify-center w-full mt-40  ${isMenuOpen ? 'max-[1024px]:block' : 'max-[1024px]:hidden'}`}
                 
             >
                 <section className="h-full w-full flex flex-col items-center justify-center">
-                  <div className="navigation-body max-[640px]:w-full">
+                  <div className="navigation-body max-[1024px]:w-full">
                       <div className="navigation-group-wrap w-full">
                         <div className="navigation-group flex flex-col items-start justify-start">
                             {navigationItems.map((item, index) => (

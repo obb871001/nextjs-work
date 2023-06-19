@@ -15,13 +15,13 @@ const RightSidebar = ({ content }) => {
     <>
       {isRightSideOpen && (
     <div className="right-sidebar fixed h-full right-0 top-0 z-[9999] bg-rightsidebar-color w-[25%] px-6 py-4 
-    max-[640px]:w-full max-[640px]:bg-[#9a47bb]">
+    max-[1024px]:w-full max-[1024px]:bg-[#9a47bb]">
         <TbArrowNarrowRight 
         onClick={handleCloseSidebar} 
         className="text-white text-4xl cursor-pointer"
         />
       
-      <Search/>
+      {/* <Search/> */}
       <h2>{content}</h2>
       <div className=" flex flex-col items-center justify-center px-2">
         <div className="flex items-start justify-between bg-[#d4b3e2] p-3 rounded-lg w-full max-w-[350px] cursor-pointer my-1">

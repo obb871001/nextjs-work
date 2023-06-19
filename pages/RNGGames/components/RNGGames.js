@@ -31,7 +31,7 @@ const TIP_CARD = [
 const RNGGames = () => {
   return (
     <>
-      <main className="min-h-screen w-full bg-[url(/Images/RNGGames/bg.jpeg)] bg-cover bg-center max-[640px]:py-[100px] md:py-[200px] lg:py-[100px]">
+      <main className="min-h-screen w-full bg-[url(/Images/RNGGames/bg.jpeg)] bg-cover bg-center max-[1024px]:py-[100px] md:py-[200px] lg:py-[100px]">
         <section className="container mx-auto flex lg:flex-row flex-col items-center justify-around">
           <img
             alt="image"
@@ -61,17 +61,17 @@ const RNGGames = () => {
             "url(/Images/RNGGames/puzzle1.png),url(/Images/RNGGames/puzzle2.png),linear-gradient(0deg,rgba(35,24,110,0) 0%,rgba(35,24,110,0) 15px,rgb(0,0,0) 100%),linear-gradient(45deg,rgb(201,13,176) 0%,rgb(16,8,121) 33%,rgb(18,6,98) 66%,rgb(18,6,98) 100%)",
         }}
       >
-        <section className="container mx-auto max-[640px]:px-[20px]">
-          <section className="flex max-[640px]:flex-col items-center justify-center mb-[40px]">
-            <div className="text-white mb-[20px] max-[640px]:text-center">
-              <p className="text-[45px] font-medium md:barcarat-text-left mb-[40px] max-[640px]:mb-[20px]">
+        <section className="container mx-auto max-[1024px]:px-[20px]">
+          <section className="flex max-[1024px]:flex-col items-center justify-center mb-[40px]">
+            <div className="text-white mb-[20px] max-[1024px]:text-center">
+              <p className="text-[45px] font-medium md:barcarat-text-left mb-[40px] max-[1024px]:mb-[20px]">
                 百家樂
               </p>
               <p>
                 作為風靡全亞洲的遊戲，Eazy Gaming 的百家樂以四張牌先發的方式進行。
               </p>
             </div>
-            <div className="rounded-full border border-white w-[163px] h-[163px] flex items-center justify-center ml-[50px] max-[640px]:ml-[0]">
+            <div className="rounded-full border border-white w-[163px] h-[163px] flex items-center justify-center ml-[50px] max-[1024px]:ml-[0]">
               <img alt="image" src="/Images/RNGGames/h5.png" />
             </div>
           </section>
@@ -89,10 +89,10 @@ const RNGGames = () => {
                     className="mb-[20px]"
                     src={`/Images/RNGGames/tip${index + 1}.png`}
                   />
-                  <p className="text-xl mb-[40px] max-[640px]:text-lg">
+                  <p className="text-xl mb-[40px] max-[1024px]:text-lg">
                     {card.main}
                   </p>
-                  <p className="text-center max-[640px]:text-sm max-[640px]:font-light">
+                  <p className="text-center max-[1024px]:text-sm max-[1024px]:font-light">
                     {card.content}
                   </p>
                 </div>

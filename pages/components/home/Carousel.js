@@ -82,7 +82,7 @@ const CarouselList = [
 
 const Carousel = () => {
   return (
-    <section className="w-screen lg:h-screen md:h-[590px] flex">
+    <section className="w-screen lg:h-screen md:h-screen flex">
       <Swiper
         className="mySwiper h-full w-full"
         loop={true}
@@ -105,23 +105,23 @@ const Carousel = () => {
           return (
             <SwiperSlide key={index} className="">
               <section
-                className="w-[full] h-full relative flex justify-center bg-no-repeat bg-center bg-cover max-[640px]:p-2"
+                className="w-[full] h-full relative flex justify-center bg-no-repeat bg-center bg-cover max-[1024px]:p-2"
                 style={{ backgroundImage: `url(${carousel.background})` }}
               >
                 <article className="flex w-[80%] justify-center items-start self-center max-w-[1200px] ml-[0%] 
-                max-[640px]:mx-auto max-[640px]:w-full max-[640px]:ml-auto max-[640px]:m-2 max-[640px]:h-[50%]">
-                  <div className="pt-32 max-[640px]:w-[100%] max-[640px]:absolute max-[640px]:z-[99] max-[640px]:py-2 max-[640px]:mt-48 max-[640px]:bg-[#00000057]">
-                    <p className="lg:text-base md:text-[20px] text-left text-white mb-[15px] max-[640px]:mt-[5%] max-[640px]:pl-[10%]">
+                max-[1024px]:mx-auto max-[1024px]:w-full max-[1024px]:ml-auto max-[1024px]:m-2 max-[1024px]:h-[80%]">
+                  <div className="pt-32 max-[1024px]:w-[100%] max-[1024px]:absolute max-[1024px]:z-[99] max-[1024px]:py-2 max-[1024px]:mt-48 max-[1024px]:bg-[#00000057]">
+                    <p className="lg:text-base md:text-[20px] text-left text-white mb-[15px] max-[1024px]:mt-[5%] max-[1024px]:pl-[10%]">
                       {carousel.gameType}
                     </p>
                     <p className="title-font-bold lg:text-7xl md:text-[30px] text-left text-white mb-[25px] 
-                    max-[640px]:text-4xl max-[640px]:mt-[0%] max-[640px]:pl-[10%] max-[640px]:mb-[15px]">
+                    max-[1024px]:text-4xl max-[1024px]:mt-[0%] max-[1024px]:pl-[10%] max-[1024px]:mb-[15px]">
                       {carousel.gameTitle}
                     </p>
-                    <p className="lg:text-base md:text-[20px] text-left text-white mb-[30px] max-[640px]:mt-[5%] max-[640px]:pl-[10%]">
+                    <p className="lg:text-base md:text-[20px] text-left text-white mb-[30px] max-[1024px]:mt-[5%] max-[1024px]:pl-[10%]">
                       {carousel.gameIntro}
                     </p>
-                    <div className="flex items-center max-[640px]:justify-center max-[640px]:mb-[5%]">
+                    <div className="flex items-center max-[1024px]:justify-center max-[1024px]:mb-[5%]">
                       <div className="title-font-bold flex items-center justify-center bg-white rounded-lg btn-shadow px-4 py-3 mr-2 cursor-pointer h-[50px]">
                         PlayNow
                         <img
@@ -130,7 +130,7 @@ const Carousel = () => {
                         alt="PlayNow"
                         />
                       </div>
-                      <div className="border border-white text-white rounded-lg px-4 py-3 mr-2 cursor-pointer max-[640px]:bg-add-favorite-btn">
+                      <div className="border border-white text-white rounded-lg px-4 py-3 mr-2 cursor-pointer max-[1024px]:bg-add-favorite-btn">
                         Add to favorite
                       </div>
                     </div>
@@ -140,7 +140,8 @@ const Carousel = () => {
                     alt="image"
                     src={carousel.titleImage}
                     className="w-[auto] max-w-[700px] h-screen object-cover hover:scale-110 transition deration-500 
-                    max-[640px]:w-[100%] max-[640px]:pb-[50%] max-[640px]:pt-[5%] max-[640px]:hover:scale-100 max-[640px]:transition-none"
+                    max-[1024px]:w-[100%] max-[1024px]:pb-[30%] max-[1024px]:pt-[5%] max-[1024px]:hover:scale-100 max-[1024px]:transition-none 
+                    max-[1024px]:object-contain max-[768px]:object-cover"
                   />
                   
                   {/* <Button

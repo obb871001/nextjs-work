@@ -6,7 +6,7 @@ import { HiOutlineLightBulb } from "react-icons/hi";
 import { FaBoxOpen } from "react-icons/fa";
 import IconTextBox from "@/pages/components/IconTextBox/IconTextBox";
 import BoxTitle from "@/pages/components/IconTextBox/BoxTitle";
-const iconStyle = "mb-[20px] text-[100px] max-[640px]:text-[70px]";
+const iconStyle = "mb-[20px] text-[100px] max-[1024px]:text-[70px]";
 const SKILL_LIST = [
   {
     icon: <AiOutlineFileDone className={iconStyle} />,
@@ -43,13 +43,13 @@ const SKILL_LIST = [
 const About = () => {
   return (
     <>
-      <main className="lg:h-[80vh] md:min-h-[35vh] max-[640px]:min-h-[35vh] w-full bg-[url(/Images/aboutUs/bg.jpeg)] flex items-center relative overflow-hidden">
+      <main className="lg:h-[80vh] md:min-h-[35vh] max-[1024px]:min-h-[35vh] w-full bg-[url(/Images/aboutUs/bg.jpeg)] flex items-center relative overflow-hidden">
         <section className="container mx-auto">
-          <div className="text-white max-[640px]:text-center max-[640px]:px-[20px]">
-            <p className="text-[50px] font-medium mb-[20px] max-[640px]:text-2xl font-medium">
+          <div className="text-white max-[1024px]:text-center max-[1024px]:px-[20px]">
+            <p className="text-[50px] font-medium mb-[20px] max-[1024px]:text-2xl font-medium">
               關於我們
             </p>
-            <p className="w-[450px] max-[640px]:text-sm max-[640px]:w-auto">
+            <p className="w-[450px] max-[1024px]:text-sm max-[1024px]:w-auto">
             Eaze Gaming
               由一群充滿經驗及熱誠的業界菁英創立，致力研發優質的老虎機遊戲，把轉輪的樂趣帶給全世界的玩家。此外，我們亦備有刺激的捕魚遊戲，為線上娛樂營運商提供豐富的遊戲選擇。
             </p>

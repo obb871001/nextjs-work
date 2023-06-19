@@ -40,7 +40,7 @@ module.exports = {
         "light-main-bg": "#ffe2b0",
         "light-gray": "#dedede",
         "grey-text": "#5f5f5f",
-        "dark-grey-text": "#4c245d",
+        "dark-grey-text": "#2d2d2d",
         "light-yellow-text": "#ffea73",
         "game-background-light": "#f2f2f2",
         "platform-bg": "#e3e3e3",

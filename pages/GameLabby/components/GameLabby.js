@@ -45,7 +45,7 @@ const GameLabby = () => {
       >
         <Skill />
       </section>
-      <section className="w-full min-h-[700px] bg-[#142B40] py-[50px] bg-[url(/Images/GameLabby/banner3.png)] bg-center bg-no-repeat max-[640px]:bg-none">
+      <section className="w-full min-h-[700px] bg-[#142B40] py-[50px] bg-[url(/Images/GameLabby/banner3.png)] bg-center bg-no-repeat max-[1024px]:bg-none">
         <TableLabby />
       </section>
     </>

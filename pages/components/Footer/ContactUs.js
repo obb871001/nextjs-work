@@ -4,15 +4,15 @@ import { RxTriangleUp, RxTriangleDown } from "react-icons/rx";
 
 const ContactUs = () => {
   return (
-    <section className="bg-[#202123] pt-[5.5rem] pb-[7.5rem] max-[640px]:py-[50px] flex flex-col items-center">
+    <section className="bg-[#202123] pt-[5.5rem] pb-[7.5rem] max-[1024px]:py-[50px] flex flex-col items-center">
       <div className="text-[40px] text-white mb-[40px]">
       <img src="Images/logo/EG-LOGO.png" alt="LOGO" className="w-[76px] h-[60px]" />
       </div>
-      <section className="flex items-center justify-center mb-[40px] max-[640px]:grid max-[640px]:grid-cols-3 max-[640px]:gap-4">
+      <section className="flex items-center justify-center mb-[40px] max-[1024px]:grid max-[1024px]:grid-cols-3 max-[1024px]:gap-4">
         {CONTACT_LIST.map((contactList, index) => {
           return (
             <div
-              className="mr-[40px] max-[640px]:mx-auto flex flex-col self-start"
+              className="mr-[40px] max-[1024px]:mx-auto flex flex-col self-start"
               key={index}
             >
               <p className="text-red-600 text-lg mb-[10px] tracking-wider text-center cursor-pointer">
@@ -35,8 +35,8 @@ const ContactUs = () => {
           );
         })}
       </section>
-      {/* <section className="flex items-center justify-center mb-[40px] max-[640px]:flex-col">
-        <p className="text-[#848484] mr-[10px] max-[640px]:mb-[20px] max-[640px]:text-lg">
+      {/* <section className="flex items-center justify-center mb-[40px] max-[1024px]:flex-col">
+        <p className="text-[#848484] mr-[10px] max-[1024px]:mb-[20px] max-[1024px]:text-lg">
           訂閱電子通訊
         </p>
         <div className="w-[300px] relative">

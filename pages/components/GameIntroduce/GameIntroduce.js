@@ -4,7 +4,7 @@ const GameIntroduce = ({ intro, gameBackground, gameIcon, gameModal }) => {
   return (
     <>
       <div
-        className={`lg:h-[680px] h-[340px] max-[640px]:mb-[20px] max-[640px]:rounded-xl relative bg-[${gameBackground}] group cursor-pointer flex flex-col justify-end bg-cover bg-center`}
+        className={`lg:h-[680px] h-[340px] max-[1024px]:mb-[20px] max-[1024px]:rounded-xl relative bg-[${gameBackground}] group cursor-pointer flex flex-col justify-end bg-cover bg-center`}
         style={{ backgroundImage: gameBackground }}
       >
         <div

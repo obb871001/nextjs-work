@@ -55,7 +55,7 @@ const Media = () => {
       <section className="flex flex-col gap-[30px] justify-center h-full">
         <TitleComponent
           title="MEDIA"
-          content="此欄截有我們最新的產品資訊，並有相關遊戲圖片提供免費下載，以作發布之用。"
+          content="此欄載有我們最新的產品資訊，並有相關遊戲圖片提供免費下載，以作發布之用。"
           selectTag={selectTag}
         />
         <div className="flex gap-[10px] items-center relative overflow-hidden">

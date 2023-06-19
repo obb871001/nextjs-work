@@ -35,7 +35,7 @@ const Collaborate = () => {
       <section className="flex flex-col gap-[30px] justify-center h-full">
         <TitleComponent
           title="Collaborate"
-          content="此欄截有與我們緊密合作的媒體夥伴。如有興趣合作，請即發電郵至Eazy Gaming@"
+          content="此欄載有與我們緊密合作的媒體夥伴。如有興趣合作，請即發電郵至Eazy Gaming@"
           selectTag={[]}
         />
         <div className="flex gap-[10px] items-center relative overflow-hidden">

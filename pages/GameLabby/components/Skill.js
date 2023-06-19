@@ -7,7 +7,7 @@ const Skill = () => {
   return (
     <section
       ref={ref}
-      className="container mx-auto grid grid-cols-1 lg:grid-cols-3 py-[50px] max-[640px]:px-[20px]"
+      className="container mx-auto grid grid-cols-1 lg:grid-cols-3 py-[50px] max-[1024px]:px-[20px]"
     >
       <Tip
         SVG={

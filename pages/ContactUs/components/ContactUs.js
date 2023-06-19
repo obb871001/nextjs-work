@@ -3,7 +3,7 @@ import { CONTACT_ICON } from "@/constants";
 const ContactUs = () => {
   return (
     <>
-      <section className="w-full bg-[#11100E] pt-[150px] pb-[100px]  max-[640px]:px-[20px]">
+      <section className="w-full bg-[#11100E] pt-[150px] pb-[100px]  max-[1024px]:px-[20px]">
         <section className="container mx-auto">
           <div className="md:w-[400px] lg:ml-auto mr-auto text-white">
             <p className="text-[45px] font-medium contact-us-text mb-[40px]">
@@ -13,7 +13,7 @@ const ContactUs = () => {
           </div>
         </section>
       </section>
-      <section className="bg-[url(/Images/Events/bg.jpeg)] py-[50px] lg:min-h-[80vh] bg-center bg-cover max-[640px]:px-[20px]">
+      <section className="bg-[url(/Images/Events/bg.jpeg)] py-[50px] lg:min-h-[80vh] bg-center bg-cover max-[1024px]:px-[20px]">
         <section className="container mx-auto text-white">
           <p className="text-[45px] font-medium contact-us-text-left mb-[60px]">
             通訊互動

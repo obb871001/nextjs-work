@@ -2,6 +2,7 @@ const Wrapper = ({ children, commonPadding }) => {
   return (
     <main
       className={`bg-single-bg min-h-screen min-w-screen ${
+        // commonPadding && "max-[1024px]: "
         commonPadding && "pl-[12%] pt-[90px] pb-[195px] flex "
       }`}
     >

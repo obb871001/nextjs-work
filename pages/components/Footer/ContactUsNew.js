@@ -27,8 +27,8 @@ const socialMediaLinks = [
 
 const ContactUsNew = () => {
   return (
-    <section className="pt-[2.5rem] pb-[2.5rem] flex flex-col pl-[50%] max-w-none max-[640px]:pb-[10px] max-[640px]:py-0 max-[640px]:pl-[20%]">
-      <section className="flex items-center justify-start mb-[0px] max-[640px]:justify-center ">
+    <section className="pt-[5.5rem] pb-[7.5rem] flex flex-col max-w-none max-[1024px]:pb-[10px] max-[1024px]:py-0 max-[1024px]:pl-[20%]">
+      <section className="flex items-center justify-start mb-[0px] max-[1024px]:justify-center ">
         <div className="flex">
           {socialMediaLinks.map((item) => {
             const IconComponent = item.icon; // 取得動態的元件名稱

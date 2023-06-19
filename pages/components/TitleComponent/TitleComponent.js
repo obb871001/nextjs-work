@@ -2,10 +2,12 @@ import { useState } from "react";
 import CommonTitle from "../TextComponents/CommonTitle";
 
 const TitleComponent = ({ selectTag, title, content, setIsFlipped }) => {
-  const [selectedItem, setSelectedItem] = useState(selectTag[0]?.label);
+  const [selectedItem, setSelectedItem] = useState(
+    selectTag ? selectTag[0]?.label : ""
+  );
 
   return (
-    <div className="flex gap-[20px] items-center text-white pr-[100px]">
+    <div className="flex gap-[20px] items-center text-white pr-[100px] max-[1024px]:block">
       <CommonTitle title={title} content={content} />
       <div className="flex gap-[10px] items-center">
         {selectTag?.map((item, index) => {
