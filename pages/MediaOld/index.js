@@ -1,12 +1,12 @@
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
-import Services from "./components/Services";
+import Media from "./components/Media";
 
 const Index = () => {
   return (
     <>
       <Header />
-      <Services />
+      <Media />
       <Footer />
     </>
   );

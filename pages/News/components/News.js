@@ -1,7 +1,7 @@
 import TitleComponent from "@/pages/components/TitleComponent/TitleComponent";
 import CommonWrapper from "@/pages/components/Wrapper/CommonWrapper";
 import React, { useRef } from "react";
-import CommonSwiper from "../../components/CommonSwiper/CommonSwiper";
+import CommonSwiper from "@/pages/components/CommonSwiper/CommonSwiper";
 const selectTag = [
   {
     label: "All",
@@ -49,14 +49,14 @@ const carouselList = [
   },
 ];
 
-const Media = () => {
+const News = () => {
   return (
     <CommonWrapper className={`w-full`}>
       <section className="flex flex-col gap-[30px] justify-center h-full">
         <TitleComponent
-          title="MEDIA"
-          content="此欄截有我們最新的產品資訊，並有相關遊戲圖片提供免費下載，以作發布之用。"
-          selectTag={selectTag}
+          title="NEWS"
+          content="查閱所有Eazy Gaming 參與過的展覽活動或舉辦過的推廣活動"
+          selectTag={[]}
         />
         <div className="flex gap-[10px] items-center relative overflow-hidden">
           <div className="max-w-[1340px] px-[50px] flex">
@@ -72,4 +72,4 @@ const Media = () => {
   );
 };
 
-export default Media;
+export default News;

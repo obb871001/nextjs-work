@@ -6,31 +6,43 @@ import { BsLine } from "react-icons/bs";
 import { FaTelegramPlane, FaFacebookSquare } from "react-icons/fa";
 
 const socialMediaLinks = [
-    { platform: "Facebook", link: "https://www.facebook.com", icon: FaFacebookSquare },
-    { platform: "Telegram", link: "https://www.telegram.org", icon: FaTelegramPlane },
-    { platform: "Instagram", link: "https://www.instagram.com", icon: AiFillInstagram },
-    { platform: "Line", link: "https://www.line.me", icon: BsLine },
-    { platform: "YouTube", link: "https://www.youtube.com", icon: AiFillYoutube },
-  ];
+  {
+    platform: "Facebook",
+    link: "https://www.facebook.com",
+    icon: FaFacebookSquare,
+  },
+  {
+    platform: "Telegram",
+    link: "https://www.telegram.org",
+    icon: FaTelegramPlane,
+  },
+  {
+    platform: "Instagram",
+    link: "https://www.instagram.com",
+    icon: AiFillInstagram,
+  },
+  { platform: "Line", link: "https://www.line.me", icon: BsLine },
+  { platform: "YouTube", link: "https://www.youtube.com", icon: AiFillYoutube },
+];
 
 const ContactUsNew = () => {
   return (
-    <section className="pt-[5.5rem] pb-[7.5rem] flex flex-col max-w-none max-[640px]:pb-[10px] max-[640px]:py-0 max-[640px]:pl-[20%]">
+    <section className="pt-[2.5rem] pb-[2.5rem] flex flex-col pl-[50%] max-w-none max-[640px]:pb-[10px] max-[640px]:py-0 max-[640px]:pl-[20%]">
       <section className="flex items-center justify-start mb-[0px] max-[640px]:justify-center ">
         <div className="flex">
-        {socialMediaLinks.map((item) => {
+          {socialMediaLinks.map((item) => {
             const IconComponent = item.icon; // 取得動態的元件名稱
             return (
-            <a
+              <a
                 key={item.platform}
                 href={item.link}
                 target="_blank"
                 rel="noopener noreferrer"
-            >
+              >
                 <IconComponent className="cursor-pointer !w-[25px] text-4xl !text-dark-grey-text mx-2 hover:!text-light-yellow-text" />
-            </a>
+              </a>
             );
-        })}
+          })}
         </div>
         {/* {COOPERATION.map((icon, index) => {
           return (
@@ -43,7 +55,10 @@ const ContactUsNew = () => {
           );
         })} */}
       </section>
-      <p className="title-font text-[#848484] text-sm text-center my-[10px] text-dark-grey-text">
+      <p
+        className="text-[#848484] text-sm text-center my-[10px] text-dark-grey-text"
+        style={{ fontFamily: "TitleFont" }}
+      >
         Copyright © 2023 Eazy Gaming. All Rights Reserved.
       </p>
     </section>

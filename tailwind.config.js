@@ -48,6 +48,7 @@ module.exports = {
         "main-input-border": "#FAAB20",
         "icon-border": "#a5b9bb",
         "icon-background": "#b2b2b2",
+        "single-bg": "#5B5B5B",
       },
     },
   },
