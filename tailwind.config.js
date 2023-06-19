@@ -50,6 +50,19 @@ module.exports = {
         "icon-background": "#b2b2b2",
         "single-bg": "#5B5B5B",
       },
+      keyframes: {
+        wiggle: {
+          '0%, 100%': {
+            transform: 'rotate(-1deg)'
+          },
+          '50%': {
+            transform: 'rotate(1deg)'
+          },
+        }
+      },
+      animation: {
+        wiggle: 'wiggle 3s ease-in-out infinite',
+      },
     },
   },
   variants: {

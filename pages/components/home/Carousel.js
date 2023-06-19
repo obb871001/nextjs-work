@@ -139,7 +139,7 @@ const Carousel = () => {
                   <img
                     alt="image"
                     src={carousel.titleImage}
-                    className="w-[auto] max-w-[700px] h-screen object-cover hover:scale-110 transition deration-500 
+                    className="animate-wiggle w-[auto] max-w-[700px] h-screen object-cover hover:scale-110 transition deration-500 
                     max-[1024px]:w-[100%] max-[1024px]:pb-[30%] max-[1024px]:pt-[5%] max-[1024px]:hover:scale-100 max-[1024px]:transition-none 
                     max-[1024px]:object-contain max-[768px]:object-cover"
                   />
