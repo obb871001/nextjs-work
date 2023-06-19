@@ -49,7 +49,7 @@ const Services = () => {
   return (
     <>
       <main
-        className="min-h-screen w-full max-[640px]:py-[100px] py-[200px] bg-no-repeat bg-[100%,cover]"
+        className="min-h-screen w-full max-[1024px]:py-[100px] py-[200px] bg-no-repeat bg-[100%,cover]"
         style={{
           backgroundImage:
             "linear-gradient(180deg,rgba(32,33,35,0) 0%,rgba(32,33,35,0.6) 50%,rgba(239,51,64,0.5) 100%),url(/Images/Services/bg.jpg)",
@@ -62,7 +62,7 @@ const Services = () => {
             title="服務簡介"
             content="Eazy Gaming 提供全面的一站式服務，不論在產品質量、服務管理以及技術支援，我們的專業團隊經驗豐富，隨時能為客人提供接合及營運等各方面的支援服務。"
           />
-          <section className="grid grid-cols-2 max-[640px]:grid-cols-1">
+          <section className="grid grid-cols-2 max-[1024px]:grid-cols-1">
             {SKILL_LIST.map((skill, index) => {
               return (
                 <IconTextBox

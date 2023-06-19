@@ -36,13 +36,13 @@ const Service = () => {
           <div className="max-w-[1340px] px-[50px] flex">
             <CommonSwiper
               slidesPerView={4}
-              customImagesClass={`!w-[250px] !object-contain`}
+              customImagesClass={`!w-[300px] !object-contain`}
               folderName={`Service`}
               carouselList={carouselList}
             />
           </div>
           <div
-            className="bg-white absolute w-full h-full"
+            className="bg-transparent absolute w-full h-full"
             style={{ top: "27%" }}
           ></div>
         </div>
