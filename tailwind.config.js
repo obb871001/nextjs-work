@@ -13,7 +13,7 @@ module.exports = {
         "main-color": "#FAAB20",
         "second-color": "#FFFFFF",
         "third-color": "#323C3C",
-        "rightsidebar-color": "rgb(255 255 255 / 30%)",
+        "rightsidebar-color": "rgb(255 255 255 / 40%)",
         "add-favorite-btn": "rgb(17 17 17 / 40%)",
         "date-color": "#eaeaea",
         "extra-black": "#FAAB20",

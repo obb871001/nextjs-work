@@ -12,12 +12,51 @@ const RightSidebar = ({ content }) => {
         setShowIframe(false);
     };
     const [showIframe, setShowIframe] = useState(false);
-    const handleOpenIframe = () => {
+    const [selectedGame, setSelectedGame] = useState(null);
+    const handleOpenIframe = (game) => {
+      setSelectedGame(game);
       setShowIframe(true);
     };
+  
     const handleCloseIframe = () => {
+      setSelectedGame(null);
       setShowIframe(false);
     };
+    const games = [
+      {
+        title: "Hoo Hey How",
+        intro: "Be the top-ranked dealer!!!",
+        imageUrl: "https://egslot.net/Images/GameItem/game-pic_HooheyhowliveVideo.png",
+        rating: 5,
+        category: "BeABanker",
+        iframeUrl: "https://game.helloholyfa.com/sicbo/hooheyhowvideo/?lang=eng",
+      },
+      {
+        title: "Xóc đĩa",
+        intro: "Winner takes all!!!",
+        imageUrl: "https://egslot.net/Images/GameItem/game-pic_XocdiaVideo.png",
+        rating: 4.5,
+        category: "BeABanker",
+        iframeUrl: "https://game.helloholyfa.com/sicbo/xocdiavideo/?lang=eng",
+      },
+      {
+        title: "Scibo",
+        intro: "Win in your hands!!!",
+        imageUrl: "https://egslot.net/Images/GameItem/game-pic_SicboVideo.png",
+        rating: 4.5,
+        category: "BeABanker",
+        iframeUrl: "https://game.helloholyfa.com/sicbo/sicbovideo/?lang=eng",
+      },
+      {
+        title: "Treasure King",
+        intro: "Can you beat the monsters?",
+        imageUrl: "https://egslot.net/Images/GameItem/game-pic_TreasureKing.png",
+        rating: 5,
+        category: "Fish",
+        iframeUrl: "https://game.helloholyfa.com/fishing/treasureking/?lang=eng",
+      },
+    ];
+
   return (
     <>
       {isRightSideOpen && (
@@ -29,82 +68,92 @@ const RightSidebar = ({ content }) => {
         />
       
       {/* <Search/> */}
-      <h2>{content}</h2>
+      <h2 className="title-font mb-2 text-xl">{content}</h2>
       <div className=" flex flex-col items-center justify-center px-2">
-      
-        <div className="flex items-start justify-between bg-[#d4b3e2] p-3 rounded-lg w-full max-w-[350px] cursor-pointer my-1"
-        onClick={handleOpenIframe}>
-          <div className="mr-1">
-            <img src="Images/GameItem/game-pic1.png" alt="" className="w-[80px] h-[80px] rounded-lg" />
+      {content === "HotGame" ? (
+        games.map((game, index) => (
+          <div
+            key={index}
+            className="flex items-start justify-start bg-[#d4b3e2] p-3 rounded-lg w-full max-w-[350px] cursor-pointer my-1"
+            onClick={() => handleOpenIframe(game)}
+          >
+            <div className="mr-1">
+                      <img
+                        src={game.imageUrl}
+                        alt=""
+                        className="w-[80px] h-[80px] rounded-lg"
+                      />
+                    </div>
+                    <div className="flex items-start justify-start mx-1">
+                      <div className="text-left">
+                        <div className="gameTitle text-xl title-font-bold">
+                          {game.title}
+                        </div>
+                        <div className="gameIntro text-sm">{game.intro}</div>
+                        <div className="star mt-1">
+                          <Rating
+                            style={{ fontSize: "20px", color: "#fee301" }}
+                            name="half-rating-read"
+                            defaultValue={game.rating}
+                            precision={0.5}
+                            readOnly
+                            emptyIcon={<StarIcon style={{ opacity: 1 }} fontSize="inherit" />}
+                          />
+                        </div>
+                      </div>
+                    </div>
           </div>
-          <div className="flex items-start justify-between mx-1">
-            <div className="text-left">
-              <div className="gameTitle text-xl title-font-bold">Neko Maid</div>
-              <div className="gameIntro text-sm">Race around the world!!!</div>
-              <div className="star mt-1">
-                <Rating 
-                  style={{ fontSize: '20px', color: '#fee301' }}
-                  name="half-rating-read" 
-                  defaultValue={4.5} 
-                  precision={0.5} 
-                  readOnly 
-                  emptyIcon={<StarIcon style={{ opacity: 1 }} fontSize="inherit" />}
-                />
-              </div>
+        ))
+      ) : (
+        games
+          .filter((game) => game.category === content)
+          .map((game, index) => (
+            <div
+              key={index}
+              className="flex items-start justify-start bg-[#d4b3e2] p-3 rounded-lg w-full max-w-[350px] cursor-pointer my-1"
+              onClick={() => handleOpenIframe(game)}
+            >
+              <div className="mr-1">
+                      <img
+                        src={game.imageUrl}
+                        alt=""
+                        className="w-[80px] h-[80px] rounded-lg"
+                      />
+                    </div>
+                    <div className="flex items-start justify-start mx-1">
+                      <div className="text-left">
+                        <div className="gameTitle text-xl title-font-bold">
+                          {game.title}
+                        </div>
+                        <div className="gameIntro text-sm">{game.intro}</div>
+                        <div className="star mt-1">
+                          <Rating
+                            style={{ fontSize: "20px", color: "#fee301" }}
+                            name="half-rating-read"
+                            defaultValue={game.rating}
+                            precision={0.5}
+                            readOnly
+                            emptyIcon={<StarIcon style={{ opacity: 1 }} fontSize="inherit" />}
+                          />
+                        </div>
+                      </div>
+                    </div>
             </div>
-            <div className="ml-12">
-              <BsFillSuitHeartFill 
-              className="opacity-80 text-gray-500 right-[5px] icon-heart"/>
-            </div>
-          </div>
-        </div>
-        
-
-        <div className="flex items-start justify-between bg-[#d4b3e2] p-3 rounded-lg w-full max-w-[350px] cursor-pointer my-1">
-          <div className="mr-1">
-            <img src="Images/GameItem/game-pic1.png" alt="" className="w-[80px] h-[80px] rounded-lg" />
-          </div>
-          <div className="flex items-start justify-between mx-1">
-            <div className="text-left">
-              <div className="gameTitle text-xl title-font-bold">Neko Maid</div>
-              <div className="gameIntro text-sm">Race around the world!!!</div>
-              <div className="star mt-1">
-                <Rating 
-                  style={{ fontSize: '20px', color: '#fee301' }}
-                  name="half-rating-read" 
-                  defaultValue={4.5} 
-                  precision={0.5} 
-                  readOnly 
-                  emptyIcon={<StarIcon style={{ opacity: 1 }} fontSize="inherit" />}
-                />
-              </div>
-            </div>
-            <div className="ml-12">
-              <BsFillSuitHeartFill 
-              className="opacity-80 text-gray-500 right-[5px] icon-heart"/>
-            </div>
-          </div>
-        </div>
-
+          ))
+      )}
       </div>
     </div>
     )}
     {showIframe && (
-    <div className="fixed w-full h-full top-0 z-[99999]">
-      <div className="absolute top-0 right-0 p-2">
-        <button
-        onClick={handleCloseIframe}
-        className="text-white text-4xl"
-        >
-          &#10006;
-        </button>
-      </div>
-      <iframe
-        src="https://game.helloholyfa.com/sicbo/hooheyhowvideo/?lang=eng"
-        className="w-full h-full"
-        />
-    </div>
-    )}
+          <div className="fixed w-full h-full top-0 z-[99999]">
+            <div className="absolute top-0 right-0 p-2">
+              <button onClick={handleCloseIframe} className="text-white text-4xl">
+                &#10006;
+              </button>
+            </div>
+            <iframe src={selectedGame?.iframeUrl} className="w-full h-full" />
+          </div>
+        )}
     </>
     
   );

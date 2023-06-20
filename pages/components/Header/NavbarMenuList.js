@@ -50,16 +50,16 @@ const NavbarMenuList = () => {
     //     handleItemClick("Favorite");
     //   },
     // },
-    {
-      icon: <TbSquareRoundedNumber7Filled className="text-white text-3xl hover:!text-light-yellow-text" />,
-      id: "Slot",
-      label: "Slot",
-      href: "/#",
-      onClick: (event) => {
-        event.preventDefault();
-        handleItemClick("Slot");
-      },
-    },
+    // {
+    //   icon: <TbSquareRoundedNumber7Filled className="text-white text-3xl hover:!text-light-yellow-text" />,
+    //   id: "Slot",
+    //   label: "Slot",
+    //   href: "/#",
+    //   onClick: (event) => {
+    //     event.preventDefault();
+    //     handleItemClick("Slot");
+    //   },
+    // },
     {
       icon: <BsDice5Fill className="text-white text-3xl hover:!text-light-yellow-text" />,
       id: "BeABanker",
@@ -121,7 +121,6 @@ const NavbarMenuList = () => {
             </div>
             <div
                 className={`absolute top-0 left-0 flex flex-col items-center justify-center w-full mt-40  ${isMenuOpen ? 'max-[1024px]:block' : 'max-[1024px]:hidden'}`}
-                
             >
                 <section className="h-full w-full flex flex-col items-center justify-center">
                   <div className="navigation-body max-[1024px]:w-full">
