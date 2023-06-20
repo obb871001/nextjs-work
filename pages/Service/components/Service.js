@@ -26,7 +26,7 @@ const carouselList = [
 const Service = () => {
   return (
     <CommonWrapper className={`w-full`}>
-      <section className="flex flex-col gap-[30px] justify-center h-full">
+      <section className="flex flex-col gap-[30px] justify-center h-full pl-[12%]">
         <TitleComponent
           title="Service"
           content="Eazy Gaming 提供全面的一站式服務，不論在產品質量、服務管理以及技術支援，我們的專業團隊經驗豐富，隨時能為客人提供接合及營運等各方面的支援服務。"

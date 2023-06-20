@@ -148,7 +148,7 @@ const NavbarMenuList = () => {
                                 </Link>
                               </div>
                             ))}
-                            <div className={`title-font bg-black text-white px-4 py-2 flex w-full items-center cursor-pointer text-base 
+                            <div className={`title-font bg-black text-white px-4 py-2 flex w-full items-center cursor-pointer text-base min-[1024px]:hidden
                                     ${isMenuOpen ? "px-10 py-4" : "p-4"}`}>
                               <div className="navigation-item flex flex-col items-start justify-start">
                                 {menuItems.map((menuItem) => (

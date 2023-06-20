@@ -62,7 +62,7 @@ const About = () => {
   const [isFlipped, setIsFlipped] = useState(false);
   return (
     <CommonWrapper>
-      <section className="flex flex-col gap-[30px] justify-center h-full">
+      <section className="flex flex-col gap-[30px] justify-center h-full pl-[12%]">
         <TitleComponent
           title="About"
           content="Eaze Gaming 由一群充滿經驗及熱誠的業界菁英創立，致力研發優質的老虎機遊戲，把轉輪的樂趣帶給全世界的玩家。此外，我們亦備有此機的捕魚遊戲，為線上娛樂營運商提供豐富的遊戲選擇。"

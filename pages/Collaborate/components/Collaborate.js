@@ -32,7 +32,7 @@ const carouselList = [
 const Collaborate = () => {
   return (
     <CommonWrapper className={`w-full`}>
-      <section className="flex flex-col gap-[30px] justify-center h-full">
+      <section className="flex flex-col gap-[30px] justify-center h-full pl-[12%]">
         <TitleComponent
           title="Collaborate"
           content="此欄載有與我們緊密合作的媒體夥伴。如有興趣合作，請即發電郵至Eazy Gaming@"

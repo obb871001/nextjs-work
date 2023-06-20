@@ -52,7 +52,7 @@ const carouselList = [
 const News = () => {
   return (
     <CommonWrapper className={`w-full`}>
-      <section className="flex flex-col gap-[30px] justify-center h-full">
+      <section className="flex flex-col gap-[30px] justify-center h-full pl-[12%]">
         <TitleComponent
           title="NEWS"
           content="查閱所有Eazy Gaming 參與過的展覽活動或舉辦過的推廣活動"

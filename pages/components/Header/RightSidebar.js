@@ -9,8 +9,15 @@ const RightSidebar = ({ content }) => {
     const [isRightSideOpen, setIsRightSideOpen] = useState(true);
     const handleCloseSidebar = () => {
         setIsRightSideOpen(false);//隐藏右側菜單
+        setShowIframe(false);
     };
-
+    const [showIframe, setShowIframe] = useState(false);
+    const handleOpenIframe = () => {
+      setShowIframe(true);
+    };
+    const handleCloseIframe = () => {
+      setShowIframe(false);
+    };
   return (
     <>
       {isRightSideOpen && (
@@ -24,7 +31,9 @@ const RightSidebar = ({ content }) => {
       {/* <Search/> */}
       <h2>{content}</h2>
       <div className=" flex flex-col items-center justify-center px-2">
-        <div className="flex items-start justify-between bg-[#d4b3e2] p-3 rounded-lg w-full max-w-[350px] cursor-pointer my-1">
+      
+        <div className="flex items-start justify-between bg-[#d4b3e2] p-3 rounded-lg w-full max-w-[350px] cursor-pointer my-1"
+        onClick={handleOpenIframe}>
           <div className="mr-1">
             <img src="Images/GameItem/game-pic1.png" alt="" className="w-[80px] h-[80px] rounded-lg" />
           </div>
@@ -49,6 +58,7 @@ const RightSidebar = ({ content }) => {
             </div>
           </div>
         </div>
+        
 
         <div className="flex items-start justify-between bg-[#d4b3e2] p-3 rounded-lg w-full max-w-[350px] cursor-pointer my-1">
           <div className="mr-1">
@@ -79,7 +89,24 @@ const RightSidebar = ({ content }) => {
       </div>
     </div>
     )}
+    {showIframe && (
+    <div className="fixed w-full h-full top-0 z-[99999]">
+      <div className="absolute top-0 right-0 p-2">
+        <button
+        onClick={handleCloseIframe}
+        className="text-white text-4xl"
+        >
+          &#10006;
+        </button>
+      </div>
+      <iframe
+        src="https://game.helloholyfa.com/sicbo/hooheyhowvideo/?lang=eng"
+        className="w-full h-full"
+        />
+    </div>
+    )}
     </>
+    
   );
 };
 

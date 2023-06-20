@@ -1,6 +1,7 @@
 import TitleComponent from "@/pages/components/TitleComponent/TitleComponent";
 import CommonWrapper from "@/pages/components/Wrapper/CommonWrapper";
 import React, { useRef } from "react";
+import { useState } from "react";
 import CommonSwiper from "../../components/CommonSwiper/CommonSwiper";
 const selectTag = [
   {
@@ -50,13 +51,15 @@ const carouselList = [
 ];
 
 const Media = () => {
+  const [isFlipped, setIsFlipped] = useState(false);
   return (
     <CommonWrapper className={`w-full`}>
-      <section className="flex flex-col gap-[30px] justify-center h-full">
+      <section className="flex flex-col gap-[30px] justify-center h-full pl-[12%]">
         <TitleComponent
           title="MEDIA"
           content="此欄載有我們最新的產品資訊，並有相關遊戲圖片提供免費下載，以作發布之用。"
           selectTag={selectTag}
+          setIsFlipped={setIsFlipped}
         />
         <div className="flex gap-[10px] items-center relative overflow-hidden">
           <div className="max-w-[1340px] px-[50px] flex">
