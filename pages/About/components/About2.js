@@ -59,11 +59,7 @@ const cardList = [
 ];
 
 const About = () => {
-  const [isFlipped, setIsFlipped] = useState(false); // 追蹤卡片是否被翻轉
-
-  const handleAccreditationClick = () => {
-    setIsFlipped(true); // 點擊時翻轉卡片
-  };
+  const [isFlipped, setIsFlipped] = useState(false);
   return (
     <CommonWrapper>
       <section className="flex flex-col gap-[30px] justify-center h-full pl-[12%] max-[1024px]:pl-[0%]">
@@ -73,67 +69,48 @@ const About = () => {
           selectTag={selectTag}
           setIsFlipped={setIsFlipped}
         />
-                <div className="flex gap-[10px] items-center overflow-x-scroll max-[1024px]:ml-[5%]">
-                <main
-                className={`flipped min-w-[275px] max-w-[275px] h-[350px] rounded-xl overflow-hidden cursor-pointer relative 
-                ${
-                  !isFlipped ? "" : "cardShow"
-                }`}
-              >
-                <section
+        <div className="flex gap-[10px] items-center overflow-x-scroll max-[1024px]:px-[2%]">
+  return (
+    <main className="min-w-[275px] max-w-[275px] h-[350px] rounded-xl overflow-hidden cursor-pointer relative">
+      {cardList.map((card, index) => (
+        <section
+          key={index}
+          className={`front w-full h-full ${card.textWhite && "text-white"}`}
+          style={{
+            backgroundImage: `url(${card.img})`,
+            backgroundSize: "100% 100%",
+          }}
+        >
+          <div className="p-[20px]">
+            <p className="title-font text-[27px] font-bold mb-[10px]">
+              {card.title}
+            </p>
+            <p className="text-sm">{card.content}</p>
+          </div>
+        </section>
+      ))}
+      {isFlipped &&
+        selectTag.find((tag) => tag.label === "Accreditation") && (
+          <main className="min-w-[275px] max-w-[275px] h-[350px] rounded-xl overflow-hidden flipped">
+            <section
               className="back w-full h-full text-white"
               style={{ backgroundColor: "#111" }}
             >
               <div className="p-[20px]">
                 <p className="title-font text-[27px] font-bold mb-[10px]">
-                <img
-                        className=" ml-2"
-                        src="/Images/About/bmm.png"
-                        alt="PlayNow"
-                        />
+                  背面標題
                 </p>
-                <p className="text-sm text-white mt-12">
+                <p className="text-sm text-white">
                   Eazy Gaming 我們所有的RNG遊戲均已取得全球經驗最豐富的第三方遊戲測試機構 BMM
                   在歐洲大部分司法管轄區的認證，合乎相關的法律及技術要求。
                 </p>
               </div>
             </section>
-              </main>
-          {cardList.map((card, index) => {
-            return (
-              <main
-                key={index}
-                className={`cardShow min-w-[275px] max-w-[275px] h-[350px] rounded-xl overflow-hidden cursor-pointer relative 
-                ${
-                  !isFlipped ? "" : "flipped"
-                }`}
-              >
-                <section
-                  className={`front w-full h-full ${
-                    card.textWhite && "text-white"
-                  }`}
-                  style={{
-                    backgroundImage: `url(${card.img})`,
-                    backgroundSize: "100% 100%",
-                  }}
-                >
-                  <div className="p-[20px]">
-                    <p
-                      className="text-[27px] font-bold mb-[10px]"
-                      style={{ fontFamily: "TitleFont" }}
-                    >
-                      {card.title}
-                    </p>
-                    <p className="text-sm">{card.content}</p>
-                  </div>
-                </section>
-                
-              </main>
-            );
-          })}
-          
-        </div>
-
+          </main>
+        )}
+    </main>
+  );
+</div>
       </section>
     </CommonWrapper>
   );

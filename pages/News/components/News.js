@@ -52,20 +52,27 @@ const carouselList = [
 const News = () => {
   return (
     <CommonWrapper className={`w-full`}>
-      <section className="flex flex-col gap-[30px] justify-center h-full pl-[12%]">
+      <section className="flex flex-col gap-[30px] justify-center h-full pl-[12%] max-[1024px]:pl-[0%]">
         <TitleComponent
           title="NEWS"
           content="查閱所有Eazy Gaming 參與過的展覽活動或舉辦過的推廣活動"
           selectTag={[]}
         />
-        <div className="flex gap-[10px] items-center relative overflow-hidden">
-          <div className="max-w-[1340px] px-[50px] flex">
+        <div className="flex gap-[10px] items-center relative overflow-hidden max-[1024px]:px-[2%]">
+          <div className="max-w-[1340px] px-[50px] flex max-[1024px]:hidden">
             <CommonSwiper folderName={`Media`} carouselList={carouselList} />
+          </div>
+          
+          <div className="max-w-[100%] px-[1%] flex min-[1024px]:hidden">
+            <CommonSwiper slidesPerView={1}
+            folderName={`Media`} 
+            carouselList={carouselList} />
           </div>
           <div
             className="bg-white absolute w-full h-full"
             style={{ top: "27%" }}
           ></div>
+          
         </div>
       </section>
     </CommonWrapper>

@@ -122,17 +122,17 @@ const Carousel = () => {
                       {carousel.gameIntro}
                     </p>
                     <div className="flex items-center max-[1024px]:justify-center max-[1024px]:mb-[5%]">
-                      <div className="title-font-bold flex items-center justify-center bg-white rounded-lg btn-shadow px-4 py-3 mr-2 cursor-pointer h-[50px]">
+                      {/* <div className="title-font-bold flex items-center justify-center bg-white rounded-lg btn-shadow px-4 py-3 mr-2 cursor-pointer h-[50px]">
                         PlayNow
                         <img
                         className="w-[32px] ml-2"
                         src="/Images/carousel/playNow-icon.png"
                         alt="PlayNow"
                         />
-                      </div>
-                      <div className="border border-white text-white rounded-lg px-4 py-3 mr-2 cursor-pointer max-[1024px]:bg-add-favorite-btn">
+                      </div> */}
+                      {/* <div className="border border-white text-white rounded-lg px-4 py-3 mr-2 cursor-pointer max-[1024px]:bg-add-favorite-btn">
                         Add to favorite
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                   

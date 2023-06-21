@@ -68,7 +68,7 @@ const RightSidebar = ({ content }) => {
         />
       
       {/* <Search/> */}
-      <h2 className="title-font mb-2 text-xl">{content}</h2>
+      <h2 className="title-font mb-2 text-xl py-2 text-white">{content}</h2>
       <div className=" flex flex-col items-center justify-center px-2">
       {content === "HotGame" ? (
         games.map((game, index) => (

@@ -171,7 +171,8 @@
 .flipped .front {
   transform: rotateY(180deg);
 }
-
+.flipped{display:none;}
+.cardShow{display:block;}
 .flipped .back {
   transform: rotateY(0);
 }
