@@ -7,9 +7,9 @@ const TitleComponent = ({ selectTag, title, content, setIsFlipped }) => {
   );
 
   return (
-    <div className="flex gap-[20px] items-center text-white pr-[100px] max-[1024px]:block">
+    <div className="flex gap-[20px] items-center text-white pr-[100px] max-[1024px]:block max-[1024px]:pr-[10%] max-[1024px]:px-[10%]">
       <CommonTitle title={title} content={content} />
-      <div className="flex gap-[10px] items-center">
+      <div className="flex gap-[10px] items-center max-[1024px]:mt-3">
         {selectTag?.map((item, index) => {
           return (
             <div

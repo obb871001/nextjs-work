@@ -70,14 +70,26 @@ const CommonSwiper = ({
           );
         })}
       </Swiper>
-      <div className="flex flex-col gap-[15px] items-center justify-center ml-[50px]">
+      {/* pc用輪播按鈕 */}
+      <div className="flex flex-col gap-[15px] items-center justify-center ml-[50px] max-[1024px]:hidden">
         <RiArrowUpSLine
           onClick={() => handleSlidePrev()}
-          className="text-4xl z-[10] cursor-pointer"
+          className="text-4xl z-[10] cursor-pointer hover:!text-light-yellow-text"
         />
         <RiArrowDownSLine
           onClick={() => handleSlideNext()}
-          className="text-4xl z-[10] cursor-pointer"
+          className="text-4xl z-[10] cursor-pointer hover:!text-light-yellow-text"
+        />
+      </div>
+      {/* mobile用輪播按鈕 */}
+      <div className="flex flex-col gap-[15px] items-center justify-center ml-[10px] min-[1024px]:hidden">
+        <RiArrowUpSLine
+          onClick={() => handleSlidePrev()}
+          className="text-4xl z-[10] cursor-pointer hover:!text-light-yellow-text"
+        />
+        <RiArrowDownSLine
+          onClick={() => handleSlideNext()}
+          className="text-4xl z-[10] cursor-pointer hover:!text-light-yellow-text"
         />
       </div>
     </>
