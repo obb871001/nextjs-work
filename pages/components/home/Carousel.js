@@ -82,7 +82,7 @@ const CarouselList = [
 
 const Carousel = () => {
   return (
-    <section className="w-screen h-screen lg:h-screen md:h-screen flex">
+    <section className="w-screen h-screen lg:h-screen md:h-screen flex mobile-height">
       <Swiper
         className="mySwiper h-full w-full"
         loop={true}

@@ -1,7 +1,7 @@
 const Wrapper = ({ children, commonPadding, removePadding }) => {
   return (
     <main
-      className="bg-single-bg min-h-screen min-w-screen h-screen m-0"
+      className="bg-single-bg min-w-screen h-screen m-0 mobile-height"
     >
       {/* <main
       className={`bg-single-bg min-h-screen min-w-screen h-screen m-0 ${
