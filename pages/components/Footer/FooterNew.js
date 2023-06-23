@@ -4,7 +4,7 @@ import ContactUsNew from "./ContactUsNew";
 
 const FooterNew = () => {
   return (
-    <footer className="absolute bottom-0 ml-[12%] z-[2] max-[1024px]:ml-auto mt-[-70px]">
+    <footer className="fixed bottom-0 z-[2] max-[1024px]:ml-auto max-[1024px]:w-full max-[1024px]:flex max-[1024px]:justify-center">
       {/* <ContactInput /> */}
       <ContactUsNew />
     </footer>

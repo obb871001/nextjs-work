@@ -66,7 +66,7 @@ const About = () => {
   };
   return (
     <CommonWrapper>
-      <section className="flex flex-col gap-[30px] justify-center h-full pl-[12%] max-[1024px]:pl-[0%]">
+      <section className="flex flex-col gap-[30px] justify-center pl-[12%] max-[1024px]:pl-[0%]">
         <TitleComponent
           title="About"
           content="Eaze Gaming 由一群充滿經驗及熱誠的業界菁英創立，致力研發優質的老虎機遊戲，把轉輪的樂趣帶給全世界的玩家。此外，我們亦備有此機的捕魚遊戲，為線上娛樂營運商提供豐富的遊戲選擇。"
@@ -75,7 +75,8 @@ const About = () => {
         />
                 <div className="flex gap-[10px] items-center overflow-x-scroll max-[1024px]:ml-[5%]">
                 <main
-                className={`flipped min-w-[275px] max-w-[275px] h-[350px] rounded-xl overflow-hidden cursor-pointer relative 
+                className={`flipped min-w-[300px] max-w-[300px] h-[350px] rounded-xl overflow-hidden cursor-pointer relative 
+                max-[1024px]:w-[300px] max-[1024px]:h-[250px] max-[1024px]:min-w-[300px]
                 ${
                   !isFlipped ? "" : "cardShow"
                 }`}
@@ -104,9 +105,11 @@ const About = () => {
               <main
                 key={index}
                 className={`cardShow min-w-[275px] max-w-[275px] h-[350px] rounded-xl overflow-hidden cursor-pointer relative 
+                max-[1024px]:w-[201px] max-[1024px]:h-[250px] max-[1024px]:min-w-[201px]
                 ${
                   !isFlipped ? "" : "flipped"
                 }`}
+                style={{ display: isFlipped ? 'none' : '' }}
               >
                 <section
                   className={`front w-full h-full ${
