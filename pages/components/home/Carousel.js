@@ -111,7 +111,7 @@ const Carousel = () => {
                 <article className="flex w-[80%] justify-center items-start self-center max-w-[1200px] ml-[0%] 
                 max-[1024px]:mx-auto max-[1024px]:w-full max-[1024px]:ml-auto max-[1024px]:m-0 max-[1024px]:h-[80%]">
                   <div className="pt-32 max-[1024px]:w-[100%]
-                   max-[1024px]:absolute max-[1024px]:pt-0 max-[1024px]:z-[99] max-[1024px]:p-2 max-[1024px]:mt-24 max-[1024px]:bg-[#00000057]">
+                   max-[1024px]:absolute max-[1024px]:pt-0 max-[1024px]:z-[99] max-[1024px]:p-2 max-[1024px]:mt-[50%] max-[1024px]:bg-[#00000057]">
                     <p className="lg:text-base md:text-[20px] text-left text-white mb-[15px] max-[1024px]:mt-[5%] max-[1024px]:px-[10%]">
                       {carousel.gameType}
                     </p>
