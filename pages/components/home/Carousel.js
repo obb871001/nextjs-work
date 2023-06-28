@@ -16,29 +16,35 @@ const CarouselList = [
   {
     background: "/Images/carousel/bg1.png",
     titleImage: "/Images/carousel/simbad.png",
-    gameType: "Hot game - Egames",
-    gameTitle: "ADVENTURE OF SIMBAD",
-    gameIntro: "You must stay alive in this horror/puzzle adventure.Try to survive the vengeful toys waiting for you in the abandoned toy factory. Use your GrabPack to hack electrical circuits or nab anything.",
+    gameType: "Hot game - Slot",
+    gameTitle: "ADVENTURE OF SINBAD",
+    gameIntro: "Embark on a Voyage, Seek the Treasures of the Seven Seas! In Adventure of Sinbad™, you will overcome various dangers and mythical creatures alongside Sinbad, experiencing her maturity, confidence, and pride. With a bold attitude, you will navigate through all the challenges and ultimately discover rare treasures, becoming legendary adventurers whose names will be remembered for eternity!",
     playLink: "",
     addFavorite: "",
+    gameImage1: "/Images/carousel/Sinbad_2.png",
+    gameImage2: "/Images/carousel/Sinbad_1.png",
   },
   {
     background: "/Images/carousel/bg1.png",
     titleImage: "/Images/carousel/magic-1.png",
     gameType: "Hot game - Slot",
     gameTitle: "Witch's Love",
-    gameIntro: "You must stay alive in this horror/puzzle adventure.Try to survive the vengeful toys waiting for you in the abandoned toy factory. Use your GrabPack to hack electrical circuits or nab anything.",
+    gameIntro: "Explore the mysterious power of love as you step into the Witch's Love™ enchanted cottage, you will witness the birth of magical romance! The witch, skilled in brewing various potions, has elevated her magical studies to new heights, enchanting everyone who comes into contact with her love elixirs. Are you ready to embark on this enchanting journey and seek your own treasure in this game?",
     playLink: "",
     addFavorite: "",
+    gameImage1: "/Images/carousel/Witch_2.png",
+    gameImage2: "/Images/carousel/Witch_1.png",
   },
   {
     background: "/Images/carousel/bg1.png",
     titleImage: "/Images/carousel/neko-2.png",
     gameType: "Hot game - Slot",
     gameTitle: "NEKO MAID",
-    gameIntro: "You must stay alive in this horror/puzzle adventure.Try to survive the vengeful toys waiting for you in the abandoned toy factory. Use your GrabPack to hack electrical circuits or nab anything.",
+    gameIntro: "Sweet Maids, Exclusive Experience! The Neko Maid™ warmly invites you to step into their dreamy café, where the magic of happiness surrounds every bite of your meal! The maids are young, cheerful, and adorable, and their attentive service will provide you with unparalleled care and satisfaction. Infusing your meals with love and immersing you in a sweet gaming experience.",
     playLink: "",
     addFavorite: "",
+    gameImage1: "/Images/carousel/Neko_2.png",
+    gameImage2: "/Images/carousel/Neko_1.png",
   },
   
   // {
@@ -110,8 +116,9 @@ const Carousel = () => {
               >
                 <article className="flex w-[80%] justify-center items-start self-center max-w-[1200px] ml-[0%] 
                 max-[1024px]:mx-auto max-[1024px]:w-full max-[1024px]:ml-auto max-[1024px]:m-0 max-[1024px]:h-[80%]">
-                  <div className="pt-32 max-[1024px]:w-[100%]
-                   max-[1024px]:absolute max-[1024px]:pt-0 max-[1024px]:z-[99] max-[1024px]:p-2 max-[1024px]:mt-[50%] max-[1024px]:bg-[#00000057]">
+
+                  <div className="pt-32 mt-[0%] max-[1024px]:w-[100%]
+                   max-[1024px]:absolute max-[1024px]:pt-0 max-[1024px]:z-[99] max-[1024px]:p-2 max-[1024px]:mt-[10%] max-[1024px]:bg-[#00000057]">
                     <p className="lg:text-base md:text-[20px] text-left text-white mb-[15px] max-[1024px]:mt-[5%] max-[1024px]:px-[10%]">
                       {carousel.gameType}
                     </p>
@@ -122,15 +129,32 @@ const Carousel = () => {
                     <p className="lg:text-base md:text-[20px] text-left text-white mb-[30px] max-[1024px]:mt-[5%] max-[1024px]:mb-[0] max-[1024px]:px-[10%]">
                       {carousel.gameIntro}
                     </p>
+                    
+                    <div className="flex gap-[10px] items-center my-8 max-[1024px]:justify-center max-[1024px]:mb-[5%]">
+                      <div className="">
+                        <img
+                          className="w-[300px] rounded-md hover:scale-125"
+                          src={carousel.gameImage1}
+                          alt={carousel.gameTitle}
+                          />
+                      </div>
+                      <div className="">
+                        <img
+                          className="w-[300px] rounded-md hover:scale-125"
+                          src={carousel.gameImage2}
+                          alt={carousel.gameTitle}
+                          />
+                      </div>
+                    </div>
                     <div className="flex items-center max-[1024px]:justify-center max-[1024px]:mb-[5%]">
-                      {/* <div className="title-font-bold flex items-center justify-center bg-white rounded-lg btn-shadow px-4 py-3 mr-2 cursor-pointer h-[50px]">
+                      <div className="title-font-bold flex items-center justify-center bg-white rounded-lg btn-shadow px-4 py-3 mr-2 cursor-pointer h-[50px]">
                         PlayNow
                         <img
                         className="w-[32px] ml-2"
                         src="/Images/carousel/playNow-icon.png"
                         alt="PlayNow"
                         />
-                      </div> */}
+                      </div>
                       {/* <div className="border border-white text-white rounded-lg px-4 py-3 mr-2 cursor-pointer max-[1024px]:bg-add-favorite-btn">
                         Add to favorite
                       </div> */}

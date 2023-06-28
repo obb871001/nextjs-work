@@ -72,12 +72,12 @@ const NavbarMenuList = () => {
     },
     {
       icon: <FaFish className="text-white text-3xl hover:!text-light-yellow-text" />,
-      id: "Fish",
-      label: "Fish",
+      id: "Fishing",
+      label: "Fishing",
       href: "/#",
       onClick: (event) => {
         event.preventDefault(); 
-        handleItemClick("Fish");
+        handleItemClick("Fishing");
       },
     },
   ];
@@ -101,7 +101,8 @@ const NavbarMenuList = () => {
           transition={{ duration: 0.2 }}
         >
         <div className={`fixed h-full left-0 top-0 z-10 w-[12%] max-[1024px]:z-[9999] 
-        ${isMenuOpen ? 'max-[1024px]:w-[70%]' : 'max-[1024px]:w-[20%]'}`}
+        ${isMenuOpen ? 'max-[1024px]:w-[70%]' : 'max-[1024px]:w-[20%]'} 
+        ${isMenuOpen ? 'max-[1024px]:h-full' : 'max-[1024px]:h-auto'}`}
         style={{
           backgroundColor: isMenuOpen ? "#411f51f2" : "transparent",
           boxShadow: isMenuOpen ? "2px 2px 2px rgba(20%,20%,40%,0.6),4px 4px 6px rgba(20%,20%,40%,0.4),6px 6px 12px rgba(20%,20%,40%,0.4)" : "unset"

@@ -88,7 +88,9 @@
 .title-font-bold {
   font-family: "TitleBoldFont", "Comfortaa", "Noto Sans TC", sans-serif, cursive;
 }
-@media (max-width: 1024px) {.mobile-height{height: calc(100vh - 43px);}.mobile-height2{height: calc(100vh - 43px);}}
+@media (max-width: 1024px) {
+  .mobile-height{height: calc(100vh - 43px);}.mobile-height2{height: calc(100vh - 43px);}.mobile-navigation{position: initial;}
+}
 .contact-us-text::after {
   content: "";
   margin: auto;

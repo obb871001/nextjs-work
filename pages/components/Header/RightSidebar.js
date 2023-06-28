@@ -24,7 +24,7 @@ const RightSidebar = ({ content }) => {
     };
     const games = [
       {
-        title: "Hoo Hey How",
+        title: "Fish Prawn Crab Spin",
         intro: "Be the top-ranked dealer!!!",
         imageUrl: "https://egslot.net/Images/GameItem/game-pic_HooheyhowliveVideo.png",
         rating: 5,
@@ -32,7 +32,7 @@ const RightSidebar = ({ content }) => {
         iframeUrl: "https://game.helloholyfa.com/sicbo/hooheyhowvideo/?lang=eng",
       },
       {
-        title: "Xóc đĩa",
+        title: "Xoc Dia Spin",
         intro: "Winner takes all!!!",
         imageUrl: "https://egslot.net/Images/GameItem/game-pic_XocdiaVideo.png",
         rating: 4.5,
@@ -40,7 +40,7 @@ const RightSidebar = ({ content }) => {
         iframeUrl: "https://game.helloholyfa.com/sicbo/xocdiavideo/?lang=eng",
       },
       {
-        title: "Scibo",
+        title: "Sic Bo Spin",
         intro: "Win in your hands!!!",
         imageUrl: "https://egslot.net/Images/GameItem/game-pic_SicboVideo.png",
         rating: 4.5,
@@ -52,7 +52,7 @@ const RightSidebar = ({ content }) => {
         intro: "Can you beat the monsters?",
         imageUrl: "https://egslot.net/Images/GameItem/game-pic_TreasureKing.png",
         rating: 5,
-        category: "Fish",
+        category: "Fishing",
         iframeUrl: "https://game.helloholyfa.com/fishing/treasureking/?lang=eng",
       },
     ];
