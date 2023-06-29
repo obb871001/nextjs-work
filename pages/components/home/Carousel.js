@@ -122,11 +122,11 @@ const Carousel = () => {
                     <p className="lg:text-base md:text-[20px] text-left text-white mb-[15px] max-[1024px]:mt-[5%] max-[1024px]:px-[10%]">
                       {carousel.gameType}
                     </p>
-                    <p className="title-font-bold lg:text-7xl md:text-[30px] text-left text-white mb-[25px] 
+                    <p className="title-font-bold text-myself-shadow lg:text-7xl md:text-[30px] text-left text-white mb-[25px] 
                     max-[1024px]:text-3xl max-[1024px]:mt-[0%] max-[1024px]:px-[10%] max-[1024px]:mb-[15px]">
                       {carousel.gameTitle}
                     </p>
-                    <p className="lg:text-base md:text-[20px] text-left text-white mb-[30px] max-[1024px]:mt-[5%] max-[1024px]:mb-[0] max-[1024px]:px-[10%]">
+                    <p className="lg:text-base md:text-[20px] text-myself-shadow-intro text-left text-white mb-[30px] max-[1024px]:mt-[5%] max-[1024px]:mb-[0] max-[1024px]:px-[10%]">
                       {carousel.gameIntro}
                     </p>
                     
