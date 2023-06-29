@@ -24,6 +24,7 @@ const ShareButton = () => {
     return (
         <div className="flex gap-[10px] my-4">
           <FacebookShareButton
+            className="hover:scale-110"
             url={'https://egslot.net/'}
             quote={''}
             hashtag=""
@@ -31,6 +32,7 @@ const ShareButton = () => {
             <FacebookIcon size={32} round />
           </FacebookShareButton>
           <TwitterShareButton
+            className="hover:scale-110"
             url={'https://egslot.net/'}
             quote={''}
             hashtag=""
@@ -38,6 +40,7 @@ const ShareButton = () => {
             <TwitterIcon size={32} round />
           </TwitterShareButton>
           <TelegramShareButton
+            className="hover:scale-110"
             url={'https://egslot.net/'}
             quote={''}
             hashtag=""
@@ -45,6 +48,7 @@ const ShareButton = () => {
             <TelegramIcon size={32} round />
           </TelegramShareButton>
           <LineShareButton
+            className="hover:scale-110"
             url={'https://egslot.net/'}
             quote={''}
             hashtag=""
@@ -52,6 +56,7 @@ const ShareButton = () => {
             <LineIcon size={32} round />
           </LineShareButton>
           <EmailShareButton
+            className="hover:scale-110"
             url={'https://egslot.net/'}
             quote={''}
             hashtag=""
