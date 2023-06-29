@@ -14,7 +14,7 @@ SwiperCore.use([Navigation, Autoplay]);
 
 const CarouselList = [
   {
-    background: "/Images/carousel/bg1.png",
+    background: "/Images/carousel/bg_simba.png",
     titleImage: "/Images/carousel/simbad.png",
     gameType: "Hot game - Slot",
     gameTitle: "ADVENTURE OF SINBAD",
@@ -25,7 +25,7 @@ const CarouselList = [
     gameImage2: "/Images/carousel/Sinbad_1.png",
   },
   {
-    background: "/Images/carousel/bg1.png",
+    background: "/Images/carousel/bg_witch.png",
     titleImage: "/Images/carousel/magic-1.png",
     gameType: "Hot game - Slot",
     gameTitle: "Witch's Love",
@@ -36,7 +36,7 @@ const CarouselList = [
     gameImage2: "/Images/carousel/Witch_1.png",
   },
   {
-    background: "/Images/carousel/bg1.png",
+    background: "/Images/carousel/bg_neko.png",
     titleImage: "/Images/carousel/neko-2.png",
     gameType: "Hot game - Slot",
     gameTitle: "NEKO MAID",
