@@ -105,7 +105,7 @@ const About = () => {
               <main
                 key={index}
                 className={`cardShow min-w-[275px] max-w-[275px] h-[350px] rounded-xl overflow-hidden cursor-pointer relative 
-                max-[1024px]:w-[201px] max-[1024px]:h-[250px] max-[1024px]:min-w-[201px]
+                max-[1024px]:w-[157px] max-[1024px]:h-[200px] max-[1024px]:min-w-[157px]
                 ${
                   !isFlipped ? "" : "flipped"
                 }`}
