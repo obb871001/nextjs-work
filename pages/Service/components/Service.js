@@ -5,53 +5,59 @@ import CommonSwiper from "@/pages/components/CommonSwiper/CommonSwiper";
 const carouselList = [
   {
     img: "service_API2",
-    date: "所有遊戲產品均可無縫接合至您的平台，為您提供豐富的遊戲選擇。",
+    date: "All our game products seamlessly integrate into your platform, providing you with a wide selection of games.",
+    // date: "所有遊戲產品均可無縫接合至您的平台，為您提供豐富的遊戲選擇。",
   },
   {
     img: "service_admin2",
-    date: "我們的後台系統提供實時運營數據及多種管理工具，助您更有效管理業務。",
+    date: "Our backend system offers real-time operational data and various management tools, helping you efficiently manage your business.",
+    // date: "我們的後台系統提供實時運營數據及多種管理工具，助您更有效管理業務。",
   },
   {
     img: "service_wallet2",
-    date: "我們備有轉帳錢包集成方案及單一錢包集成方案，讓玩家靈活運用資金，娛樂更加方便。",
+    date: "We provide transfer wallet integration and single wallet integration solutions, allowing players to flexibly utilize their funds for convenient entertainment.",
+    // date: "我們備有轉帳錢包集成方案及單一錢包集成方案，讓玩家靈活運用資金，娛樂更加方便。",
   },
   {
     img: "service_tech2",
-    date: "我們的支援隊伍全天候為您提供各種援助，使遊戲運行順暢、玩家全情投入、收入節節上升。",
+    date: "Our support team is available 24/7 to assist you, ensuring smooth game operation, immersive player experiences, and increasing revenues.",
+    // date: "我們的支援隊伍全天候為您提供各種援助，使遊戲運行順暢、玩家全情投入、收入節節上升。",
   },
   {
     img: "service_online2",
-    date: "我們的客服團隊人員樂於為您排解疑難、聆聽您所需。",
+    date: "Our customer service team is dedicated to resolving any inquiries and listening to your needs.",
+    // date: "我們的客服團隊人員樂於為您排解疑難、聆聽您所需。",
   },
   {
     img: "service_coin2",
-    date: "我們的遊戲支援多種主要語言及貨幣，世界各地的玩家能盡情享受我們的遊戲。",
+    date: "Our games support multiple major languages and currencies, enabling players from around the world to fully enjoy our games.",
+    // date: "我們的遊戲支援多種主要語言及貨幣，世界各地的玩家能盡情享受我們的遊戲。",
   },
 ];
 const carouselList_mobile = [
     {
-        imageUrl: "	https://egslot.net/Images/Service/service_API2.png",
-        date: "所有遊戲產品均可無縫接合至您的平台，為您提供豐富的遊戲選擇。",
+        img: "service_API2",
+        date: "Seamless game integration for a diverse selection.",
     },
     {
-        imageUrl: "	https://egslot.net/Images/Service/service_admin2.png",
-        date: "我們的後台系統提供實時運營數據及多種管理工具，助您更有效管理業務。",
+        img: "service_admin2",
+        date: "Real-time data and management tools for efficient operations.",
     },
     {
-        imageUrl: "	https://egslot.net/Images/Service/service_wallet2.png",
-        date: "我們備有轉帳錢包集成方案及單一錢包集成方案，讓玩家靈活運用資金，娛樂更加方便。",
+        img: "service_wallet2",
+        date: "Flexible wallet integration for convenient player experience.",
     },
     {
-        imageUrl: "	https://egslot.net/Images/Service/service_tech2.png",
-        date: "我們的支援隊伍全天候為您提供各種援助，使遊戲運行順暢、玩家全情投入、收入節節上升。",
+        img: "service_tech2",
+        date: "24/7 support for smooth gameplay and increased revenues.",
     },
     {
-        imageUrl: "	https://egslot.net/Images/Service/service_online2.png",
-        date: "我們的客服團隊人員樂於為您排解疑難、聆聽您所需。",
+        img: "service_online2",
+        date: "Responsive customer service catering to your needs.",
     },
     {
-        imageUrl: "	https://egslot.net/Images/Service/service_coin2.png",
-        date: "我們的遊戲支援多種主要語言及貨幣，世界各地的玩家能盡情享受我們的遊戲。",
+        img: "service_coin2",
+        date: "Multi-language and multi-currency support for global players.",
     },
   ];
 
@@ -61,7 +67,8 @@ const Service = () => {
       <section className="flex flex-col gap-[30px] justify-center h-full pl-[12%] max-[1024px]:pl-[0%]">
         <TitleComponent
           title="Service"
-          content="Eazy Gaming 提供全面的一站式服務，不論在產品質量、服務管理以及技術支援，我們的專業團隊經驗豐富，隨時能為客人提供接合及營運等各方面的支援服務。 聯絡我們：service@egslot.net"
+          content="Eazy Gaming offers comprehensive one-stop services, encompassing product quality, service management, and technical support. Contact us at service@egslot.net."
+          // content="Eazy Gaming 提供全面的一站式服務，不論在產品質量、服務管理以及技術支援，我們的專業團隊經驗豐富，隨時能為客人提供接合及營運等各方面的支援服務。 聯絡我們：service@egslot.net"
           selectTag={[]}
         />
         <div className="flex gap-[10px] items-center relative overflow-hidden max-[1024px]:px-[10%]">
@@ -83,7 +90,7 @@ const Service = () => {
               slidesPerView={1}
               customImagesClass={`!w-[300px] !object-contain`}
               folderName={`Service`}
-              carouselList={carouselList}
+              carouselList={carouselList_mobile}
             />
           </div>
         </div>

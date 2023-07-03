@@ -57,7 +57,8 @@ const Media = () => {
       <section className="flex flex-col gap-[30px] justify-center h-full pl-[12%] max-[1024px]:pl-[0%]">
         <TitleComponent
           title="MEDIA"
-          content="此欄載有我們最新的產品資訊，並有相關遊戲圖片提供免費下載，以作發布之用。"
+          content="This section contains our latest product information and offers related game images for free download, for the purpose of publication."
+          // content="此欄載有我們最新的產品資訊，並有相關遊戲圖片提供免費下載，以作發布之用。"
           selectTag={selectTag}
           setIsFlipped={setIsFlipped}
         />

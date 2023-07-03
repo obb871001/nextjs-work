@@ -56,8 +56,7 @@ const ContactUsNew = () => {
         })} */}
       </section>
       <p
-        className="text-[#848484] text-sm text-left my-[10px] text-white max-[1024px]:text-center"
-        style={{ fontFamily: "TitleFont" }}
+        className="text-[#848484] title-font text-sm text-left my-[10px] text-white max-[1024px]:text-center"
       >service@egslot.net<br></br>
         Copyright © 2023 Eazy Gaming. All Rights Reserved.
       </p>

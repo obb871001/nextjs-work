@@ -4,8 +4,7 @@ const CommonTitle = ({ title, content }) => {
   return (
     <>
       <p
-        className="text-[80px] font-extrabold max-[1024px]:text-[40px]"
-        style={{ fontFamily: "TitleFont" }}
+        className="text-[80px] title-font font-extrabold max-[1024px]:text-[40px]"
       >
         {title}
       </p>

@@ -23,8 +23,7 @@ const TitleComponent = ({ selectTag, title, content, setIsFlipped }) => {
               <p
                 className={`${
                   selectedItem === item.label ? "text-[#F5DD49]" : "text-white"
-                } text-lg  max-[1024px]:text-base`}
-                style={{ fontFamily: "TitleFont" }}
+                } text-lg title-font max-[1024px]:text-base`}
               >
                 {item.label}
               </p>

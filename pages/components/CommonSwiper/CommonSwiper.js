@@ -57,13 +57,11 @@ const CommonSwiper = ({
                   src={`/Images/${folderName}/${item.img}.png`}
                 />
                 <p
-                  className="text-[24px] font-bold my-[10px] max-[1024px]:text-[18px] max-[1024px]:my-[5px]"
-                  style={{ fontFamily: "TitleFont" }}
+                  className="text-[24px] title-font font-bold my-[5px] max-[1024px]:text-[18px]"
                 >
                   {item.label}
-                  <br />
-                  <span>{item.title}</span>
                 </p>
+                <p className="text-[24px] title-font max-[1024px]:text-[18px]">{item.title}</p>
                 <p className="text-sm">{item.date}</p>
               </section>
             </SwiperSlide>
