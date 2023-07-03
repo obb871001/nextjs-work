@@ -53,11 +53,11 @@ const CommonSwiper = ({
             <SwiperSlide key={item.img}>
               <section className={`rounded-lg cursor-pointer`}>
                 <img
-                  className={`w-[360px] h-[250px] object-cover ${customImagesClass}`}
+                  className={`w-[360px] h-[250px] max-[1024px]:w-[288px] max-[1024px]:h-[200px] object-cover ${customImagesClass}`}
                   src={`/Images/${folderName}/${item.img}.png`}
                 />
                 <p
-                  className="text-[24px] font-bold my-[10px]"
+                  className="text-[24px] font-bold my-[10px] max-[1024px]:text-[18px] max-[1024px]:my-[5px]"
                   style={{ fontFamily: "TitleFont" }}
                 >
                   {item.label}
