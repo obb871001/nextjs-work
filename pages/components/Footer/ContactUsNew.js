@@ -27,7 +27,7 @@ const socialMediaLinks = [
 
 const ContactUsNew = () => {
   return (
-    <section className="pt-[5.5rem] pb-[5.5rem] flex flex-col max-w-none max-[1024px]:pb-[0px] max-[1024px]:py-0 max-[1024px]:px-[5%]">
+    <section className="pt-[1.5rem] pb-[5.5rem] flex flex-col max-w-none max-[1024px]:pb-[0px] max-[1024px]:py-0 max-[1024px]:px-[5%]">
       <section className="flex items-center justify-start mb-[0px] max-[1024px]:justify-center ">
         {/* <div className="flex">
           {socialMediaLinks.map((item) => {
