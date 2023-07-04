@@ -26,40 +26,40 @@ const ShareButton = () => {
           <FacebookShareButton
             className="hover:scale-110"
             url={'https://egslot.net/'}
-            quote={''}
-            hashtag=""
+            quote={'EAZY Gaming, leading the Global Gaming Market Trend!'}
+            hashtag="EAZYGaming"
           >
             <FacebookIcon size={32} round />
           </FacebookShareButton>
           <TwitterShareButton
             className="hover:scale-110"
             url={'https://egslot.net/'}
-            quote={''}
-            hashtag=""
+            quote={'EAZY Gaming, leading the Global Gaming Market Trend!'}
+            hashtag="EAZYGaming"
           >
             <TwitterIcon size={32} round />
           </TwitterShareButton>
           <TelegramShareButton
             className="hover:scale-110"
             url={'https://egslot.net/'}
-            quote={''}
-            hashtag=""
+            quote={'EAZY Gaming, leading the Global Gaming Market Trend!'}
+            hashtag="EAZYGaming"
           >
             <TelegramIcon size={32} round />
           </TelegramShareButton>
           <LineShareButton
             className="hover:scale-110"
             url={'https://egslot.net/'}
-            quote={''}
-            hashtag=""
+            quote={'EAZY Gaming, leading the Global Gaming Market Trend!'}
+            hashtag="EAZYGaming"
           >
             <LineIcon size={32} round />
           </LineShareButton>
           <EmailShareButton
             className="hover:scale-110"
             url={'https://egslot.net/'}
-            quote={''}
-            hashtag=""
+            quote={'EAZY Gaming, leading the Global Gaming Market Trend!'}
+            hashtag="EAZYGaming"
           >
             <EmailIcon size={32} round />
           </EmailShareButton>

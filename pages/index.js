@@ -14,6 +14,13 @@ import FooterNew from "./components/Footer/FooterNew";
 export default function Home() {
   return (
     <>
+    <Head>
+        <meta property="og:image" content="../public/Images/logo/EGloading.png" />
+        <meta property="og:description" content="EAZY Gaming, leading the Global Gaming Market Trend!" />
+        <meta property="og:url" content="https://egslot.net/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="EAZY Gaming" />
+      </Head>
       <Header />
       <NavbarMenuList />
       {/* <HomePage /> */}
