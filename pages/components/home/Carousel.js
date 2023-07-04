@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Pagination, Navigation, Autoplay } from "swiper";
 import CarouselNavigation from "./CarouselNavigation";
@@ -18,7 +18,7 @@ const CarouselList = [
     titleImage: "/Images/carousel/simbad.png",
     gameType: "Hot game - Slot",
     gameTitle: "ADVENTURE OF SINBAD",
-    gameIntro_pc: "Embark on a Voyage, Seek the Treasures of the Seven Seas! In Adventure of Sinbad™, you will overcome various dangers and mythical creatures alongside Sinbad, experiencing her maturity, confidence, and pride. With a bold attitude, you will navigate through all the challenges and ultimately discover rare treasures, becoming legendary adventurers whose names will be remembered for eternity!",
+    gameIntro_pc: "Embark on a Voyage, Seek the Treasures of the Seven Seas! In Adventure of Sinbad™, you will overcome various dangers and mythical creatures alongside Sinbad. With a bold attitude, you will navigate through all the challenges and ultimately discover rare treasures, becoming legendary adventurers whose names will be remembered for eternity!",
     gameIntro_mobile: "Embark on a Voyage, Seek the Treasures of the Seven Seas! In Adventure of Sinbad™, you will become legendary adventurers whose names will be remembered for eternity!",
     playLink: "",
     addFavorite: "",
@@ -32,7 +32,7 @@ const CarouselList = [
     gameTitle: "Witch's Love",
     gameIntro_pc: "Explore the mysterious power of love as you step into the Witch's Love™ enchanted cottage, you will witness the birth of magical romance! The witch, skilled in brewing various potions, has elevated her magical studies to new heights, enchanting everyone who comes into contact with her love elixirs. Are you ready to embark on this enchanting journey and seek your own treasure in this game?",
     gameIntro_mobile: "Explore the mysterious power of love as you step into the Witch's Love™ enchanted cottage. The witch is enchanting everyone who comes into contact with her love elixirs. Are you ready to seek your own treasure in this game?",
-    playLink: "",
+    playLink: "https://d29juml4m9n88c.cloudfront.net/games/witchlove/?hidefps=true",
     addFavorite: "",
     gameImage1: "/Images/carousel/Witch_2.png",
     gameImage2: "/Images/carousel/Witch_1.png",
@@ -90,6 +90,18 @@ const CarouselList = [
 ];
 
 const Carousel = () => {
+  const [showIframe, setShowIframe] = useState(false);
+  const [selectedGame, setSelectedGame] = useState(null);
+
+  const handleOpenIframe = (game) => {
+    setShowIframe(true);
+    setSelectedGame(game);
+  };
+
+  const handleCloseIframe = () => {
+    setShowIframe(false);
+    setSelectedGame(null);
+  };
   return (
     <section className="w-screen h-screen lg:h-screen md:h-screen flex">
       <Swiper
@@ -155,14 +167,20 @@ const Carousel = () => {
                       </div>
                     </div>
                     <div className="flex items-center max-[1024px]:justify-center max-[1024px]:mb-[5%]">
-                      <div className="title-font-bold flex items-center justify-center bg-white rounded-lg btn-shadow px-4 py-3 mr-2 cursor-pointer h-[50px]">
-                        PlayNow
-                        <img
-                        className="w-[32px] ml-2"
-                        src="/Images/carousel/playNow-icon.png"
-                        alt="PlayNow"
-                        />
-                      </div>
+                      {/* 只有在 playLink 存在時才顯示 PlayNow 按鈕 */}
+                      {carousel.playLink && (
+                        <div
+                          className="title-font-bold flex items-center justify-center bg-white rounded-lg btn-shadow px-4 py-3 mr-2 cursor-pointer h-[50px]"
+                          onClick={() => handleOpenIframe(carousel)}
+                        >
+                          PlayNow
+                          <img
+                            className="w-[32px] ml-2"
+                            src="/Images/carousel/playNow-icon.png"
+                            alt="PlayNow"
+                          />
+                        </div>
+                      )}
                       {/* <div className="border border-white text-white rounded-lg px-4 py-3 mr-2 cursor-pointer max-[1024px]:bg-add-favorite-btn">
                         Add to favorite
                       </div> */}
@@ -193,6 +211,16 @@ const Carousel = () => {
         })}
         <CarouselNavigation />
       </Swiper>
+      {showIframe && (
+        <div className="fixed w-full h-full top-0 z-[99999]">
+          <div className="absolute top-0 right-0 p-2">
+            <button onClick={handleCloseIframe} className="text-white text-4xl">
+              &#10006;
+            </button>
+          </div>
+          <iframe src={selectedGame?.playLink} className="w-full h-full" />
+        </div>
+      )}
       {/* <FooterNew /> */}
     </section>
   );
