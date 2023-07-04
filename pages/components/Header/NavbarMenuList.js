@@ -14,6 +14,7 @@ import { CgMenu, CgMenuLeft } from "react-icons/cg";
 const NavbarMenuList = () => {
   const [selectedItem, setSelectedItem] = useState(null);
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const [isRightSidebarOpen, setRightSidebarOpen] = useState(false); // 添加状态用于控制右侧菜单的显示和隐藏
   const router = useRouter();
   const menuItems = [
     { title: "About", href: "/About" },
@@ -87,8 +88,10 @@ const NavbarMenuList = () => {
   const handleItemClick = (itemId) => {
     if (itemId === selectedItem) {
       setSelectedItem(null);
+      setRightSidebarOpen(false); // 关闭右侧菜单
     } else {
       setSelectedItem(itemId);
+      setRightSidebarOpen(true); // 打开右侧菜单
     }
   };
 
@@ -168,9 +171,12 @@ const NavbarMenuList = () => {
             
       </div>
       </motion.section>
-      {selectedItem && (
+      {selectedItem && isRightSidebarOpen && ( // 仅当右侧菜单打开且有选定项时才显示右侧菜单
         <>
-          <RightSidebar content={selectedItem} handleCloseSidebar={() => setSelectedItem(null)} />
+          <RightSidebar
+            content={selectedItem}
+            onClose={() => setRightSidebarOpen(false)} // 关闭右侧菜单的事件处理程序
+          />
           {/* <Search content={selectedItem} /> */}
         </>
       )}

@@ -6,9 +6,10 @@ import Rating from "@mui/material/Rating";
 import StarIcon from '@mui/icons-material/Star';
 import ShareButton from './ShareButton';
 import Search from "./Search";
-const RightSidebar = ({ content }) => {
+const RightSidebar = ({ content, onClose }) => {
     const [isRightSideOpen, setIsRightSideOpen] = useState(true);
     const handleCloseSidebar = () => {
+        onClose(); // 调用父组件传递的关闭事件处理程序
         setIsRightSideOpen(false);//隐藏右側菜單
         setShowIframe(false);
     };
