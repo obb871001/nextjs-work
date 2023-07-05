@@ -3,6 +3,7 @@ import '../styles/fonts.css';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import PageLoading from './components/PageLoading/PageLoading';
+import Head from 'next/head'
 
 export default function App({ Component, pageProps }) {
   const [loading, setLoading] = useState(false);
@@ -24,6 +25,10 @@ export default function App({ Component, pageProps }) {
   }, []);
   return (
     <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Eazy Gaming</title>
+      </Head>
       {loading && <PageLoading />}
       <Component {...pageProps} />
     </>

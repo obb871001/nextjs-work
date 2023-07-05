@@ -20,6 +20,8 @@ export default function Home() {
         <meta property="og:url" content="https://egslot.net/" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="EAZY Gaming" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link rel="manifest" href="./manifest.json" />
       </Head>
       <Header />
       <NavbarMenuList />

@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Pagination, Navigation, Autoplay } from "swiper";
 import CarouselNavigation from "./CarouselNavigation";
 import FooterNew from "./../Footer/FooterNew";
+import { SlSizeFullscreen, SlClose, SlSizeActual } from "react-icons/sl";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -13,18 +14,6 @@ import { Button } from "antd";
 SwiperCore.use([Navigation, Autoplay]);
 
 const CarouselList = [
-  {
-    background: "/Images/carousel/bg_simba.png",
-    titleImage: "/Images/carousel/simbad.png",
-    gameType: "Hot game - Slot",
-    gameTitle: "ADVENTURE OF SINBAD",
-    gameIntro_pc: "Embark on a Voyage, Seek the Treasures of the Seven Seas! In Adventure of Sinbad™, you will overcome various dangers and mythical creatures alongside Sinbad. With a bold attitude, you will navigate through all the challenges and ultimately discover rare treasures, becoming legendary adventurers whose names will be remembered for eternity!",
-    gameIntro_mobile: "Embark on a Voyage, Seek the Treasures of the Seven Seas! In Adventure of Sinbad™, you will become legendary adventurers whose names will be remembered for eternity!",
-    playLink: "",
-    addFavorite: "",
-    gameImage1: "/Images/carousel/Sinbad_2.png",
-    gameImage2: "/Images/carousel/Sinbad_1.png",
-  },
   {
     background: "/Images/carousel/bg_witch.png",
     titleImage: "/Images/carousel/magic-1.png",
@@ -49,28 +38,22 @@ const CarouselList = [
     gameImage1: "/Images/carousel/Neko_2.png",
     gameImage2: "/Images/carousel/Neko_1.png",
   },
-  
-  // {
-  //   background: "/Images/carousel/carousel1-2.jpg",
-  //   titleImage: "/Images/carousel/carousel1Title-2.png",
-  //   content: "CASINO",
-  // },
+  {
+    background: "/Images/carousel/bg_simba.png",
+    titleImage: "/Images/carousel/simbad.png",
+    gameType: "Hot game - Slot",
+    gameTitle: "ADVENTURE OF SINBAD",
+    gameIntro_pc: "Embark on a Voyage, Seek the Treasures of the Seven Seas! In Adventure of Sinbad™, you will overcome various dangers and mythical creatures alongside Sinbad. With a bold attitude, you will navigate through all the challenges and ultimately discover rare treasures, becoming legendary adventurers whose names will be remembered for eternity!",
+    gameIntro_mobile: "Embark on a Voyage, Seek the Treasures of the Seven Seas! In Adventure of Sinbad™, you will become legendary adventurers whose names will be remembered for eternity!",
+    playLink: "",
+    addFavorite: "",
+    gameImage1: "/Images/carousel/Sinbad_2.png",
+    gameImage2: "/Images/carousel/Sinbad_1.png",
+  },
   // {
   //   background: "/Images/carousel/carousel4.png",
   //   titleImage: "/Images/carousel/carousel4Title.png",
   //   content: "開拓遊戲新階段　贏取獎金不間斷",
-  // },
-  // {
-  //   background: "/Images/carousel/carousel1-3.jpg",
-  //   content: "開拓遊戲新階段　贏取獎金不間斷",
-  // },
-  // {
-  //   background: "/Images/carousel/carousel2-3.jpg",
-  //   content: "無與倫比的主題遊戲",
-  // },
-  // {
-  //   background: "/Images/carousel/carousel3-3.jpg",
-  //   content: "您的美麗　是贏獎金的助力",
   // },
   // {
   //   background: "/Images/carousel/carousel1.jpeg",
@@ -102,6 +85,76 @@ const Carousel = () => {
     setShowIframe(false);
     setSelectedGame(null);
   };
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const iframeRef = useRef(null);
+
+  const enterFullscreen = () => {
+    if (iframeRef.current) {
+      if (iframeRef.current.requestFullscreen) {
+        iframeRef.current.requestFullscreen();
+      } else if (iframeRef.current.mozRequestFullScreen) {
+        iframeRef.current.mozRequestFullScreen();
+      } else if (iframeRef.current.webkitRequestFullscreen) {
+        iframeRef.current.webkitRequestFullscreen();
+      } else if (iframeRef.current.msRequestFullscreen) {
+        iframeRef.current.msRequestFullscreen();
+      }
+      setIsFullscreen(true);
+    }
+  };
+
+  const exitFullscreen = () => {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.mozCancelFullScreen) {
+      document.mozCancelFullScreen();
+    } else if (document.webkitExitFullscreen) {
+      document.webkitExitFullscreen();
+    } else if (document.msExitFullscreen) {
+      document.msExitFullscreen();
+    }
+    setIsFullscreen(false);
+  };
+
+  useEffect(() => {
+    const handleFullscreenChange = () => {
+      setIsFullscreen(
+        document.fullscreenElement ||
+          document.mozFullScreenElement ||
+          document.webkitFullscreenElement ||
+          document.msFullscreenElement ||
+          false
+      );
+    };
+
+    document.addEventListener("fullscreenchange", handleFullscreenChange);
+    document.addEventListener("mozfullscreenchange", handleFullscreenChange);
+    document.addEventListener(
+      "webkitfullscreenchange",
+      handleFullscreenChange
+    );
+    document.addEventListener("msfullscreenchange", handleFullscreenChange);
+
+    return () => {
+      document.removeEventListener(
+        "fullscreenchange",
+        handleFullscreenChange
+      );
+      document.removeEventListener(
+        "mozfullscreenchange",
+        handleFullscreenChange
+      );
+      document.removeEventListener(
+        "webkitfullscreenchange",
+        handleFullscreenChange
+      );
+      document.removeEventListener(
+        "msfullscreenchange",
+        handleFullscreenChange
+      );
+    };
+  }, []);
+
   return (
     <section className="w-screen h-screen lg:h-screen md:h-screen flex">
       <Swiper
@@ -215,10 +268,24 @@ const Carousel = () => {
         <div className="fixed w-full h-full top-0 z-[99999]">
           <div className="absolute top-0 right-0 p-2">
             <button onClick={handleCloseIframe} className="text-white text-4xl">
-              &#10006;
+              <SlClose className="text-white text-4xl bg-[#00000057]" />
             </button>
           </div>
-          <iframe src={selectedGame?.playLink} className="w-full h-full" />
+          <div className="absolute bottom-0 right-0 p-2">
+            <button
+              onClick={isFullscreen ? exitFullscreen : enterFullscreen} // 點擊時切換全螢幕模式
+              className="text-white text-4xl"
+            >
+              {isFullscreen ? (
+                <SlSizeActual className="text-white text-4xl bg-[#00000057]" />
+              ) : (
+                <SlSizeFullscreen className="text-white text-4xl bg-[#00000057]" />
+              )}
+            </button>
+          </div>
+          
+            <iframe ref={iframeRef} src={selectedGame?.playLink} className="w-full h-full" />
+          
         </div>
       )}
       {/* <FooterNew /> */}

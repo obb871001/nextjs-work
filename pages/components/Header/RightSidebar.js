@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { TbArrowNarrowRight } from "react-icons/tb";
 import { BsFillSuitHeartFill } from "react-icons/bs";
 import ReactStars from 'react-stars'
 import Rating from "@mui/material/Rating";
 import StarIcon from '@mui/icons-material/Star';
+import { SlSizeFullscreen, SlClose, SlSizeActual } from "react-icons/sl";
 import ShareButton from './ShareButton';
 import Search from "./Search";
 const RightSidebar = ({ content, onClose }) => {
@@ -58,7 +59,36 @@ const RightSidebar = ({ content, onClose }) => {
         iframeUrl: "https://game.helloholyfa.com/fishing/treasureking/?lang=eng",
       },
     ];
+    const iframeRef = useRef(null);
 
+    const handleFullScreen = () => {
+      if (iframeRef.current) {
+        if (iframeRef.current.requestFullscreen) {
+          iframeRef.current.requestFullscreen();
+        } else if (iframeRef.current.mozRequestFullScreen) {
+          iframeRef.current.mozRequestFullScreen();
+        } else if (iframeRef.current.webkitRequestFullscreen) {
+          iframeRef.current.webkitRequestFullscreen();
+        } else if (iframeRef.current.msRequestFullscreen) {
+          iframeRef.current.msRequestFullscreen();
+        } else if (iframeRef.current.webkitEnterFullscreen) {
+          iframeRef.current.webkitEnterFullscreen();
+        } else if (iframeRef.current.webkitEnterFullScreen) {
+          iframeRef.current.webkitEnterFullScreen();
+        } else if (iframeRef.current.msEnterFullscreen) {
+          iframeRef.current.msEnterFullscreen();
+        } else if (iframeRef.current.msEnterFullScreen) {
+          iframeRef.current.msEnterFullScreen();
+        } else if (iframeRef.current.mozEnterFullscreen) {
+          iframeRef.current.mozEnterFullscreen();
+        } else if (iframeRef.current.mozEnterFullScreen) {
+          iframeRef.current.mozEnterFullScreen();
+        } else {
+          // Fullscreen API is not supported
+          console.log("Fullscreen API is not supported.");
+        }
+      }
+    };
   return (
     <>
       {isRightSideOpen && (
@@ -152,10 +182,15 @@ const RightSidebar = ({ content, onClose }) => {
       <div className="fixed w-full h-full top-0 z-[99999]">
         <div className="absolute top-0 right-0 p-2">
           <button onClick={handleCloseIframe} className="text-white text-4xl">
-            &#10006;
+            <SlClose className="text-white text-4xl bg-[#00000057]" />
           </button>
         </div>
-        <iframe src={selectedGame?.iframeUrl} className="w-full h-full" />
+        <div className="absolute bottom-0 right-0 p-2">
+          <button onClick={handleFullScreen} className="text-white text-4xl">
+            <SlSizeFullscreen className="text-white text-4xl bg-[#00000057]" />
+          </button>
+        </div>
+        <iframe ref={iframeRef} src={selectedGame?.iframeUrl} className="w-full h-full" />
       </div>
     )}
     
