@@ -15,40 +15,40 @@ SwiperCore.use([Navigation, Autoplay]);
 
 const CarouselList = [
   {
-    background: "/Images/carousel/bg_witch.png",
-    titleImage: "/Images/carousel/magic-1.png",
+    background: "/Images/carousel/bg_witch.webp",
+    titleImage: "/Images/carousel/magic-1.webp",
     gameType: "Hot game - Slot",
     gameTitle: "Witch's Love",
     gameIntro_pc: "Explore the mysterious power of love as you step into the Witch's Love™ enchanted cottage, you will witness the birth of magical romance! The witch, skilled in brewing various potions, has elevated her magical studies to new heights, enchanting everyone who comes into contact with her love elixirs. Are you ready to embark on this enchanting journey and seek your own treasure in this game?",
     gameIntro_mobile: "Explore the mysterious power of love as you step into the Witch's Love™ enchanted cottage. The witch is enchanting everyone who comes into contact with her love elixirs. Are you ready to seek your own treasure in this game?",
     playLink: "https://d29juml4m9n88c.cloudfront.net/games/witchlove/?hidefps=true",
     addFavorite: "",
-    gameImage1: "/Images/carousel/Witch_2.png",
-    gameImage2: "/Images/carousel/Witch_1.png",
+    gameImage1: "/Images/carousel/Witch_2.webp",
+    gameImage2: "/Images/carousel/Witch_1.webp",
   },
   {
-    background: "/Images/carousel/bg_neko.png",
-    titleImage: "/Images/carousel/neko-2.png",
+    background: "/Images/carousel/bg_neko.webp",
+    titleImage: "/Images/carousel/neko-2.webp",
     gameType: "Hot game - Slot",
     gameTitle: "NEKO MAID",
     gameIntro_pc: "Sweet Maids, Exclusive Experience! The Neko Maid™ warmly invites you to step into their dreamy café, where the magic of happiness surrounds every bite of your meal! The maids are young, cheerful, and adorable, and their attentive service will provide you with unparalleled care and satisfaction. Infusing your meals with love and immersing you in a sweet gaming experience.",
     gameIntro_mobile: "Sweet Maids, Exclusive Experience! The Neko Maid™ warmly invites you to step into their dreamy café. Infusing your meals with love and immersing you in a sweet gaming experience.",
     playLink: "",
     addFavorite: "",
-    gameImage1: "/Images/carousel/Neko_2.png",
-    gameImage2: "/Images/carousel/Neko_1.png",
+    gameImage1: "/Images/carousel/Neko_2.webp",
+    gameImage2: "/Images/carousel/Neko_1.webp",
   },
   {
-    background: "/Images/carousel/bg_simba.png",
-    titleImage: "/Images/carousel/simbad.png",
+    background: "/Images/carousel/bg_simba.webp",
+    titleImage: "/Images/carousel/simbad.webp",
     gameType: "Hot game - Slot",
     gameTitle: "ADVENTURE OF SINBAD",
     gameIntro_pc: "Embark on a Voyage, Seek the Treasures of the Seven Seas! In Adventure of Sinbad™, you will overcome various dangers and mythical creatures alongside Sinbad. With a bold attitude, you will navigate through all the challenges and ultimately discover rare treasures, becoming legendary adventurers whose names will be remembered for eternity!",
     gameIntro_mobile: "Embark on a Voyage, Seek the Treasures of the Seven Seas! In Adventure of Sinbad™, you will become legendary adventurers whose names will be remembered for eternity!",
-    playLink: "",
+    playLink: "https://d29juml4m9n88c.cloudfront.net/games/adventureofsinbad/?hidefps=true",
     addFavorite: "",
-    gameImage1: "/Images/carousel/Sinbad_2.png",
-    gameImage2: "/Images/carousel/Sinbad_1.png",
+    gameImage1: "/Images/carousel/Sinbad_2.webp",
+    gameImage2: "/Images/carousel/Sinbad_1.webp",
   },
   // {
   //   background: "/Images/carousel/carousel4.png",
@@ -229,7 +229,7 @@ const Carousel = () => {
                           PlayNow
                           <img
                             className="w-[32px] ml-2"
-                            src="/Images/carousel/playNow-icon.png"
+                            src="/Images/carousel/playNow-icon.webp"
                             alt="PlayNow"
                           />
                         </div>
@@ -284,7 +284,7 @@ const Carousel = () => {
             </button>
           </div>
           
-            <iframe ref={iframeRef} src={selectedGame?.playLink} className="w-full h-full" />
+            <iframe ref={iframeRef} src={selectedGame?.playLink} className="w-full h-full" allowFullScreen />
           
         </div>
       )}

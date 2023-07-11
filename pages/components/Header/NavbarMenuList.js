@@ -29,7 +29,10 @@ const NavbarMenuList = () => {
       id: "Home",
       label: "Home",
       href: "/#",
-      onClick: () => handleItemClick(null), // 不顯示右側選單，整頁跳轉
+      onClick: () => { 
+        setMenuOpen(false);// 關閉左側選單
+        handleItemClick(null); // 不顯示右側選單，整頁跳轉
+      },
     },
     {
       icon: <BsFire className="text-white text-3xl hover:!text-light-yellow-text" />,

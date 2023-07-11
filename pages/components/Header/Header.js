@@ -45,7 +45,7 @@ const Header = () => {
             href="/#"
           >
             <img
-              src="https://egslot.net/Images/logo/EG-LOGO.png"
+              src="https://egslot.net/Images/logo/EG-LOGO.webp"
               alt="Eazy Gaming"
               className="w-[155px] h-[48px] max-[1024px]:w-[100px] max-[1024px]:h-[31px]"
             />

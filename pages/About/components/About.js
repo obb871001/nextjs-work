@@ -19,14 +19,14 @@ const cardList = [
     title: "Specialty",
     content: "With years of industry experience, our team has mastered the secrets of popular games.",
     // content: "在業界經年累月的經驗，讓我們的團隊掌握受歡迎遊戲的竅門",
-    img: "/Images/About/specialty.png",
+    img: "/Images/About/specialty.webp",
     cardBackColor: "#FFDA6C",
   },
   {
     title: "Enthusiasm",
     content: "We are passionate about gaming and dedicated to developing products that can become classics.",
     // content: "整個團隊熱愛遊戲，滿懷熱誠，並致力開發出可以成為經典的產品",
-    img: "/Images/About/enthusiasm.png",
+    img: "/Images/About/enthusiasm.webp",
     // textWhite: true,
     cardBackColor: "#EC5068",
   },
@@ -34,7 +34,7 @@ const cardList = [
   //   title: "Creative",
   //   content: "Eazy Gaming values creativity, as it is through creativity that we can create games with unique styles. ",
   //   // content: "Eazy Gaming重視創意。全憑創意我們才可開發出獨具風格的遊戲。",
-  //   img: "/Images/About/Creative.png",
+  //   img: "/Images/About/Creative.webp",
   //   textWhite: true,
   //   cardBackColor: "#8A76FF",
   // },
@@ -42,14 +42,14 @@ const cardList = [
     title: "Creative",
     content: "Eazy Gaming values creativity, as it allows us to create unique and distinctive games.",
     // content: "Eazy Gaming重視創意。全憑創意我們才可開發出獨具風格的遊戲。",
-    img: "/Images/About/Diverse.png",
+    img: "/Images/About/Diverse.webp",
     cardBackColor: "#A9D2FF",
   },
   {
     title: "Customer",
     content: "We prioritize client perspectives and develop profit-enhancing games, generating limitless business opportunities.",
     // content: "我們從客戶的角度思考，開發有效提升營利的遊戲，共創無限商機。",
-    img: "/Images/About/Customer.png",
+    img: "/Images/About/Customer.webp",
     // textWhite: true,
     cardBackColor: "#6DCA91",
   },
@@ -57,7 +57,7 @@ const cardList = [
     title: "Novelty",
     content:"We boldly innovate, integrating state-of-the-art technologies into our games for a unique player experience.",
     // content:"我們敢於創新，不斷將嶄新新科技融入遊戲，為玩家帶來全新的遊戲體驗。",
-    img: "/Images/About/Novelty.png",
+    img: "/Images/About/Novelty.webp",
     // textWhite: true,
     cardBackColor: "#9791EF",
   },
@@ -95,7 +95,7 @@ const About = () => {
                 <p className="title-font text-[27px] font-bold mb-[10px]">
                 <img
                         className=" ml-2"
-                        src="/Images/About/bmm.png"
+                        src="/Images/About/bmm.webp"
                         alt="PlayNow"
                         />
                 </p>
