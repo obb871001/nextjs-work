@@ -68,7 +68,8 @@ const RNGGames = () => {
                 百家樂
               </p>
               <p>
-                作為風靡全亞洲的遊戲，Eazy Gaming 的百家樂以四張牌先發的方式進行。
+                作為風靡全亞洲的遊戲，Eazy Gaming
+                的百家樂以四張牌先發的方式進行。
               </p>
             </div>
             <div className="rounded-full border border-white w-[163px] h-[163px] flex items-center justify-center ml-[50px] max-[1024px]:ml-[0]">
