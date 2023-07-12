@@ -59,6 +59,51 @@ const CarouselList = [
     gameImage1: "/Images/carousel/Sinbad_2.webp",
     gameImage2: "/Images/carousel/Sinbad_1.webp",
   },
+  {
+    background: "/Images/carousel/bg_gold.webp",
+    titleImage: "/Images/carousel/gold.webp",
+    gameType: "Hot game - BeABanker",
+    gameTitle: "Spin",
+    gameIntro_pc:
+      "Challenge your luck and discover the path to becoming a winner with the Lucky Dice from the Golden Wheel. Continuing the classic tradition, the outcome of the dice rolled on the Golden Wheel will determine the victor. Diverse betting strategies allow players to experience the thrilling sensation of risking a little for a chance at a big win.",
+    gameIntro_mobile:
+      "Challenge your luck and discover the path to becoming a winner with the Lucky Dice from the Golden Wheel. Diverse betting strategies allow players to experience a big win!",
+    playLink:
+      "https://d29juml4m9n88c.cloudfront.net/games/adventureofsinbad/?hidefps=true",
+    addFavorite: "",
+    gameImage1: "/Images/carousel/gold2.webp",
+    gameImage2: "/Images/carousel/gold1.webp",
+  },
+  {
+    background: "/Images/carousel/bg_dragon.webp",
+    titleImage: "/Images/carousel/dragon.webp",
+    gameType: "Hot game - Fishing",
+    gameTitle: "Treasure King",
+    gameIntro_pc:
+      "Embark on an underwater adventure, piloting a mighty submarine through beautiful yet dangerous seas. Discover a long-lost ancient civilization's remnants, sought after by countless treasure hunters for its vast riches and unknown technologies. Encounter unique marine life and unravel the mysteries of the deep!",
+    gameIntro_mobile:
+      "Explore the depths of the ocean and uncover the mysteries of an ancient civilization. Pilot a formidable submarine, and unearth vast treasures and hidden technologies.",
+    playLink:
+      "https://game.helloholyfa.com/fishing/treasureking/?lang=eng",
+    addFavorite: "",
+    gameImage1: "/Images/carousel/dragon2.webp",
+    gameImage2: "/Images/carousel/dragon1.webp",
+  },
+  {
+    background: "/Images/carousel/bg_blockchain.webp",
+    titleImage: "/Images/carousel/blockchain.webp",
+    gameType: "Hot game - Blockchain Games",
+    gameTitle: "Blockchain Games",
+    gameIntro_pc:
+      "Experience the most exhilarating fast-paced instant game! Utilize your intuition and insight as you embark on an adventure, hoping that your choices will bring the most rewarding outcomes. With innovative technology, each game is verified to ensure absolute fairness and impartiality.",
+    gameIntro_mobile:
+      "Experience the most exhilarating fast-paced instant game! Hoping your choices will bring the most rewarding outcomes!",
+    playLink:
+      "https://d29juml4m9n88c.cloudfront.net/games/adventureofsinbad/?hidefps=true",
+    addFavorite: "",
+    gameImage1: "/Images/carousel/Sinbad_2.webp",
+    gameImage2: "/Images/carousel/Sinbad_1.webp",
+  },
   // {
   //   background: "/Images/carousel/carousel4.png",
   //   titleImage: "/Images/carousel/carousel4Title.png",
@@ -269,14 +314,14 @@ const Carousel = () => {
                     <div className="flex gap-[10px] items-center my-8 max-[1024px]:justify-center max-[1024px]:mb-[3%] max-[1024px]:mt-[3%]">
                       <div className="">
                         <img
-                          className="w-[300px] rounded-md hover:scale-125"
+                          className="w-full max-w-[300px] h-auto max-h-[250px] rounded-md hover:scale-125"
                           src={carousel.gameImage1}
                           alt={carousel.gameTitle}
                         />
                       </div>
                       <div className="">
                         <img
-                          className="w-[300px] rounded-md hover:scale-125"
+                          className="w-full max-w-[300px] h-auto max-h-[250px] rounded-md hover:scale-125"
                           src={carousel.gameImage2}
                           alt={carousel.gameTitle}
                         />
@@ -306,7 +351,7 @@ const Carousel = () => {
                   <img
                     alt="image"
                     src={carousel.titleImage}
-                    className="animate-wiggle w-[auto] max-w-[700px] h-screen object-cover hover:scale-110 transition deration-500 
+                    className="animate-wiggle w-[auto] max-w-[700px] h-screen object-contain hover:scale-110 transition deration-500 
                     max-[1024px]:w-[100%] max-[1024px]:pb-[30%] max-[1024px]:pt-[2%] max-[1024px]:hover:scale-100 max-[1024px]:transition-none 
                     max-[1024px]:object-contain max-[768px]:object-cover"
                   />

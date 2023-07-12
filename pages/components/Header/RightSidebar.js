@@ -94,7 +94,7 @@ const RightSidebar = ({ content, onClose }) => {
     {
       title: "Xoc Dia Spin",
       intro: "Winner takes all!!!",
-      imageUrl: "https://egslot.net/Images/GameItem/game-pic_XocdiaVideo.webp",
+      imageUrl: "https://egslot.net/Images/GameItem/game-pic_XocdiaVideo3.webp",
       rating: 4.5,
       category: "BeABanker",
       iframeUrl:
@@ -115,6 +115,30 @@ const RightSidebar = ({ content, onClose }) => {
       imageUrl: "https://egslot.net/Images/GameItem/game-pic_TreasureKing.webp",
       rating: 5,
       category: "Fishing",
+      iframeUrl: "https://game.helloholyfa.com/fishing/treasureking/?lang=eng",
+    },
+    {
+      title: "BlastX",
+      intro: "Receive rewards before the rocket takes off!",
+      imageUrl: "https://egslot.net/Images/GameItem/game-pic_GameIcon_BlastX.webp",
+      rating: 5,
+      category: "Blockchain Games",
+      iframeUrl: "https://game.helloholyfa.com/fishing/treasureking/?lang=eng",
+    },
+    {
+      title: "Plinko",
+      intro: "Hoping ball lands in the highest payout slot!",
+      imageUrl: "https://egslot.net/Images/GameItem/game-pic_GameIcon_Plinko.webp",
+      rating: 4,
+      category: "Blockchain Games",
+      iframeUrl: "https://game.helloholyfa.com/fishing/treasureking/?lang=eng",
+    },
+    {
+      title: "HiLo",
+      intro: "Embrace the thrilling moment of flipping cards!",
+      imageUrl: "https://egslot.net/Images/GameItem/game-pic_GameIcon_HiLo.webp",
+      rating: 5,
+      category: "Blockchain Games",
       iframeUrl: "https://game.helloholyfa.com/fishing/treasureking/?lang=eng",
     },
   ];
