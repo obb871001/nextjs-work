@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { TfiClose } from "react-icons/tfi";
 import { CONTACT_LIST } from "@/constants";
 import Link from "next/link";
@@ -9,9 +9,11 @@ import Search from "./Search";
 import { AiFillHome, AiFillHeart } from "react-icons/ai";
 import { BsFire, BsDice5Fill } from "react-icons/bs";
 import { FaFish } from "react-icons/fa";
+import { SiBlockchaindotcom } from "react-icons/si";
 import { TbSquareRoundedNumber7Filled } from "react-icons/tb";
 import { CgMenu, CgMenuLeft } from "react-icons/cg";
 const NavbarMenuList = () => {
+  const menuRef = useRef(null);
   const [selectedItem, setSelectedItem] = useState(null);
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isRightSidebarOpen, setRightSidebarOpen] = useState(false); // 添加状态用于控制右侧菜单的显示和隐藏
@@ -84,6 +86,16 @@ const NavbarMenuList = () => {
         handleItemClick("Fishing");
       },
     },
+    {
+      icon: <SiBlockchaindotcom className="text-white text-3xl hover:!text-light-yellow-text" />,
+      id: "Blockchain",
+      label: "Blockchain Games",
+      href: "/#",
+      onClick: (event) => {
+        event.preventDefault(); 
+        handleItemClick("Blockchain Games");
+      },
+    },
   ];
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
@@ -97,7 +109,19 @@ const NavbarMenuList = () => {
       setRightSidebarOpen(true); // 打开右侧菜单
     }
   };
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setMenuOpen(false);
+      }
+    };
 
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
   return (
     <AnimatePresence>
       <motion.section
@@ -112,7 +136,8 @@ const NavbarMenuList = () => {
         style={{
           backgroundColor: isMenuOpen ? "#411f51f2" : "transparent",
           boxShadow: isMenuOpen ? "2px 2px 2px rgba(20%,20%,40%,0.6),4px 4px 6px rgba(20%,20%,40%,0.4),6px 6px 12px rgba(20%,20%,40%,0.4)" : "unset"
-        }}>
+        }}
+        ref={menuRef}>
             <div className="flex items-center justify-center p-4">
                 {isMenuOpen ? (
                     <CgMenu
