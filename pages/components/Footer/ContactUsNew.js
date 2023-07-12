@@ -27,7 +27,7 @@ const socialMediaLinks = [
 
 const ContactUsNew = () => {
   return (
-    <section className="pt-[1.5rem] pb-[5.5rem] flex flex-col max-w-none max-[1024px]:pb-[0px] max-[1024px]:py-0 max-[1024px]:px-[5%]">
+    <section className="pt-[1.5rem] pb-[2.5rem] flex flex-col max-w-none max-[1024px]:pb-[0px] max-[1024px]:py-0 max-[1024px]:px-[5%]">
       <section className="flex items-center justify-start mb-[0px] max-[1024px]:justify-center ">
         {/* <div className="flex">
           {socialMediaLinks.map((item) => {
@@ -55,9 +55,8 @@ const ContactUsNew = () => {
           );
         })} */}
       </section>
-      <p
-        className="text-[#848484] title-font text-sm text-left my-[10px] text-white max-[1024px]:text-center"
-      >service@egslot.net<br></br>
+      <p className="text-[#848484] title-font text-sm text-left my-[10px] text-white max-[1024px]:text-center">
+        service@egslot.net<br></br>
         Copyright © 2023 Eazy Gaming. All Rights Reserved.
       </p>
     </section>
