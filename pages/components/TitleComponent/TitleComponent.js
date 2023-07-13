@@ -1,7 +1,17 @@
 import { useState } from "react";
 import CommonTitle from "../TextComponents/CommonTitle";
+import { useTranslation } from "react-i18next";
 
-const TitleComponent = ({ selectTag, title, content, setIsFlipped }) => {
+const TitleComponent = ({
+  selectTag,
+  title,
+  content,
+  setIsFlipped,
+  fileName,
+}) => {
+  const { t } = useTranslation();
+  const i18n = (key) => t(`${fileName}.${key}`);
+
   const [selectedItem, setSelectedItem] = useState(
     selectTag ? selectTag[0]?.label : ""
   );
@@ -23,9 +33,9 @@ const TitleComponent = ({ selectTag, title, content, setIsFlipped }) => {
               <p
                 className={`${
                   selectedItem === item.label ? "text-[#F5DD49]" : "text-white"
-                } text-lg title-font max-[1024px]:text-base`}
+                } text-lg title-font max-[1024px]:text-base break-keep	`}
               >
-                {item.label}
+                {i18n(item.label)}
               </p>
               <div class="flex items-center justify-center">
                 <hr

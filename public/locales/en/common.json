@@ -1,0 +1,130 @@
+{
+  "common": {
+    "SLOT": "Slot",
+    "Hot game": "Hot game",
+    "HotGame": "Hot Game",
+    "Blockchain Games": "Blockchain Games",
+    "Fishing": "Fishing",
+    "BeABanker": "Be A Banker",
+    "playnow": "Play Now",
+    "Home": "Home",
+    "Hot": "Hot"
+  },
+  "navbar": {
+    "About": "About",
+    "Service": "Service"
+  },
+  "rightSide": {
+    "fishPawnCrabSpin": {
+      "title": "Fish Pawn Crab Spin",
+      "intro": "Be the top-ranked dealer!!!"
+    },
+    "xocDiaSpin": {
+      "title": "Xoc Dia Spin",
+      "intro": "Winner takes all!!!"
+    },
+    "sicBoSpin": {
+      "title": "Sic Bo Spin",
+      "intro": "Win in your hands!!!"
+    },
+    "treasureKing": {
+      "title": "Treasure King",
+      "intro": "Can you beat the monsters?"
+    },
+    "blastX": {
+      "title": "Blast X",
+      "intro": "Receive rewards before the rocket takes off!"
+    },
+    "plinko": {
+      "title": "Plinko",
+      "intro": "Hoping ball lands in the highest payout slot!"
+    },
+    "hilo": {
+      "title": "Hi-Lo",
+      "intro": "Embrace the thrilling moment of flipping cards!"
+    }
+  },
+  "carousel": {
+    "witchLove": {
+      "title": "Witch's Love",
+      "introPC": "Explore the mysterious power of love as you step into the Witch's Love™ enchanted cottage, you will witness the birth of magical romance! The witch, skilled in brewing various potions, has elevated her magical studies to new heights, enchanting everyone who comes into contact with her love elixirs. Are you ready to embark on this enchanting journey and seek your own treasure in this game?",
+      "introMobile": "Explore the mysterious power of love as you step into the Witch's Love™ enchanted cottage. The witch is enchanting everyone who comes into contact with her love elixirs. Are you ready to seek your own treasure in this game?"
+    },
+    "nekoMaid": {
+      "title": "Neko Maid",
+      "introPC": "Sweet Maids, Exclusive Experience! The Neko Maid™ warmly invites you to step into their dreamy café, where the magic of happiness surrounds every bite of your meal! The maids are young, cheerful, and adorable, and their attentive service will provide you with unparalleled care and satisfaction. Infusing your meals with love and immersing you in a sweet gaming experience.",
+      "introMobile": "Sweet Maids, Exclusive Experience! The Neko Maid™ warmly invites you to step into their dreamy café. Infusing your meals with love and immersing you in a sweet gaming experience."
+    },
+    "adventureOfSinbad": {
+      "title": "Adventure of Sinbad",
+      "introPC": "Embark on a Voyage, Seek the Treasures of the Seven Seas! In Adventure of Sinbad™, you will overcome various dangers and mythical creatures alongside Sinbad. With a bold attitude, you will navigate through all the challenges and ultimately discover rare treasures, becoming legendary adventurers whose names will be remembered for eternity!",
+      "introMobile": "Embark on a Voyage, Seek the Treasures of the Seven Seas! In Adventure of Sinbad™, you will become legendary adventurers whose names will be remembered for eternity!"
+    },
+    "spin": {
+      "title": "Spin",
+      "introPC": "Challenge your luck and discover the path to becoming a winner with the Lucky Dice from the Golden Wheel. Continuing the classic tradition, the outcome of the dice rolled on the Golden Wheel will determine the victor. Diverse betting strategies allow players to experience the thrilling sensation of risking a little for a chance at a big win.",
+      "introMobile": "Challenge your luck and discover the path to becoming a winner with the Lucky Dice from the Golden Wheel. Diverse betting strategies allow players to experience a big win!"
+    },
+    "treasureKing": {
+      "title": "Treasure King",
+      "introPC": "Embark on an underwater adventure, piloting a mighty submarine through beautiful yet dangerous seas. Discover a long-lost ancient civilization's remnants, sought after by countless treasure hunters for its vast riches and unknown technologies. Encounter unique marine life and unravel the mysteries of the deep!",
+      "introMobile": "Explore the depths of the ocean and uncover the mysteries of an ancient civilization. Pilot a formidable submarine, and unearth vast treasures and hidden technologies."
+    },
+    "blockchainGames": {
+      "title": "Blockchain Games",
+      "introPC": "Experience the most exhilarating fast-paced instant game! Utilize your intuition and insight as you embark on an adventure, hoping that your choices will bring the most rewarding outcomes. With innovative technology, each game is verified to ensure absolute fairness and impartiality.",
+      "introMobile": "Experience the most exhilarating fast-paced instant game! Hoping your choices will bring the most rewarding outcomes!"
+    }
+  },
+  "service": {
+    "title": "Service",
+    "content": "Eazy Gaming offers comprehensive one-stop services, encompassing product quality, service management, and technical support. Contact us at service@egslot.net.",
+    "PCIntro": {
+      "1": "All our game products seamlessly integrate into your platform, providing you with a wide selection of games.",
+      "2": "Our backend system offers real-time operational data and various management tools, helping you efficiently manage your business.",
+      "3": "We provide transfer wallet integration and single wallet integration solutions, allowing players to flexibly utilize their funds for convenient entertainment.",
+      "4": "Our support team is available 24/7 to assist you, ensuring smooth game operation, immersive player experiences, and increasing revenues.",
+      "5": "Our customer service team is dedicated to resolving any inquiries and listening to your needs.",
+      "6": "Our games support multiple major languages and currencies, enabling players from around the world to fully enjoy our games."
+    },
+    "MobileIntro": {
+      "1": "Seamless game integration for a diverse selection.",
+      "2": "Real-time data and management tools for efficient operations.",
+      "3": "Flexible wallet integration for convenient player experience.",
+      "4": "24/7 support for smooth gameplay and increased revenues.",
+      "5": "Responsive customer service catering to your needs.",
+      "6": "Multi-language and multi-currency support for global players."
+    }
+  },
+  "about": {
+    "Accreditation": "Accreditation",
+    "Team": "Team",
+    "title": "About",
+    "content": "Eazy Gaming, founded by experienced and passionate industry experts, develops top-notch slot games worldwide. We also offer a fishing game, providing rich gaming options for online entertainment operators.",
+    "card": {
+      "1": {
+        "title": "Specialty",
+        "content": "With years of industry experience, our team has mastered the secrets of popular games."
+      },
+      "2": {
+        "title": "Enthusiasm",
+        "content": "We are passionate about gaming and dedicated to developing products that can become classics."
+      },
+      "3": {
+        "title": "Creative",
+        "content": "Eazy Gaming values creativity, as it allows us to create unique and distinctive games."
+      },
+      "4": {
+        "title": "Customer",
+        "content": "We prioritize client perspectives and develop profit-enhancing games, generating limitless business opportunities."
+      },
+      "5": {
+        "title": "Novelty",
+        "content": "We boldly innovate, integrating state-of-the-art technologies into our games for a unique player experience."
+      }
+    },
+    "bmm": {
+      "content": "Our RNG games are certified by BMM, a leading global game testing agency. We meet all legal and technical requirements in most European jurisdictions."
+    }
+  }
+}

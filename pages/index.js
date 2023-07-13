@@ -9,14 +9,21 @@ import ToDownScroll from "./components/home/ToDownScroll";
 import Carousel from "./components/home/Carousel";
 import GameTypeChoose from "./components/home/GameTypeChoose";
 import FooterNew from "./components/Footer/FooterNew";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 // const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <>
-    <Head>
-        <meta property="og:image" content="../public/Images/logo/EGloading.png" />
-        <meta property="og:description" content="EAZY Gaming, leading the Global Gaming Market Trend!" />
+      <Head>
+        <meta
+          property="og:image"
+          content="../public/Images/logo/EGloading.png"
+        />
+        <meta
+          property="og:description"
+          content="EAZY Gaming, leading the Global Gaming Market Trend!"
+        />
         <meta property="og:url" content="https://egslot.net/" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="EAZY Gaming" />
@@ -31,7 +38,15 @@ export default function Home() {
       {/* <ToDownScroll /> */}
       <Carousel />
       {/* <GameTypeChoose />*/}
-      <FooterNew /> 
+      <FooterNew />
     </>
   );
+}
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])),
+    },
+  };
 }

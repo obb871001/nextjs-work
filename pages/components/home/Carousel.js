@@ -12,121 +12,115 @@ import "swiper/css/effect-fade";
 import "swiper/css/autoplay";
 import { Button } from "antd";
 import NoticeScroll from "../NoticeScroll/noticeScroll";
+import { useTranslation } from "next-i18next";
 SwiperCore.use([Navigation, Autoplay]);
 
-const CarouselList = [
-  {
-    background: "/Images/carousel/bg_witch.webp",
-    titleImage: "/Images/carousel/magic-1.webp",
-    gameType: "Hot game - Slot",
-    gameTitle: "Witch's Love",
-    gameIntro_pc:
-      "Explore the mysterious power of love as you step into the Witch's Love™ enchanted cottage, you will witness the birth of magical romance! The witch, skilled in brewing various potions, has elevated her magical studies to new heights, enchanting everyone who comes into contact with her love elixirs. Are you ready to embark on this enchanting journey and seek your own treasure in this game?",
-    gameIntro_mobile:
-      "Explore the mysterious power of love as you step into the Witch's Love™ enchanted cottage. The witch is enchanting everyone who comes into contact with her love elixirs. Are you ready to seek your own treasure in this game?",
-    playLink:
-      "https://d29juml4m9n88c.cloudfront.net/games/witchlove/?lang=en&curr=usd&hidefps=true",
-    addFavorite: "",
-    gameImage1: "/Images/carousel/Witch_2.webp",
-    gameImage2: "/Images/carousel/Witch_1.webp",
-  },
-  {
-    background: "/Images/carousel/bg_neko.webp",
-    titleImage: "/Images/carousel/neko-2.webp",
-    gameType: "Hot game - Slot",
-    gameTitle: "NEKO MAID",
-    gameIntro_pc:
-      "Sweet Maids, Exclusive Experience! The Neko Maid™ warmly invites you to step into their dreamy café, where the magic of happiness surrounds every bite of your meal! The maids are young, cheerful, and adorable, and their attentive service will provide you with unparalleled care and satisfaction. Infusing your meals with love and immersing you in a sweet gaming experience.",
-    gameIntro_mobile:
-      "Sweet Maids, Exclusive Experience! The Neko Maid™ warmly invites you to step into their dreamy café. Infusing your meals with love and immersing you in a sweet gaming experience.",
-    playLink: "https://d29juml4m9n88c.cloudfront.net/games/nekomaid/?lang=en&curr=usd&hidefps=true",
-    addFavorite: "",
-    gameImage1: "/Images/carousel/Neko_2.webp",
-    gameImage2: "/Images/carousel/Neko_1.webp",
-  },
-  {
-    background: "/Images/carousel/bg_simba.webp",
-    titleImage: "/Images/carousel/simbad.webp",
-    gameType: "Hot game - Slot",
-    gameTitle: "ADVENTURE OF SINBAD",
-    gameIntro_pc:
-      "Embark on a Voyage, Seek the Treasures of the Seven Seas! In Adventure of Sinbad™, you will overcome various dangers and mythical creatures alongside Sinbad. With a bold attitude, you will navigate through all the challenges and ultimately discover rare treasures, becoming legendary adventurers whose names will be remembered for eternity!",
-    gameIntro_mobile:
-      "Embark on a Voyage, Seek the Treasures of the Seven Seas! In Adventure of Sinbad™, you will become legendary adventurers whose names will be remembered for eternity!",
-    playLink:
-      "https://d29juml4m9n88c.cloudfront.net/games/adventureofsinbad/?lang=en&curr=usd&hidefps=true",
-    addFavorite: "",
-    gameImage1: "/Images/carousel/Sinbad_2.webp",
-    gameImage2: "/Images/carousel/Sinbad_1.webp",
-  },
-  {
-    background: "/Images/carousel/bg_gold.webp",
-    titleImage: "/Images/carousel/gold.webp",
-    gameType: "Hot game - BeABanker",
-    gameTitle: "Spin",
-    gameIntro_pc:
-      "Challenge your luck and discover the path to becoming a winner with the Lucky Dice from the Golden Wheel. Continuing the classic tradition, the outcome of the dice rolled on the Golden Wheel will determine the victor. Diverse betting strategies allow players to experience the thrilling sensation of risking a little for a chance at a big win.",
-    gameIntro_mobile:
-      "Challenge your luck and discover the path to becoming a winner with the Lucky Dice from the Golden Wheel. Diverse betting strategies allow players to experience a big win!",
-    playLink:
-      "https://d29juml4m9n88c.cloudfront.net/games/sicbovideo/?lang=en&curr=usd",
-    addFavorite: "",
-    gameImage1: "/Images/carousel/gold2.webp",
-    gameImage2: "/Images/carousel/gold1.webp",
-  },
-  {
-    background: "/Images/carousel/bg_dragon.webp",
-    titleImage: "/Images/carousel/dragon.webp",
-    gameType: "Hot game - Fishing",
-    gameTitle: "Treasure King",
-    gameIntro_pc:
-      "Embark on an underwater adventure, piloting a mighty submarine through beautiful yet dangerous seas. Discover a long-lost ancient civilization's remnants, sought after by countless treasure hunters for its vast riches and unknown technologies. Encounter unique marine life and unravel the mysteries of the deep!",
-    gameIntro_mobile:
-      "Explore the depths of the ocean and uncover the mysteries of an ancient civilization. Pilot a formidable submarine, and unearth vast treasures and hidden technologies.",
-    playLink:
-      "https://d29juml4m9n88c.cloudfront.net/games/treasureking/?lang=en&curr=usd",
-    addFavorite: "",
-    gameImage1: "/Images/carousel/dragon2.webp",
-    gameImage2: "/Images/carousel/dragon1.webp",
-  },
-  {
-    background: "/Images/carousel/bg_blockchain.webp",
-    titleImage: "/Images/carousel/blockchain.webp",
-    gameType: "Hot game - Blockchain Games",
-    gameTitle: "Blockchain Games",
-    gameIntro_pc:
-      "Experience the most exhilarating fast-paced instant game! Utilize your intuition and insight as you embark on an adventure, hoping that your choices will bring the most rewarding outcomes. With innovative technology, each game is verified to ensure absolute fairness and impartiality.",
-    gameIntro_mobile:
-      "Experience the most exhilarating fast-paced instant game! Hoping your choices will bring the most rewarding outcomes!",
-    playLink:
-      "https://d29juml4m9n88c.cloudfront.net/games/blastxp/?lang=en&curr=usd",
-    addFavorite: "",
-    gameImage1: "/Images/carousel/Sinbad_2.webp",
-    gameImage2: "/Images/carousel/Sinbad_1.webp",
-  },
-  // {
-  //   background: "/Images/carousel/carousel4.png",
-  //   titleImage: "/Images/carousel/carousel4Title.png",
-  //   content: "開拓遊戲新階段　贏取獎金不間斷",
-  // },
-  // {
-  //   background: "/Images/carousel/carousel1.jpeg",
-  //   titleImage: "/Images/carousel/carousel1Title.png",
-  //   content: "開拓遊戲新階段　贏取獎金不間斷",
-  // },
-  // {
-  //   background: "/Images/carousel/carousel2.jpeg",
-  //   titleImage: "/Images/carousel/carousel2Title.png",
-  //   content: "無與倫比的主題遊戲",
-  // },
-  // {
-  //   background: "/Images/carousel/carousel3.jpeg",
-  //   titleImage: "/Images/carousel/carousel3Title.png",
-  //   content: "您的美麗　是贏獎金的助力",
-  // },
-];
-
 const Carousel = () => {
+  const { t } = useTranslation("common");
+  const i18n = (key) => t(`carousel.${key}`);
+  const i18nCommon = (key) => t(`common.${key}`);
+
+  const CarouselList = [
+    {
+      background: "/Images/carousel/bg_witch.webp",
+      titleImage: "/Images/carousel/magic-1.webp",
+      gameType: `${i18nCommon("Hot game")} - ${i18nCommon("SLOT")}`,
+      gameTitle: i18n("witchLove.title"),
+      gameIntro_pc: i18n("witchLove.introPC"),
+      gameIntro_mobile: i18n("witchLove.introMobile"),
+      playLink:
+        "https://d29juml4m9n88c.cloudfront.net/games/witchlove/?lang=en&curr=usd&hidefps=true",
+      addFavorite: "",
+      gameImage1: "/Images/carousel/Witch_2.webp",
+      gameImage2: "/Images/carousel/Witch_1.webp",
+    },
+    {
+      background: "/Images/carousel/bg_neko.webp",
+      titleImage: "/Images/carousel/neko-2.webp",
+      gameType: `${i18nCommon("Hot game")} - ${i18nCommon("SLOT")}`,
+      gameTitle: i18n("nekoMaid.title"),
+      gameIntro_pc: i18n("nekoMaid.introPC"),
+      gameIntro_mobile: i18n("nekoMaid.introMobile"),
+      playLink:
+        "https://d29juml4m9n88c.cloudfront.net/games/nekomaid/?lang=en&curr=usd&hidefps=true",
+      addFavorite: "",
+      gameImage1: "/Images/carousel/Neko_2.webp",
+      gameImage2: "/Images/carousel/Neko_1.webp",
+    },
+    {
+      background: "/Images/carousel/bg_simba.webp",
+      titleImage: "/Images/carousel/simbad.webp",
+      gameType: `${i18nCommon("Hot game")} - ${i18nCommon("SLOT")}`,
+      gameTitle: i18n("adventureOfSinbad.title"),
+      gameIntro_pc: i18n("adventureOfSinbad.introPC"),
+      gameIntro_mobile: i18n("adventureOfSinbad.introMobile"),
+      playLink:
+        "https://d29juml4m9n88c.cloudfront.net/games/adventureofsinbad/?lang=en&curr=usd&hidefps=true",
+      addFavorite: "",
+      gameImage1: "/Images/carousel/Sinbad_2.webp",
+      gameImage2: "/Images/carousel/Sinbad_1.webp",
+    },
+    {
+      background: "/Images/carousel/bg_gold.webp",
+      titleImage: "/Images/carousel/gold.webp",
+      gameType: `${i18nCommon("Hot game")} - ${i18nCommon("BeABanker")}`,
+      gameTitle: i18n("spin.title"),
+      gameIntro_pc: i18n("spin.introPC"),
+      gameIntro_mobile: i18n("spin.introMobile"),
+      playLink:
+        "https://d29juml4m9n88c.cloudfront.net/games/sicbovideo/?lang=en&curr=usd",
+      addFavorite: "",
+      gameImage1: "/Images/carousel/gold2.webp",
+      gameImage2: "/Images/carousel/gold1.webp",
+    },
+    {
+      background: "/Images/carousel/bg_dragon.webp",
+      titleImage: "/Images/carousel/dragon.webp",
+      gameType: `${i18nCommon("Hot game")} - ${i18nCommon("Fishing")}`,
+      gameTitle: i18n("treasureKing.title"),
+      gameIntro_pc: i18n("treasureKing.introPC"),
+      gameIntro_mobile: i18n("treasureKing.introMobile"),
+      playLink:
+        "https://d29juml4m9n88c.cloudfront.net/games/treasureking/?lang=en&curr=usd",
+      addFavorite: "",
+      gameImage1: "/Images/carousel/dragon2.webp",
+      gameImage2: "/Images/carousel/dragon1.webp",
+    },
+    {
+      background: "/Images/carousel/bg_blockchain.webp",
+      titleImage: "/Images/carousel/blockchain.webp",
+      gameType: `${i18nCommon("Hot game")} - ${i18nCommon("Blockchain Games")}`,
+      gameTitle: i18n("blockchainGames.title"),
+      gameIntro_pc: i18n("blockchainGames.introPC"),
+      gameIntro_mobile: i18n("blockchainGames.introMobile"),
+      playLink:
+        "https://d29juml4m9n88c.cloudfront.net/games/blastxp/?lang=en&curr=usd",
+      addFavorite: "",
+      gameImage1: "/Images/carousel/Sinbad_2.webp",
+      gameImage2: "/Images/carousel/Sinbad_1.webp",
+    },
+    // {
+    //   background: "/Images/carousel/carousel4.png",
+    //   titleImage: "/Images/carousel/carousel4Title.png",
+    //   content: "開拓遊戲新階段　贏取獎金不間斷",
+    // },
+    // {
+    //   background: "/Images/carousel/carousel1.jpeg",
+    //   titleImage: "/Images/carousel/carousel1Title.png",
+    //   content: "開拓遊戲新階段　贏取獎金不間斷",
+    // },
+    // {
+    //   background: "/Images/carousel/carousel2.jpeg",
+    //   titleImage: "/Images/carousel/carousel2Title.png",
+    //   content: "無與倫比的主題遊戲",
+    // },
+    // {
+    //   background: "/Images/carousel/carousel3.jpeg",
+    //   titleImage: "/Images/carousel/carousel3Title.png",
+    //   content: "您的美麗　是贏獎金的助力",
+    // },
+  ];
+
   const isBrowser = typeof window !== "undefined";
   const [showIframe, setShowIframe] = useState(false);
   const [selectedGame, setSelectedGame] = useState(null);
@@ -270,7 +264,7 @@ const Carousel = () => {
         //   clickable: true,
         // }}
         autoplay={{
-          delay: 1000000,
+          delay: 7000,
           disableOnInteraction: false,
         }}
         modules={[Autoplay]}
@@ -334,7 +328,7 @@ const Carousel = () => {
                           className="title-font-bold flex items-center justify-center bg-white rounded-lg btn-shadow px-4 py-3 mr-2 cursor-pointer relative z-[99] h-[50px]"
                           onClick={() => handleOpenIframe(carousel)}
                         >
-                          PlayNow
+                          {i18nCommon("playnow")}
                           <img
                             className="w-[32px] ml-2"
                             src="/Images/carousel/playNow-icon.webp"

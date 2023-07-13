@@ -1,3 +1,4 @@
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import FooterNew from "../components/Footer/FooterNew";
 import Header from "../components/Header/Header";
 import NavbarMenuList from "../components/Header/NavbarMenuList";
@@ -14,5 +15,13 @@ const Index = () => {
     </Wrapper>
   );
 };
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])),
+    },
+  };
+}
 
 export default Index;

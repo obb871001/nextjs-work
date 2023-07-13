@@ -12,13 +12,18 @@ import "swiper/css";
 import "swiper/swiper-bundle.css";
 import { useRef, useState } from "react";
 import { RiArrowUpSLine, RiArrowDownSLine } from "react-icons/ri";
+import { useTranslation } from "next-i18next";
 
 const CommonSwiper = ({
   folderName,
   carouselList,
   customImagesClass,
   slidesPerView,
+  i18nName,
 }) => {
+  const { t } = useTranslation();
+  const i18n = (key) => t(`${i18nName}.${key}`);
+
   const swiperRef = useRef(null);
 
   const handleSlideNext = () => {
@@ -56,13 +61,14 @@ const CommonSwiper = ({
                   className={`w-[360px] h-[250px] max-[1024px]:w-[288px] max-[1024px]:h-[200px] object-cover ${customImagesClass}`}
                   src={`/Images/${folderName}/${item.img}.png`}
                 />
-                <p
-                  className="text-[24px] title-font font-bold my-[5px] max-[1024px]:text-[18px]"
-                >
+                <p className="text-[24px] title-font font-bold my-[5px] max-[1024px]:text-[18px]">
                   {item.label}
                 </p>
-                <p className="text-[24px] title-font max-[1024px]:text-[18px]">{item.title}</p>
-                <p className="text-sm">{item.date}</p>
+                <p className="text-[24px] title-font max-[1024px]:text-[18px]">
+                  {item.title}
+                </p>
+                {/* <p className="text-sm">{item.date}</p>  備份*/}
+                <p className="text-sm">{i18n(index + 1)}</p>
               </section>
             </SwiperSlide>
           );
