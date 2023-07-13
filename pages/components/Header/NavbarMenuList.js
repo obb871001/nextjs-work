@@ -46,26 +46,6 @@ const NavbarMenuList = () => {
         handleItemClick("HotGame"); // 顯示右側選單，內容為「熱門遊戲」
       },
     },
-    // {
-    //   icon: <AiFillHeart className="text-white text-3xl hover:!text-light-yellow-text" />,
-    //   id: "Favorite",
-    //   label: "Favorite",
-    //   href: "/#",
-    //   onClick: (event) => {
-    //     event.preventDefault();
-    //     handleItemClick("Favorite");
-    //   },
-    // },
-    // {
-    //   icon: <TbSquareRoundedNumber7Filled className="text-white text-3xl hover:!text-light-yellow-text" />,
-    //   id: "Slot",
-    //   label: "Slot",
-    //   href: "/#",
-    //   onClick: (event) => {
-    //     event.preventDefault();
-    //     handleItemClick("Slot");
-    //   },
-    // },
     {
       icon: <BsDice5Fill className="text-white text-3xl hover:!text-light-yellow-text" />,
       id: "BeABanker",
@@ -97,7 +77,8 @@ const NavbarMenuList = () => {
       },
     },
   ];
-  const toggleMenu = () => {
+  const toggleMenu = (event) => {
+    event.stopPropagation(); // 阻止事件冒泡
     setMenuOpen(!isMenuOpen);
   };
   const handleItemClick = (itemId) => {
@@ -110,18 +91,18 @@ const NavbarMenuList = () => {
     }
   };
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (menuRef.current && !menuRef.current.contains(event.target)) {
+    const handleDocumentClick = (event) => {
+      if (isMenuOpen && !menuRef.current.contains(event.target)) {
         setMenuOpen(false);
       }
     };
 
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("click", handleDocumentClick);
 
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("click", handleDocumentClick);
     };
-  }, []);
+  }, [isMenuOpen]);
   return (
     <AnimatePresence>
       <motion.section
