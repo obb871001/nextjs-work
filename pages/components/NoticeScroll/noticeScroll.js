@@ -1,10 +1,10 @@
 import React from "react";
-import { isIOS } from "react-device-detect";
+import { isIOS, isIPad13 } from "react-device-detect";
 import { IoPhonePortraitOutline, IoPhonePortraitSharp } from "react-icons/io5";
 
 const NoticeScroll = ({ onlyPortrait }) => {
   return (
-    isIOS && (
+    (isIOS && !isIPad13) && (
       <div className="absolute bg-[rgb(0,0,0,0.5)] top-0 left-0 w-screen min-h-[100vh] flex items-center justify-center">
         {onlyPortrait ? (
           <div className="flex flex-col items-center justify-center gap-[10px] text-white">

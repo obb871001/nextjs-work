@@ -89,7 +89,7 @@ const RightSidebar = ({ content, onClose }) => {
       rating: 5,
       category: "BeABanker",
       iframeUrl:
-        "https://d29juml4m9n88c.cloudfront.net/games/hooheyhowvideo/?lang=en",
+        "https://d29juml4m9n88c.cloudfront.net/games/hooheyhowvideo/?lang=en&curr=usd",
     },
     {
       title: "Xoc Dia Spin",
@@ -98,7 +98,7 @@ const RightSidebar = ({ content, onClose }) => {
       rating: 4.5,
       category: "BeABanker",
       iframeUrl:
-        "https://d29juml4m9n88c.cloudfront.net/games/xocdiavideo/?lang=en",
+        "https://d29juml4m9n88c.cloudfront.net/games/xocdiavideo/?lang=en&curr=usd",
     },
     {
       title: "Sic Bo Spin",
@@ -107,7 +107,7 @@ const RightSidebar = ({ content, onClose }) => {
       rating: 4.5,
       category: "BeABanker",
       iframeUrl:
-        "https://d29juml4m9n88c.cloudfront.net/games/sicbovideo/?lang=en",
+        "https://d29juml4m9n88c.cloudfront.net/games/sicbovideo/?lang=en&curr=usd",
     },
     {
       title: "Treasure King",
@@ -115,7 +115,7 @@ const RightSidebar = ({ content, onClose }) => {
       imageUrl: "https://egslot.net/Images/GameItem/game-pic_TreasureKing.webp",
       rating: 5,
       category: "Fishing",
-      iframeUrl: "https://game.helloholyfa.com/fishing/treasureking/?lang=eng",
+      iframeUrl: "https://d29juml4m9n88c.cloudfront.net/games/treasureking/?lang=en&curr=usd",
     },
     {
       title: "BlastX",
@@ -123,7 +123,7 @@ const RightSidebar = ({ content, onClose }) => {
       imageUrl: "https://egslot.net/Images/GameItem/game-pic_GameIcon_BlastX.webp",
       rating: 5,
       category: "Blockchain Games",
-      iframeUrl: "https://game.helloholyfa.com/fishing/treasureking/?lang=eng",
+      iframeUrl: "https://d29juml4m9n88c.cloudfront.net/games/blastxp/?lang=en&curr=usd",
     },
     {
       title: "Plinko",
@@ -131,7 +131,7 @@ const RightSidebar = ({ content, onClose }) => {
       imageUrl: "https://egslot.net/Images/GameItem/game-pic_GameIcon_Plinko.webp",
       rating: 4,
       category: "Blockchain Games",
-      iframeUrl: "https://game.helloholyfa.com/fishing/treasureking/?lang=eng",
+      iframeUrl: "https://d29juml4m9n88c.cloudfront.net/games/plinkop/?lang=en&curr=usd",
     },
     {
       title: "HiLo",
@@ -139,7 +139,7 @@ const RightSidebar = ({ content, onClose }) => {
       imageUrl: "https://egslot.net/Images/GameItem/game-pic_GameIcon_HiLo.webp",
       rating: 5,
       category: "Blockchain Games",
-      iframeUrl: "https://game.helloholyfa.com/fishing/treasureking/?lang=eng",
+      iframeUrl: "https://d29juml4m9n88c.cloudfront.net/games/hilop/?lang=en&curr=usd",
     },
   ];
   const iframeRef = useRef(null);
@@ -176,7 +176,7 @@ const RightSidebar = ({ content, onClose }) => {
     <>
       {isRightSideOpen && (
         <div
-          className="right-sidebar fixed h-full right-0 top-0 z-[9999] bg-rightsidebar-color w-[25%] px-6 py-4 
+          className="right-sidebar fixed h-full right-0 top-0 z-[9999] overflow-auto bg-rightsidebar-color w-[25%] px-6 py-4 
     max-[1024px]:w-full max-[1024px]:bg-[#9a47bb]"
         >
           <TbArrowNarrowRight

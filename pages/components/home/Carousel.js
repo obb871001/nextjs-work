@@ -25,7 +25,7 @@ const CarouselList = [
     gameIntro_mobile:
       "Explore the mysterious power of love as you step into the Witch's Love™ enchanted cottage. The witch is enchanting everyone who comes into contact with her love elixirs. Are you ready to seek your own treasure in this game?",
     playLink:
-      "https://d29juml4m9n88c.cloudfront.net/games/witchlove/?hidefps=true",
+      "https://d29juml4m9n88c.cloudfront.net/games/witchlove/?lang=en&curr=usd&hidefps=true",
     addFavorite: "",
     gameImage1: "/Images/carousel/Witch_2.webp",
     gameImage2: "/Images/carousel/Witch_1.webp",
@@ -39,7 +39,7 @@ const CarouselList = [
       "Sweet Maids, Exclusive Experience! The Neko Maid™ warmly invites you to step into their dreamy café, where the magic of happiness surrounds every bite of your meal! The maids are young, cheerful, and adorable, and their attentive service will provide you with unparalleled care and satisfaction. Infusing your meals with love and immersing you in a sweet gaming experience.",
     gameIntro_mobile:
       "Sweet Maids, Exclusive Experience! The Neko Maid™ warmly invites you to step into their dreamy café. Infusing your meals with love and immersing you in a sweet gaming experience.",
-    playLink: "",
+    playLink: "https://d29juml4m9n88c.cloudfront.net/games/nekomaid/?lang=en&curr=usd&hidefps=true",
     addFavorite: "",
     gameImage1: "/Images/carousel/Neko_2.webp",
     gameImage2: "/Images/carousel/Neko_1.webp",
@@ -54,7 +54,7 @@ const CarouselList = [
     gameIntro_mobile:
       "Embark on a Voyage, Seek the Treasures of the Seven Seas! In Adventure of Sinbad™, you will become legendary adventurers whose names will be remembered for eternity!",
     playLink:
-      "https://d29juml4m9n88c.cloudfront.net/games/adventureofsinbad/?hidefps=true",
+      "https://d29juml4m9n88c.cloudfront.net/games/adventureofsinbad/?lang=en&curr=usd&hidefps=true",
     addFavorite: "",
     gameImage1: "/Images/carousel/Sinbad_2.webp",
     gameImage2: "/Images/carousel/Sinbad_1.webp",
@@ -69,7 +69,7 @@ const CarouselList = [
     gameIntro_mobile:
       "Challenge your luck and discover the path to becoming a winner with the Lucky Dice from the Golden Wheel. Diverse betting strategies allow players to experience a big win!",
     playLink:
-      "https://d29juml4m9n88c.cloudfront.net/games/adventureofsinbad/?hidefps=true",
+      "https://d29juml4m9n88c.cloudfront.net/games/sicbovideo/?lang=en&curr=usd",
     addFavorite: "",
     gameImage1: "/Images/carousel/gold2.webp",
     gameImage2: "/Images/carousel/gold1.webp",
@@ -84,7 +84,7 @@ const CarouselList = [
     gameIntro_mobile:
       "Explore the depths of the ocean and uncover the mysteries of an ancient civilization. Pilot a formidable submarine, and unearth vast treasures and hidden technologies.",
     playLink:
-      "https://game.helloholyfa.com/fishing/treasureking/?lang=eng",
+      "https://d29juml4m9n88c.cloudfront.net/games/treasureking/?lang=en&curr=usd",
     addFavorite: "",
     gameImage1: "/Images/carousel/dragon2.webp",
     gameImage2: "/Images/carousel/dragon1.webp",
@@ -99,7 +99,7 @@ const CarouselList = [
     gameIntro_mobile:
       "Experience the most exhilarating fast-paced instant game! Hoping your choices will bring the most rewarding outcomes!",
     playLink:
-      "https://d29juml4m9n88c.cloudfront.net/games/adventureofsinbad/?hidefps=true",
+      "https://d29juml4m9n88c.cloudfront.net/games/blastxp/?lang=en&curr=usd",
     addFavorite: "",
     gameImage1: "/Images/carousel/Sinbad_2.webp",
     gameImage2: "/Images/carousel/Sinbad_1.webp",
@@ -314,14 +314,14 @@ const Carousel = () => {
                     <div className="flex gap-[10px] items-center my-8 max-[1024px]:justify-center max-[1024px]:mb-[3%] max-[1024px]:mt-[3%]">
                       <div className="">
                         <img
-                          className="w-full max-w-[300px] h-auto max-h-[250px] rounded-md hover:scale-125"
+                          className="w-full max-w-[300px] h-auto max-h-[200px] rounded-md hover:scale-125"
                           src={carousel.gameImage1}
                           alt={carousel.gameTitle}
                         />
                       </div>
                       <div className="">
                         <img
-                          className="w-full max-w-[300px] h-auto max-h-[250px] rounded-md hover:scale-125"
+                          className="w-full max-w-[300px] h-auto max-h-[200px] rounded-md hover:scale-125"
                           src={carousel.gameImage2}
                           alt={carousel.gameTitle}
                         />
