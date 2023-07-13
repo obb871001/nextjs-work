@@ -68,7 +68,7 @@ const Carousel = () => {
       gameIntro_pc: i18n("spin.introPC"),
       gameIntro_mobile: i18n("spin.introMobile"),
       playLink:
-        "https://d29juml4m9n88c.cloudfront.net/games/sicbovideo/?lang=en&curr=usd",
+        "https://d29juml4m9n88c.cloudfront.net/games/wheelp/?lang=en&curr=usd",
       addFavorite: "",
       gameImage1: "/Images/carousel/gold2.webp",
       gameImage2: "/Images/carousel/gold1.webp",
