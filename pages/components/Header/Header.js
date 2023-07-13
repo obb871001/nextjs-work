@@ -27,8 +27,8 @@ const Header = () => {
   const menuItems = [
     { title: "About", href: "/About" },
     // { title: "News", href: "/News" },
-    { title: "Media", href: "/Media" },
-    { title: "Collaborate", href: "/Collaborate" },
+    // { title: "Media", href: "/Media" },
+    // { title: "Collaborate", href: "/Collaborate" },
     { title: "Service", href: "/Service" },
   ];
 
