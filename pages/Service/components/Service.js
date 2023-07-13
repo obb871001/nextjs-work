@@ -2,6 +2,7 @@ import TitleComponent from "@/pages/components/TitleComponent/TitleComponent";
 import CommonWrapper from "@/pages/components/Wrapper/CommonWrapper";
 import React, { useRef } from "react";
 import CommonSwiper from "@/pages/components/CommonSwiper/CommonSwiper";
+import { useTranslation } from "next-i18next";
 const carouselList = [
   {
     img: "service_API2",
@@ -35,39 +36,42 @@ const carouselList = [
   },
 ];
 const carouselList_mobile = [
-    {
-        img: "service_API2",
-        date: "Seamless game integration for a diverse selection.",
-    },
-    {
-        img: "service_admin2",
-        date: "Real-time data and management tools for efficient operations.",
-    },
-    {
-        img: "service_wallet2",
-        date: "Flexible wallet integration for convenient player experience.",
-    },
-    {
-        img: "service_tech2",
-        date: "24/7 support for smooth gameplay and increased revenues.",
-    },
-    {
-        img: "service_online2",
-        date: "Responsive customer service catering to your needs.",
-    },
-    {
-        img: "service_coin2",
-        date: "Multi-language and multi-currency support for global players.",
-    },
-  ];
+  {
+    img: "service_API2",
+    date: "Seamless game integration for a diverse selection.",
+  },
+  {
+    img: "service_admin2",
+    date: "Real-time data and management tools for efficient operations.",
+  },
+  {
+    img: "service_wallet2",
+    date: "Flexible wallet integration for convenient player experience.",
+  },
+  {
+    img: "service_tech2",
+    date: "24/7 support for smooth gameplay and increased revenues.",
+  },
+  {
+    img: "service_online2",
+    date: "Responsive customer service catering to your needs.",
+  },
+  {
+    img: "service_coin2",
+    date: "Multi-language and multi-currency support for global players.",
+  },
+];
 
 const Service = () => {
+  const { t } = useTranslation();
+  const i18n = (key) => t(`service.${key}`);
+
   return (
     <CommonWrapper className={`w-full`}>
       <section className="flex flex-col gap-[30px] justify-center h-full pl-[12%] max-[1024px]:pl-[0%]">
         <TitleComponent
-          title="Service"
-          content="Eazy Gaming offers comprehensive one-stop services, encompassing product quality, service management, and technical support. Contact us at service@egslot.net."
+          title={i18n("title")}
+          content={i18n("content")}
           // content="Eazy Gaming 提供全面的一站式服務，不論在產品質量、服務管理以及技術支援，我們的專業團隊經驗豐富，隨時能為客人提供接合及營運等各方面的支援服務。 聯絡我們：service@egslot.net"
           selectTag={[]}
         />
@@ -77,6 +81,7 @@ const Service = () => {
               slidesPerView={4}
               customImagesClass={`!w-[300px] !object-contain`}
               folderName={`Service`}
+              i18nName="service.PCIntro"
               carouselList={carouselList}
             />
           </div>
@@ -84,12 +89,13 @@ const Service = () => {
             className="bg-transparent absolute w-full h-full max-[1024px]:hidden"
             style={{ top: "27%" }}
           ></div>
-          
+
           <div className="max-w-[100%] px-[1%] text-white flex min-[1024px]:hidden">
             <CommonSwiper
               slidesPerView={1}
               customImagesClass={`!w-[300px] !object-contain`}
               folderName={`Service`}
+              i18nName="service.MobileIntro"
               carouselList={carouselList_mobile}
             />
           </div>

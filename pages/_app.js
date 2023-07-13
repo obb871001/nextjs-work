@@ -1,11 +1,12 @@
 import "../styles/globals.css";
-import '../styles/fonts.css';
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
-import PageLoading from './components/PageLoading/PageLoading';
-import Head from 'next/head'
+import "../styles/fonts.css";
+import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
+import PageLoading from "./components/PageLoading/PageLoading";
+import Head from "next/head";
+import { appWithTranslation } from "next-i18next";
 
-export default function App({ Component, pageProps }) {
+const App = ({ Component, pageProps }) => {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
 
@@ -13,14 +14,14 @@ export default function App({ Component, pageProps }) {
     const handleStart = () => setLoading(true);
     const handleComplete = () => setLoading(false);
 
-    router.events.on('routeChangeStart', handleStart);
-    router.events.on('routeChangeComplete', handleComplete);
-    router.events.on('routeChangeError', handleComplete);
+    router.events.on("routeChangeStart", handleStart);
+    router.events.on("routeChangeComplete", handleComplete);
+    router.events.on("routeChangeError", handleComplete);
 
     return () => {
-      router.events.off('routeChangeStart', handleStart);
-      router.events.off('routeChangeComplete', handleComplete);
-      router.events.off('routeChangeError', handleComplete);
+      router.events.off("routeChangeStart", handleStart);
+      router.events.off("routeChangeComplete", handleComplete);
+      router.events.off("routeChangeError", handleComplete);
     };
   }, []);
   return (
@@ -33,4 +34,5 @@ export default function App({ Component, pageProps }) {
       <Component {...pageProps} />
     </>
   );
-}
+};
+export default appWithTranslation(App);

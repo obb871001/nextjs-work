@@ -8,7 +8,12 @@ import { SlSizeFullscreen, SlClose, SlSizeActual } from "react-icons/sl";
 import ShareButton from "./ShareButton";
 import Search from "./Search";
 import NoticeScroll from "../NoticeScroll/noticeScroll";
+import { useTranslation } from "next-i18next";
 const RightSidebar = ({ content, onClose }) => {
+  const { t } = useTranslation();
+  const i18n = (key) => t(`rightSide.${key}`);
+  const i18nCommon = (key) => t(`common.${key}`);
+
   const isBrowser = typeof window !== "undefined";
   const [isRightSideOpen, setIsRightSideOpen] = useState(true);
   const [showIframe, setShowIframe] = useState(false);
@@ -82,94 +87,71 @@ const RightSidebar = ({ content, onClose }) => {
   };
   const games = [
     {
-      title: "Witch's Love",
-      intro: "Explore the mysterious power of love!",
-      imageUrl:
-        "https://egslot.net/Images/GameItem/game-pic_HooheyhowliveVideo.webp",
-      rating: 5,
-      category: "HotGame",
-      iframeUrl:
-        "https://d29juml4m9n88c.cloudfront.net/games/witchlove/?lang=en&curr=usd&hidefps=true",
-    },
-    {
-      title: "NEKO MAID",
-      intro: "Sweet Maids, Exclusive Experience!",
-      imageUrl:
-        "https://egslot.net/Images/GameItem/game-pic_HooheyhowliveVideo.webp",
-      rating: 5,
-      category: "HotGame",
-      iframeUrl:
-        "https://d29juml4m9n88c.cloudfront.net/games/nekomaid/?lang=en&curr=usd&hidefps=true",
-    },
-    {
-      title: "ADVENTURE OF SINBAD",
-      intro: "Seek the Treasures of the Seven Seas!",
-      imageUrl:
-        "https://egslot.net/Images/GameItem/game-pic_HooheyhowliveVideo.webp",
-      rating: 5,
-      category: "HotGame",
-      iframeUrl:
-        "https://d29juml4m9n88c.cloudfront.net/games/adventureofsinbad/?lang=en&curr=usd&hidefps=true",
-    },
-    {
       title: "Fish Prawn Crab Spin",
       intro: "Be the top-ranked dealer!!!",
       imageUrl:
         "https://egslot.net/Images/GameItem/game-pic_HooheyhowliveVideo.webp",
       rating: 5,
-      category: "BeABanker",
+      category: i18nCommon("BeABanker"),
       iframeUrl:
         "https://d29juml4m9n88c.cloudfront.net/games/hooheyhowvideo/?lang=en&curr=usd",
     },
     {
-      title: "Xoc Dia Spin",
-      intro: "Winner takes all!!!",
+      title: i18n("xocDiaSpin.title"),
+      intro: i18n("xocDiaSpin.intro"),
       imageUrl: "https://egslot.net/Images/GameItem/game-pic_XocdiaVideo3.webp",
       rating: 4.5,
-      category: "BeABanker",
+      category: i18nCommon("BeABanker"),
       iframeUrl:
         "https://d29juml4m9n88c.cloudfront.net/games/xocdiavideo/?lang=en&curr=usd",
     },
     {
-      title: "Sic Bo Spin",
-      intro: "Win in your hands!!!",
+      title: i18n("sicBoSpin.title"),
+      intro: i18n("sicBoSpin.intro"),
       imageUrl: "https://egslot.net/Images/GameItem/game-pic_SicboVideo.webp",
       rating: 4.5,
-      category: "BeABanker",
+      category: i18nCommon("BeABanker"),
       iframeUrl:
         "https://d29juml4m9n88c.cloudfront.net/games/sicbovideo/?lang=en&curr=usd",
     },
     {
-      title: "Treasure King",
-      intro: "Can you beat the monsters?",
+      title: i18n("treasureKing.title"),
+      intro: i18n("treasureKing.intro"),
       imageUrl: "https://egslot.net/Images/GameItem/game-pic_TreasureKing.webp",
       rating: 5,
-      category: "Fishing",
-      iframeUrl: "https://d29juml4m9n88c.cloudfront.net/games/treasureking/?lang=en&curr=usd",
+      category: i18nCommon("Fishing"),
+      iframeUrl:
+        "https://d29juml4m9n88c.cloudfront.net/games/treasureking/?lang=en&curr=usd",
     },
     {
-      title: "BlastX",
-      intro: "Receive rewards before the rocket takes off!",
-      imageUrl: "https://egslot.net/Images/GameItem/game-pic_GameIcon_BlastX.webp",
+      title: i18n("blastX.title"),
+      intro: i18n("blastX.intro"),
+      imageUrl:
+        "https://egslot.net/Images/GameItem/game-pic_GameIcon_BlastX.webp",
       rating: 5,
-      category: "Blockchain Games",
-      iframeUrl: "https://d29juml4m9n88c.cloudfront.net/games/blastxp/?lang=en&curr=usd",
+      category: i18nCommon("Blockchain Games"),
+      iframeUrl:
+        "https://d29juml4m9n88c.cloudfront.net/games/blastxp/?lang=en&curr=usd",
     },
     {
-      title: "Plinko",
-      intro: "Hoping ball lands in the highest payout slot!",
-      imageUrl: "https://egslot.net/Images/GameItem/game-pic_GameIcon_Plinko.webp",
+      title: i18n("plinko.title"),
+      intro: i18n("plinko.intro"),
+      imageUrl:
+        "https://egslot.net/Images/GameItem/game-pic_GameIcon_Plinko.webp",
       rating: 4,
-      category: "Blockchain Games",
-      iframeUrl: "https://d29juml4m9n88c.cloudfront.net/games/plinkop/?lang=en&curr=usd",
+      category: i18nCommon("Blockchain Games"),
+      iframeUrl:
+        "https://d29juml4m9n88c.cloudfront.net/games/plinkop/?lang=en&curr=usd",
     },
     {
-      title: "HiLo",
-      intro: "Embrace the thrilling moment of flipping cards!",
-      imageUrl: "https://egslot.net/Images/GameItem/game-pic_GameIcon_HiLo.webp",
+      title: i18n("hilo.title"),
+      intro: i18n("hilo.intro"),
+      imageUrl:
+        "https://egslot.net/Images/GameItem/game-pic_GameIcon_HiLo.webp",
       rating: 5,
-      category: "Blockchain Games",
-      iframeUrl: "https://d29juml4m9n88c.cloudfront.net/games/hilop/?lang=en&curr=usd",
+      category: i18nCommon("Blockchain Games"),
+      iframeUrl:
+        "https://d29juml4m9n88c.cloudfront.net/games/hilop/?lang=en&curr=usd",
     },
   ];
   const iframeRef = useRef(null);
@@ -215,48 +197,89 @@ const RightSidebar = ({ content, onClose }) => {
           />
 
           {/* <Search/> */}
-          <h2 className="title-font mb-2 text-xl py-2 text-white">{content}</h2>
+          <h2 className="title-font mb-2 text-xl py-2 text-white">
+            {i18nCommon(content)}
+          </h2>
           <div className=" flex flex-col items-center justify-center px-2">
-            {games
-              .filter((game) => game.category === content)
-              .map((game, index) => (
-                <div
-                  key={index}
-                  className="flex items-start justify-start bg-[#d4b3e2] p-3 rounded-lg w-full max-w-[350px] cursor-pointer my-1"
-                  onClick={() => handleOpenIframe(game)}
-                >
-                  <div className="mr-1">
-                    <img
-                      src={game.imageUrl}
-                      alt=""
-                      className="w-[80px] h-[80px] rounded-lg"
-                    />
-                  </div>
-                  <div className="flex items-start justify-start mx-1">
-                    <div className="text-left">
-                      <div className="gameTitle text-xl title-font-bold">
-                        {game.title}
-                      </div>
-                      <div className="gameIntro text-sm">{game.intro}</div>
-                      <div className="star mt-1">
-                        <Rating
-                          style={{ fontSize: "20px", color: "#fee301" }}
-                          name="half-rating-read"
-                          defaultValue={game.rating}
-                          precision={0.5}
-                          readOnly
-                          emptyIcon={
-                            <StarIcon
-                              style={{ opacity: 1 }}
-                              fontSize="inherit"
-                            />
-                          }
-                        />
+            {content === "HotGame"
+              ? games.map((game, index) => (
+                  <div
+                    key={index}
+                    className="flex items-start justify-start bg-[#d4b3e2] p-3 rounded-lg w-full max-w-[350px] cursor-pointer my-1"
+                    onClick={() => handleOpenIframe(game)}
+                  >
+                    <div className="mr-1">
+                      <img
+                        src={game.imageUrl}
+                        alt=""
+                        className="w-[80px] h-[80px] rounded-lg"
+                      />
+                    </div>
+                    <div className="flex items-start justify-start mx-1">
+                      <div className="text-left">
+                        <div className="gameTitle text-xl title-font-bold">
+                          {game.title}
+                        </div>
+                        <div className="gameIntro text-sm">{game.intro}</div>
+                        <div className="star mt-1">
+                          <Rating
+                            style={{ fontSize: "20px", color: "#fee301" }}
+                            name="half-rating-read"
+                            defaultValue={game.rating}
+                            precision={0.5}
+                            readOnly
+                            emptyIcon={
+                              <StarIcon
+                                style={{ opacity: 1 }}
+                                fontSize="inherit"
+                              />
+                            }
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))
+              : games
+                  .filter((game) => game.category === i18nCommon(content))
+                  .map((game, index) => (
+                    <div
+                      key={index}
+                      className="flex items-start justify-start bg-[#d4b3e2] p-3 rounded-lg w-full max-w-[350px] cursor-pointer my-1"
+                      onClick={() => handleOpenIframe(game)}
+                    >
+                      <div className="mr-1">
+                        <img
+                          src={game.imageUrl}
+                          alt=""
+                          className="w-[80px] h-[80px] rounded-lg"
+                        />
+                      </div>
+                      <div className="flex items-start justify-start mx-1">
+                        <div className="text-left">
+                          <div className="gameTitle text-xl title-font-bold">
+                            {game.title}
+                          </div>
+                          <div className="gameIntro text-sm">{game.intro}</div>
+                          <div className="star mt-1">
+                            <Rating
+                              style={{ fontSize: "20px", color: "#fee301" }}
+                              name="half-rating-read"
+                              defaultValue={game.rating}
+                              precision={0.5}
+                              readOnly
+                              emptyIcon={
+                                <StarIcon
+                                  style={{ opacity: 1 }}
+                                  fontSize="inherit"
+                                />
+                              }
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
             <ShareButton />
           </div>
         </div>

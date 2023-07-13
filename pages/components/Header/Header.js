@@ -3,7 +3,11 @@ import { CgMenuLeft } from "react-icons/cg";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { useTranslation } from "next-i18next";
 const Header = () => {
+  const { t } = useTranslation();
+  const i18nNavbar = (key) => t(`navbar.${key}`);
+
   const [styles, setStyle] = useState(false);
   const [openNav, setOpenNav] = useState(false);
   const router = useRouter();
@@ -23,7 +27,7 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  
+
   const menuItems = [
     { title: "About", href: "/About" },
     // { title: "News", href: "/News" },
@@ -54,7 +58,7 @@ const Header = () => {
             {menuItems.map((menuItem) => (
               <Link key={menuItem.title} href={menuItem.href}>
                 <div className="title-font text-white text-xl px-4 py-2">
-                  {menuItem.title}
+                  {i18nNavbar(menuItem.title)}
                 </div>
               </Link>
             ))}
