@@ -55,6 +55,14 @@
     "hilo": {
       "title": "Hi-Lo",
       "intro": "Embrace the thrilling moment of flipping cards!"
+    },
+    "wheel": {
+      "title": "Wheel",
+      "intro": "Stare at the Spinning Wheel and get the prize!"
+    },
+    "dice": {
+      "title": "Dice",
+      "intro": "Let's roll the dice!"
     }
   },
   "carousel": {

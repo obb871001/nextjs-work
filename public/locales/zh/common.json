@@ -55,6 +55,14 @@
     "hilo": {
       "title": "Hi-Lo",
       "intro": "拥抱翻牌的刺激时刻!"
+    },
+    "wheel": {
+      "title": "Wheel",
+      "intro": "期待着转盘停在最高派彩的区域!"
+    },
+    "dice": {
+      "title": "Dice",
+      "intro": "投掷骰子，看看你的预测是否成真！"
     }
   },
   "carousel": {

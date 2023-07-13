@@ -95,6 +95,7 @@ const Carousel = () => {
       gameIntro_mobile: i18n("blockchainGames.introMobile"),
       playLink:
         "https://d29juml4m9n88c.cloudfront.net/games/blastxp/?lang=en&curr=usd",
+      More: "123",
       addFavorite: "",
       gameImage1: "/Images/carousel/Sinbad_2.webp",
       gameImage2: "/Images/carousel/Sinbad_1.webp",
@@ -335,6 +336,12 @@ const Carousel = () => {
                             alt="PlayNow"
                           />
                         </div>
+                      )}
+                      {/* 只有在 More 存在時才顯示 More 按鈕 */}
+                      {carousel.More && (
+                        <div className="border border-white text-white rounded-lg px-4 py-3 mr-2 cursor-pointer max-[1024px]:bg-add-favorite-btn">
+                        {i18nCommon("More")}
+                      </div> 
                       )}
                       {/* <div className="border border-white text-white rounded-lg px-4 py-3 mr-2 cursor-pointer max-[1024px]:bg-add-favorite-btn">
                         Add to favorite

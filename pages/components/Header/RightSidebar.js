@@ -90,7 +90,7 @@ const RightSidebar = ({ content, onClose }) => {
       title: "Witch's Love",
       intro: "Explore the mysterious power of love!",
       imageUrl:
-        "https://egslot.net/Images/GameItem/game-pic_HooheyhowliveVideo.webp",
+        "https://egslot.net/Images/GameItem/game-pic_WitchsLove.webp",
       rating: 5,
       category: i18nCommon("HotGame"),
       iframeUrl:
@@ -100,7 +100,7 @@ const RightSidebar = ({ content, onClose }) => {
       title: "NEKO MAID",
       intro: "Sweet Maids, Exclusive Experience!",
       imageUrl:
-        "https://egslot.net/Images/GameItem/game-pic_HooheyhowliveVideo.webp",
+        "https://egslot.net/Images/GameItem/game-pic_NekoMaid.webp",
       rating: 5,
       category: i18nCommon("HotGame"),
       iframeUrl:
@@ -110,7 +110,7 @@ const RightSidebar = ({ content, onClose }) => {
       title: "ADVENTURE OF SINBAD",
       intro: "Seek the Treasures of the Seven Seas!",
       imageUrl:
-        "https://egslot.net/Images/GameItem/game-pic_HooheyhowliveVideo.webp",
+        "https://egslot.net/Images/GameItem/game-pic_LegendOfSinbad.webp",
       rating: 5,
       category: i18nCommon("HotGame"),
       iframeUrl:
@@ -182,6 +182,26 @@ const RightSidebar = ({ content, onClose }) => {
       category: i18nCommon("Blockchain Games"),
       iframeUrl:
         "https://d29juml4m9n88c.cloudfront.net/games/hilop/?lang=en&curr=usd",
+    },
+    {
+      title: i18n("wheel.title"),
+      intro: i18n("wheel.intro"),
+      imageUrl:
+        "https://egslot.net/Images/GameItem/game-pic_GameIcon_Wheel.webp",
+      rating: 5,
+      category: i18nCommon("Blockchain Games"),
+      iframeUrl:
+        "https://d29juml4m9n88c.cloudfront.net/games/wheelp/?lang=en&curr=usd",
+    },
+    {
+      title: i18n("dice.title"),
+      intro: i18n("dice.intro"),
+      imageUrl:
+        "https://egslot.net/Images/GameItem/game-pic_GameIcon_Dice.webp",
+      rating: 5,
+      category: i18nCommon("Blockchain Games"),
+      iframeUrl:
+        "https://d29juml4m9n88c.cloudfront.net/games/dicep/?lang=en&curr=usd",
     },
   ];
   const iframeRef = useRef(null);
