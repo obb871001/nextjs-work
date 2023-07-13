@@ -7,6 +7,7 @@
     "Fishing": "Fishing",
     "BeABanker": "Be A Banker",
     "playnow": "Play Now",
+    "More": "More",
     "Home": "Home",
     "Hot": "Hot"
   },
@@ -15,6 +16,18 @@
     "Service": "Service"
   },
   "rightSide": {
+    "WitchsLove": {
+      "title": "Witch's Love",
+      "intro": "Explore the mysterious power of love!"
+    },
+    "NEKOMAID": {
+      "title": "NEKO MAID",
+      "intro": "Sweet Maids, Exclusive Experience!"
+    },
+    "ADVENTUREOFSINBAD": {
+      "title": "ADVENTURE OF SINBAD",
+      "intro": "Seek the Treasures of the Seven Seas!"
+    },
     "fishPawnCrabSpin": {
       "title": "Fish Pawn Crab Spin",
       "intro": "Be the top-ranked dealer!!!"
