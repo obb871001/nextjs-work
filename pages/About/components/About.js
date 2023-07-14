@@ -2,7 +2,7 @@ import CommonTitle from "@/pages/components/TextComponents/CommonTitle";
 import TitleComponent from "@/pages/components/TitleComponent/TitleComponent";
 import CommonWrapper from "@/pages/components/Wrapper/CommonWrapper";
 import { useState } from "react";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-export-i18n";
 
 const selectTag = [
   {

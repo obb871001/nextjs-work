@@ -12,7 +12,7 @@ import "swiper/css";
 import "swiper/swiper-bundle.css";
 import { useRef, useState } from "react";
 import { RiArrowUpSLine, RiArrowDownSLine } from "react-icons/ri";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-export-i18n";
 
 const CommonSwiper = ({
   folderName,

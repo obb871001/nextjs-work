@@ -3,7 +3,7 @@ import { CgMenuLeft } from "react-icons/cg";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-export-i18n";
 const Header = () => {
   const { t } = useTranslation();
   const i18nNavbar = (key) => t(`navbar.${key}`);

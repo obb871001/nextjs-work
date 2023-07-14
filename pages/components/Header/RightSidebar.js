@@ -8,7 +8,7 @@ import { SlSizeFullscreen, SlClose, SlSizeActual } from "react-icons/sl";
 import ShareButton from "./ShareButton";
 import Search from "./Search";
 import NoticeScroll from "../NoticeScroll/noticeScroll";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-export-i18n";
 const RightSidebar = ({ content, onClose }) => {
   const { t } = useTranslation();
   const i18n = (key) => t(`rightSide.${key}`);

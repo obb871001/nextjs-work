@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import PageLoading from "./components/PageLoading/PageLoading";
 import Head from "next/head";
-import { appWithTranslation } from "next-i18next";
 
 const App = ({ Component, pageProps }) => {
   const [loading, setLoading] = useState(false);
@@ -35,4 +34,4 @@ const App = ({ Component, pageProps }) => {
     </>
   );
 };
-export default appWithTranslation(App);
+export default App;

@@ -12,7 +12,7 @@ import { FaFish } from "react-icons/fa";
 import { SiBlockchaindotcom } from "react-icons/si";
 import { TbSquareRoundedNumber7Filled } from "react-icons/tb";
 import { CgMenu, CgMenuLeft } from "react-icons/cg";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-export-i18n";
 import ChangeTranslate from "../ChangeTranslate/ChangeTranslate";
 const NavbarMenuList = () => {
   const { t } = useTranslation();
