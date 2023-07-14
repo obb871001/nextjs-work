@@ -24,13 +24,14 @@ const Carousel = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isRightSidebarOpen, setRightSidebarOpen] = useState(false); // 添加状态用于控制右侧菜单的显示和隐藏
   const handleItemClick = (itemId) => {
-    if (itemId === selectedItem) {
-      setSelectedItem(null);
-      setRightSidebarOpen(false); // 关闭右侧菜单
-    } else {
-      setSelectedItem(itemId);
-      setRightSidebarOpen(true); // 打开右侧菜单
-    }
+    //  if (itemId === selectedItem) {
+    //   setSelectedItem(null);
+    //   setRightSidebarOpen(false); // 关闭右侧菜单
+    // } else {
+    //   setSelectedItem(itemId);
+    //   setRightSidebarOpen(true); // 打开右侧菜单
+    // }
+    setRightSidebarOpen(true);
   };
   const CarouselList = [
     {
@@ -351,10 +352,12 @@ const Carousel = () => {
                       )}
                       {/* 只有在 More 存在時才顯示 More 按鈕 */}
                       {carousel.More && (
-                        <div onClick={() => handleItemClick("Blockchain Games")}
-                         className="border border-white text-white rounded-lg px-4 py-3 mr-2 cursor-pointer max-[1024px]:bg-add-favorite-btn">
-                        {i18nCommon("More")}
-                      </div> 
+                        <div
+                          onClick={() => handleItemClick("Blockchain Games")}
+                          className="border border-white text-white rounded-lg px-4 py-3 mr-2 cursor-pointer max-[1024px]:bg-add-favorite-btn"
+                        >
+                          {i18nCommon("More")}
+                        </div>
                       )}
                       {/* <div className="border border-white text-white rounded-lg px-4 py-3 mr-2 cursor-pointer max-[1024px]:bg-add-favorite-btn">
                         Add to favorite
@@ -416,14 +419,14 @@ const Carousel = () => {
         </div>
       )}
       <>
-            <RightSidebar
-              content={selectedItem}
-              onClose={() => setRightSidebarOpen(false)} // 关闭右侧菜单的事件处理程序
-            />
-            {/* <Search content={selectedItem} /> */}
-          </>
+        <RightSidebar
+          isRightSidebarOpen={isRightSidebarOpen}
+          content={selectedItem}
+          onClose={() => setRightSidebarOpen(false)} // 关闭右侧菜单的事件处理程序
+        />
+        {/* <Search content={selectedItem} /> */}
+      </>
     </section>
-    
   );
 };
 

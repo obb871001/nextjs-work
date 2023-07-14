@@ -9,7 +9,7 @@ import ShareButton from "./ShareButton";
 import Search from "./Search";
 import NoticeScroll from "../NoticeScroll/noticeScroll";
 import { useTranslation } from "next-export-i18n";
-const RightSidebar = ({ content, onClose }) => {
+const RightSidebar = ({ content, onClose, isRightSidebarOpen }) => {
   const { t } = useTranslation();
   const i18n = (key) => t(`rightSide.${key}`);
   const i18nCommon = (key) => t(`common.${key}`);
@@ -101,8 +101,7 @@ const RightSidebar = ({ content, onClose }) => {
     {
       title: i18n("WitchsLove.title"),
       intro: i18n("WitchsLove.intro"),
-      imageUrl:
-        "https://egslot.net/Images/GameItem/game-pic_WitchsLove.webp",
+      imageUrl: "https://egslot.net/Images/GameItem/game-pic_WitchsLove.webp",
       rating: 5,
       category: i18nCommon("HotGame"),
       iframeUrl:
@@ -111,8 +110,7 @@ const RightSidebar = ({ content, onClose }) => {
     {
       title: i18n("NEKOMAID.title"),
       intro: i18n("NEKOMAID.intro"),
-      imageUrl:
-        "https://egslot.net/Images/GameItem/game-pic_NekoMaid.webp",
+      imageUrl: "https://egslot.net/Images/GameItem/game-pic_NekoMaid.webp",
       rating: 5,
       category: i18nCommon("HotGame"),
       iframeUrl:
@@ -248,7 +246,7 @@ const RightSidebar = ({ content, onClose }) => {
   };
   return (
     <>
-      {isRightSideOpen && (
+      {(isRightSideOpen || isRightSidebarOpen) && (
         <div
           className="right-sidebar fixed h-full right-0 top-0 z-[9999] overflow-auto bg-rightsidebar-color w-[25%] px-6 py-4 
     max-[1024px]:w-full max-[1024px]:bg-[#9a47bb]"
@@ -263,46 +261,46 @@ const RightSidebar = ({ content, onClose }) => {
             {i18nCommon(content)}
           </h2>
           <div className=" flex flex-col items-center justify-center px-2">
-            { games
-                  .filter((game) => game.category === i18nCommon(content))
-                  .map((game, index) => (
-                    <div
-                      key={index}
-                      className="flex items-start justify-start bg-[#d4b3e2] p-3 rounded-lg w-full max-w-[350px] cursor-pointer my-1"
-                      onClick={() => handleOpenIframe(game)}
-                    >
-                      <div className="mr-1">
-                        <img
-                          src={game.imageUrl}
-                          alt=""
-                          className="w-[80px] h-[80px] rounded-lg"
+            {games
+              .filter((game) => game.category === i18nCommon(content))
+              .map((game, index) => (
+                <div
+                  key={index}
+                  className="flex items-start justify-start bg-[#d4b3e2] p-3 rounded-lg w-full max-w-[350px] cursor-pointer my-1"
+                  onClick={() => handleOpenIframe(game)}
+                >
+                  <div className="mr-1">
+                    <img
+                      src={game.imageUrl}
+                      alt=""
+                      className="w-[80px] h-[80px] rounded-lg"
+                    />
+                  </div>
+                  <div className="flex items-start justify-start mx-1">
+                    <div className="text-left">
+                      <div className="gameTitle text-xl title-font-bold">
+                        {game.title}
+                      </div>
+                      <div className="gameIntro text-sm">{game.intro}</div>
+                      <div className="star mt-1">
+                        <Rating
+                          style={{ fontSize: "20px", color: "#fee301" }}
+                          name="half-rating-read"
+                          defaultValue={game.rating}
+                          precision={0.5}
+                          readOnly
+                          emptyIcon={
+                            <StarIcon
+                              style={{ opacity: 1 }}
+                              fontSize="inherit"
+                            />
+                          }
                         />
                       </div>
-                      <div className="flex items-start justify-start mx-1">
-                        <div className="text-left">
-                          <div className="gameTitle text-xl title-font-bold">
-                            {game.title}
-                          </div>
-                          <div className="gameIntro text-sm">{game.intro}</div>
-                          <div className="star mt-1">
-                            <Rating
-                              style={{ fontSize: "20px", color: "#fee301" }}
-                              name="half-rating-read"
-                              defaultValue={game.rating}
-                              precision={0.5}
-                              readOnly
-                              emptyIcon={
-                                <StarIcon
-                                  style={{ opacity: 1 }}
-                                  fontSize="inherit"
-                                />
-                              }
-                            />
-                          </div>
-                        </div>
-                      </div>
                     </div>
-                  ))}
+                  </div>
+                </div>
+              ))}
             <ShareButton />
           </div>
         </div>
