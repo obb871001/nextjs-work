@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { TbArrowNarrowRight } from "react-icons/tb";
 import { BsFillSuitHeartFill } from "react-icons/bs";
+import YouTube from 'react-youtube';
 import ReactStars from "react-stars";
 import Rating from "@mui/material/Rating";
 import StarIcon from "@mui/icons-material/Star";
@@ -261,46 +262,54 @@ const RightSidebar = ({ content, onClose, isRightSidebarOpen }) => {
             {i18nCommon(content)}
           </h2>
           <div className=" flex flex-col items-center justify-center px-2">
-            {games
-              .filter((game) => game.category === i18nCommon(content))
-              .map((game, index) => (
+          {content === "Movie"
+              ? (
                 <div
-                  key={index}
-                  className="flex items-start justify-start bg-[#d4b3e2] p-3 rounded-lg w-full max-w-[350px] cursor-pointer my-1"
-                  onClick={() => handleOpenIframe(game)}
+                  className="flex items-start justify-start p-3 rounded-lg w-full max-w-[350px] cursor-pointer my-1"
                 >
-                  <div className="mr-1">
-                    <img
-                      src={game.imageUrl}
-                      alt=""
-                      className="w-[80px] h-[80px] rounded-lg"
-                    />
-                  </div>
-                  <div className="flex items-start justify-start mx-1">
-                    <div className="text-left">
-                      <div className="gameTitle text-xl title-font-bold">
-                        {game.title}
-                      </div>
-                      <div className="gameIntro text-sm">{game.intro}</div>
-                      <div className="star mt-1">
-                        <Rating
-                          style={{ fontSize: "20px", color: "#fee301" }}
-                          name="half-rating-read"
-                          defaultValue={game.rating}
-                          precision={0.5}
-                          readOnly
-                          emptyIcon={
-                            <StarIcon
-                              style={{ opacity: 1 }}
-                              fontSize="inherit"
-                            />
-                          }
+                  <iframe width="350" height="350" src="https://www.youtube.com/embed/Vl-M1xquTgk" title="EG 遊戲展示影片" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+              )
+              : games
+                  .filter((game) => game.category === i18nCommon(content))
+                  .map((game, index) => (
+                    <div
+                      key={index}
+                      className="flex items-start justify-start bg-[#d4b3e2] p-3 rounded-lg w-full max-w-[350px] cursor-pointer my-1"
+                      onClick={() => handleOpenIframe(game)}
+                    >
+                      <div className="mr-1">
+                        <img
+                          src={game.imageUrl}
+                          alt=""
+                          className="w-[80px] h-[80px] rounded-lg"
                         />
                       </div>
+                      <div className="flex items-start justify-start mx-1">
+                        <div className="text-left">
+                          <div className="gameTitle text-xl title-font-bold">
+                            {game.title}
+                          </div>
+                          <div className="gameIntro text-sm">{game.intro}</div>
+                          <div className="star mt-1">
+                            <Rating
+                              style={{ fontSize: "20px", color: "#fee301" }}
+                              name="half-rating-read"
+                              defaultValue={game.rating}
+                              precision={0.5}
+                              readOnly
+                              emptyIcon={
+                                <StarIcon
+                                  style={{ opacity: 1 }}
+                                  fontSize="inherit"
+                                />
+                              }
+                            />
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-              ))}
+                  ))}
             <ShareButton />
           </div>
         </div>
@@ -308,14 +317,14 @@ const RightSidebar = ({ content, onClose, isRightSidebarOpen }) => {
       {showIframe && (
         <div className="fixed w-full h-full top-0 z-[99999]">
           {showNotice && <NoticeScroll onlyPortrait />}
-          <div className="absolute top-0 right-0 p-2">
-            <button onClick={handleCloseIframe} className="text-white text-4xl">
-              <SlClose className="text-white text-4xl bg-[#00000057]" />
+          <div className="absolute top-0 right-[50%] p-2">
+            <button onClick={handleCloseIframe} className="text-white text-xl">
+              <SlClose className="text-white text-xl opacity-40 bg-[#00000057]" />
             </button>
           </div>
           <div className="absolute bottom-0 right-0 p-2">
             <button onClick={handleFullScreen} className="text-white text-4xl">
-              <SlSizeFullscreen className="text-white text-4xl bg-[#00000057]" />
+              <SlSizeFullscreen className="text-white text-3xl bg-[#00000057]" />
             </button>
           </div>
           <iframe

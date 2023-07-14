@@ -97,7 +97,7 @@ const NavbarMenuList = () => {
       icon: (
         <RiMovieFill className="text-white text-3xl hover:!text-light-yellow-text" />
       ),
-      id: "",
+      id: "Movie",
       label: "Movie",
       href: "/#",
       onClick: (event) => {
