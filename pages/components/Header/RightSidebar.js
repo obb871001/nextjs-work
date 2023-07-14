@@ -245,6 +245,18 @@ const RightSidebar = ({ content, onClose, isRightSidebarOpen }) => {
       }
     }
   };
+  useEffect(() => {
+    const handleMessage = (event) => {
+      if (event.data.event === 'close') {
+        setShowIframe(false);// 做一些處理，例如關閉 iframe
+      }
+    };
+    window.addEventListener('message', handleMessage);
+    // 清除事件監聽器
+    return () => {
+      window.removeEventListener('message', handleMessage);
+    };
+  }, []);
   return (
     <>
       {(isRightSideOpen || isRightSidebarOpen) && (

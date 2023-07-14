@@ -264,7 +264,18 @@ const Carousel = () => {
       );
     };
   }, []);
-
+  useEffect(() => {
+    const handleMessage = (event) => {
+      if (event.data.event === 'close') {
+        setShowIframe(false);// 做一些處理，例如關閉 iframe
+      }
+    };
+    window.addEventListener('message', handleMessage);
+    // 清除事件監聽器
+    return () => {
+      window.removeEventListener('message', handleMessage);
+    };
+  }, []);
   return (
     <section className="w-screen min-h-screen lg:h-screen md:h-screen flex">
       <Swiper
@@ -401,7 +412,7 @@ const Carousel = () => {
       {showIframe && (
         <div className="fixed w-full h-full top-0 left-0 bottom-0 right-0 z-[99999]">
           {!isToolbarHidden && <NoticeScroll />}
-          <div className="absolute top-0 right-0 p-2">
+          <div className="absolute top-0 right-[50%] p-2">
             <button onClick={handleCloseIframe} className="text-white text-xl">
               <SlClose className="text-white text-xl opacity-40 bg-[#00000057]" />
             </button>
