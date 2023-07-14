@@ -97,8 +97,8 @@ const Carousel = () => {
         "https://d29juml4m9n88c.cloudfront.net/games/blastxp/?lang=en&curr=usd",
       More: "123",
       addFavorite: "",
-      gameImage1: "/Images/carousel/Sinbad_2.webp",
-      gameImage2: "/Images/carousel/Sinbad_1.webp",
+      gameImage1: "/Images/carousel/block2.webp",
+      gameImage2: "/Images/carousel/block1.webp",
     },
     // {
     //   background: "/Images/carousel/carousel4.png",
