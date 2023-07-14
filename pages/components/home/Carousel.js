@@ -4,6 +4,7 @@ import SwiperCore, { Pagination, Navigation, Autoplay } from "swiper";
 import CarouselNavigation from "./CarouselNavigation";
 import FooterNew from "./../Footer/FooterNew";
 import { SlSizeFullscreen, SlClose, SlSizeActual } from "react-icons/sl";
+import RightSidebar from "../Header/RightSidebar";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";

@@ -52,7 +52,19 @@ const RightSidebar = ({ content, onClose }) => {
       window.removeEventListener("resize", handleResize);
     };
   }, [windowWidth, showIframe]);
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (isRightSideOpen && !event.target.closest(".right-sidebar")) {
+        handleCloseSidebar();
+      }
+    };
 
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isRightSideOpen]);
   useEffect(() => {
     const handleOrientationChange = () => {
       setTimeout(() => {
