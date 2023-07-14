@@ -10,6 +10,7 @@ import { AiFillHome, AiFillHeart } from "react-icons/ai";
 import { BsFire, BsDice5Fill } from "react-icons/bs";
 import { FaFish } from "react-icons/fa";
 import { SiBlockchaindotcom } from "react-icons/si";
+import { RiMovieFill } from "react-icons/ri";
 import { TbSquareRoundedNumber7Filled } from "react-icons/tb";
 import { CgMenu, CgMenuLeft } from "react-icons/cg";
 import { useTranslation } from "next-export-i18n";
@@ -90,6 +91,18 @@ const NavbarMenuList = () => {
       onClick: (event) => {
         event.preventDefault();
         handleItemClick("Blockchain Games");
+      },
+    },
+    {
+      icon: (
+        <RiMovieFill className="text-white text-3xl hover:!text-light-yellow-text" />
+      ),
+      id: "",
+      label: "Movie",
+      href: "/#",
+      onClick: (event) => {
+        event.preventDefault(); // 阻止默認的頁面導航行為
+        handleItemClick("Movie"); // 顯示右側選單，內容為「熱門遊戲」
       },
     },
   ];

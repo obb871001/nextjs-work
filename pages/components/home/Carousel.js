@@ -20,7 +20,18 @@ const Carousel = () => {
   const { t } = useTranslation();
   const i18n = (key) => t(`carousel.${key}`);
   const i18nCommon = (key) => t(`common.${key}`);
-
+  const [selectedItem, setSelectedItem] = useState(null);
+  const [isMenuOpen, setMenuOpen] = useState(false);
+  const [isRightSidebarOpen, setRightSidebarOpen] = useState(false); // 添加状态用于控制右侧菜单的显示和隐藏
+  const handleItemClick = (itemId) => {
+    if (itemId === selectedItem) {
+      setSelectedItem(null);
+      setRightSidebarOpen(false); // 关闭右侧菜单
+    } else {
+      setSelectedItem(itemId);
+      setRightSidebarOpen(true); // 打开右侧菜单
+    }
+  };
   const CarouselList = [
     {
       background: "/Images/carousel/bg_witch.webp",
@@ -340,7 +351,8 @@ const Carousel = () => {
                       )}
                       {/* 只有在 More 存在時才顯示 More 按鈕 */}
                       {carousel.More && (
-                        <div className="border border-white text-white rounded-lg px-4 py-3 mr-2 cursor-pointer max-[1024px]:bg-add-favorite-btn">
+                        <div onClick={() => handleItemClick("Blockchain Games")}
+                         className="border border-white text-white rounded-lg px-4 py-3 mr-2 cursor-pointer max-[1024px]:bg-add-favorite-btn">
                         {i18nCommon("More")}
                       </div> 
                       )}
@@ -403,7 +415,15 @@ const Carousel = () => {
           />
         </div>
       )}
+      <>
+            <RightSidebar
+              content={selectedItem}
+              onClose={() => setRightSidebarOpen(false)} // 关闭右侧菜单的事件处理程序
+            />
+            {/* <Search content={selectedItem} /> */}
+          </>
     </section>
+    
   );
 };
 
