@@ -87,8 +87,8 @@ const RightSidebar = ({ content, onClose }) => {
   };
   const games = [
     {
-      title: "Witch's Love",
-      intro: "Explore the mysterious power of love!",
+      title: i18n("WitchsLove.title"),
+      intro: i18n("WitchsLove.intro"),
       imageUrl:
         "https://egslot.net/Images/GameItem/game-pic_WitchsLove.webp",
       rating: 5,
@@ -97,8 +97,8 @@ const RightSidebar = ({ content, onClose }) => {
         "https://d29juml4m9n88c.cloudfront.net/games/witchlove/?lang=en&curr=usd&hidefps=true",
     },
     {
-      title: "NEKO MAID",
-      intro: "Sweet Maids, Exclusive Experience!",
+      title: i18n("NEKOMAID.title"),
+      intro: i18n("NEKOMAID.intro"),
       imageUrl:
         "https://egslot.net/Images/GameItem/game-pic_NekoMaid.webp",
       rating: 5,
@@ -107,8 +107,8 @@ const RightSidebar = ({ content, onClose }) => {
         "https://d29juml4m9n88c.cloudfront.net/games/nekomaid/?lang=en&curr=usd&hidefps=true",
     },
     {
-      title: "ADVENTURE OF SINBAD",
-      intro: "Seek the Treasures of the Seven Seas!",
+      title: i18n("ADVENTUREOFSINBAD.title"),
+      intro: i18n("ADVENTUREOFSINBAD.intro"),
       imageUrl:
         "https://egslot.net/Images/GameItem/game-pic_LegendOfSinbad.webp",
       rating: 5,
@@ -117,8 +117,8 @@ const RightSidebar = ({ content, onClose }) => {
         "https://d29juml4m9n88c.cloudfront.net/games/adventureofsinbad/?lang=en&curr=usd&hidefps=true",
     },
     {
-      title: "Fish Prawn Crab Spin",
-      intro: "Be the top-ranked dealer!!!",
+      title: i18n("fishPawnCrabSpin.title"),
+      intro: i18n("fishPawnCrabSpin.intro"),
       imageUrl:
         "https://egslot.net/Images/GameItem/game-pic_HooheyhowliveVideo.webp",
       rating: 5,
