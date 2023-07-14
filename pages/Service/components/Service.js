@@ -2,7 +2,7 @@ import TitleComponent from "@/pages/components/TitleComponent/TitleComponent";
 import CommonWrapper from "@/pages/components/Wrapper/CommonWrapper";
 import React, { useRef } from "react";
 import CommonSwiper from "@/pages/components/CommonSwiper/CommonSwiper";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-export-i18n";
 const carouselList = [
   {
     img: "service_API2",

@@ -12,11 +12,11 @@ import "swiper/css/effect-fade";
 import "swiper/css/autoplay";
 import { Button } from "antd";
 import NoticeScroll from "../NoticeScroll/noticeScroll";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-export-i18n";
 SwiperCore.use([Navigation, Autoplay]);
 
 const Carousel = () => {
-  const { t } = useTranslation("common");
+  const { t } = useTranslation();
   const i18n = (key) => t(`carousel.${key}`);
   const i18nCommon = (key) => t(`common.${key}`);
 

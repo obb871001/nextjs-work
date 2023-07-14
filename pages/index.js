@@ -9,7 +9,6 @@ import ToDownScroll from "./components/home/ToDownScroll";
 import Carousel from "./components/home/Carousel";
 import GameTypeChoose from "./components/home/GameTypeChoose";
 import FooterNew from "./components/Footer/FooterNew";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 // const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -41,12 +40,4 @@ export default function Home() {
       <FooterNew />
     </>
   );
-}
-
-export async function getStaticProps({ locale }) {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ["common"])),
-    },
-  };
 }
