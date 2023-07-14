@@ -86,10 +86,10 @@
     "Segoe UI Symbol", "Noto Color Emoji", cursive;
 }
 .title-font {
-  font-family: "TitleFont", "Comfortaa", "Noto Sans TC", sans-serif, cursive;
+  font-family: "TitleFont", Helvetica, 'PingFang SC', "Microsoft YaHei", "Comfortaa", "Noto Sans TC", sans-serif, cursive;
 }
 .title-font-bold {
-  font-family: "TitleBoldFont", "Comfortaa", "Noto Sans TC", sans-serif, cursive;
+  font-family: "TitleBoldFont", Helvetica, 'PingFang SC', "Microsoft YaHei", "Comfortaa", "Noto Sans TC", sans-serif, cursive;
 }
 @media (max-width: 1024px) {
   .mobile-height{height: calc(100vh - 43px);}.mobile-height2{height: calc(100vh - 43px);}.mobile-navigation{position: initial;}
