@@ -6,7 +6,7 @@ const i18n = {
     en,
     zh,
   },
-  defaultLang: "zh",
+  defaultLang: "en",
   useBrowserDefault: true,
 };
 
