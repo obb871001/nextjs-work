@@ -106,7 +106,7 @@ const RightSidebar = ({ content, onClose, isRightSidebarOpen }) => {
       rating: 5,
       category: i18nCommon("HotGame"),
       iframeUrl:
-        "https://d29juml4m9n88c.cloudfront.net/games/witchlove/?lang=en&curr=usd&hidefps=true",
+        "https://d29juml4m9n88c.cloudfront.net/games/witchlove/?lang=en&curr=usd&hidefps=true&useIFrame=true",
     },
     {
       title: i18n("NEKOMAID.title"),
@@ -115,7 +115,7 @@ const RightSidebar = ({ content, onClose, isRightSidebarOpen }) => {
       rating: 5,
       category: i18nCommon("HotGame"),
       iframeUrl:
-        "https://d29juml4m9n88c.cloudfront.net/games/nekomaid/?lang=en&curr=usd&hidefps=true",
+        "https://d29juml4m9n88c.cloudfront.net/games/nekomaid/?lang=en&curr=usd&hidefps=true&useIFrame=true",
     },
     {
       title: i18n("ADVENTUREOFSINBAD.title"),
@@ -125,7 +125,7 @@ const RightSidebar = ({ content, onClose, isRightSidebarOpen }) => {
       rating: 5,
       category: i18nCommon("HotGame"),
       iframeUrl:
-        "https://d29juml4m9n88c.cloudfront.net/games/adventureofsinbad/?lang=en&curr=usd&hidefps=true",
+        "https://d29juml4m9n88c.cloudfront.net/games/adventureofsinbad/?lang=en&curr=usd&hidefps=true&useIFrame=true",
     },
     {
       title: i18n("fishPawnCrabSpin.title"),
@@ -135,7 +135,7 @@ const RightSidebar = ({ content, onClose, isRightSidebarOpen }) => {
       rating: 5,
       category: i18nCommon("BeABanker"),
       iframeUrl:
-        "https://d29juml4m9n88c.cloudfront.net/games/hooheyhowvideo/?lang=en&curr=usd",
+        "https://d29juml4m9n88c.cloudfront.net/games/hooheyhowvideo/?lang=en&curr=usd&useIFrame=true",
     },
     {
       title: i18n("xocDiaSpin.title"),
@@ -144,7 +144,7 @@ const RightSidebar = ({ content, onClose, isRightSidebarOpen }) => {
       rating: 4.5,
       category: i18nCommon("BeABanker"),
       iframeUrl:
-        "https://d29juml4m9n88c.cloudfront.net/games/xocdiavideo/?lang=en&curr=usd",
+        "https://d29juml4m9n88c.cloudfront.net/games/xocdiavideo/?lang=en&curr=usd&useIFrame=true",
     },
     {
       title: i18n("sicBoSpin.title"),
@@ -153,7 +153,7 @@ const RightSidebar = ({ content, onClose, isRightSidebarOpen }) => {
       rating: 4.5,
       category: i18nCommon("BeABanker"),
       iframeUrl:
-        "https://d29juml4m9n88c.cloudfront.net/games/sicbovideo/?lang=en&curr=usd",
+        "https://d29juml4m9n88c.cloudfront.net/games/sicbovideo/?lang=en&curr=usd&useIFrame=true",
     },
     {
       title: i18n("treasureKing.title"),
@@ -162,7 +162,7 @@ const RightSidebar = ({ content, onClose, isRightSidebarOpen }) => {
       rating: 5,
       category: i18nCommon("Fishing"),
       iframeUrl:
-        "https://d29juml4m9n88c.cloudfront.net/games/treasureking/?lang=en&curr=usd",
+        "https://d29juml4m9n88c.cloudfront.net/games/treasureking/?lang=en&curr=usd&useIFrame=true",
     },
     {
       title: i18n("blastX.title"),
@@ -172,7 +172,7 @@ const RightSidebar = ({ content, onClose, isRightSidebarOpen }) => {
       rating: 5,
       category: i18nCommon("Blockchain Games"),
       iframeUrl:
-        "https://d29juml4m9n88c.cloudfront.net/games/blastxp/?lang=en&curr=usd",
+        "https://d29juml4m9n88c.cloudfront.net/games/blastxp/?lang=en&curr=usd&useIFrame=true",
     },
     {
       title: i18n("plinko.title"),
@@ -182,7 +182,7 @@ const RightSidebar = ({ content, onClose, isRightSidebarOpen }) => {
       rating: 4,
       category: i18nCommon("Blockchain Games"),
       iframeUrl:
-        "https://d29juml4m9n88c.cloudfront.net/games/plinkop/?lang=en&curr=usd",
+        "https://d29juml4m9n88c.cloudfront.net/games/plinkop/?lang=en&curr=usd&useIFrame=true",
     },
     {
       title: i18n("hilo.title"),
@@ -192,7 +192,7 @@ const RightSidebar = ({ content, onClose, isRightSidebarOpen }) => {
       rating: 5,
       category: i18nCommon("Blockchain Games"),
       iframeUrl:
-        "https://d29juml4m9n88c.cloudfront.net/games/hilop/?lang=en&curr=usd",
+        "https://d29juml4m9n88c.cloudfront.net/games/hilop/?lang=en&curr=usd&useIFrame=true",
     },
     {
       title: i18n("wheel.title"),
@@ -202,7 +202,7 @@ const RightSidebar = ({ content, onClose, isRightSidebarOpen }) => {
       rating: 5,
       category: i18nCommon("Blockchain Games"),
       iframeUrl:
-        "https://d29juml4m9n88c.cloudfront.net/games/wheelp/?lang=en&curr=usd",
+        "https://d29juml4m9n88c.cloudfront.net/games/wheelp/?lang=en&curr=usd&useIFrame=true",
     },
     {
       title: i18n("dice.title"),
@@ -212,7 +212,7 @@ const RightSidebar = ({ content, onClose, isRightSidebarOpen }) => {
       rating: 5,
       category: i18nCommon("Blockchain Games"),
       iframeUrl:
-        "https://d29juml4m9n88c.cloudfront.net/games/dicep/?lang=en&curr=usd",
+        "https://d29juml4m9n88c.cloudfront.net/games/dicep/?lang=en&curr=usd&useIFrame=true",
     },
   ];
   const iframeRef = useRef(null);
@@ -257,6 +257,11 @@ const RightSidebar = ({ content, onClose, isRightSidebarOpen }) => {
       window.removeEventListener('message', handleMessage);
     };
   }, []);
+  const [isIOS, setIsIOS] = useState(false);
+  useEffect(() => {
+    const userAgent = window.navigator.userAgent.toLowerCase();
+    setIsIOS(/iphone|ipad|ipod/.test(userAgent));
+  }, []);
   return (
     <>
       {(isRightSideOpen || isRightSidebarOpen) && (
@@ -279,7 +284,7 @@ const RightSidebar = ({ content, onClose, isRightSidebarOpen }) => {
                 <div
                   className="flex items-start justify-start p-3 rounded-lg w-full max-w-[350px] cursor-pointer my-1"
                 >
-                  <iframe width="350" height="350" src="https://www.youtube.com/embed/Vl-M1xquTgk" title="EG 遊戲展示影片" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  <iframe width="350" height="350" src="https://www.youtube.com/embed/Vl-M1xquTgk" title="Eazy Gaming Introduction Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
               )
               : games
@@ -329,16 +334,20 @@ const RightSidebar = ({ content, onClose, isRightSidebarOpen }) => {
       {showIframe && (
         <div className="fixed w-full h-full top-0 z-[99999]">
           {showNotice && <NoticeScroll onlyPortrait />}
-          <div className="absolute top-0 right-[50%] p-2">
+          <div className="absolute top-0 left-0 p-2">
             <button onClick={handleCloseIframe} className="text-white text-xl">
-              <SlClose className="text-white text-xl opacity-40 bg-[#00000057]" />
+              <SlClose className="text-white text-xl opacity-60 bg-[#00000057]" />
             </button>
           </div>
+          {isIOS ? (
+            null // iOS系統隱藏按鈕
+          ) : (
           <div className="absolute bottom-0 right-0 p-2">
             <button onClick={handleFullScreen} className="text-white text-4xl">
               <SlSizeFullscreen className="text-white text-3xl bg-[#00000057]" />
             </button>
           </div>
+          )}
           <iframe
             ref={iframeRef}
             src={selectedGame?.iframeUrl}

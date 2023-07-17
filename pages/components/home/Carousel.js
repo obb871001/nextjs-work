@@ -33,6 +33,11 @@ const Carousel = () => {
     }
     setRightSidebarOpen(true);
   };
+  const [isIOS, setIsIOS] = useState(false);
+  useEffect(() => {
+    const userAgent = window.navigator.userAgent.toLowerCase();
+    setIsIOS(/iphone|ipad|ipod/.test(userAgent));
+  }, []);
   const CarouselList = [
     {
       background: "/Images/carousel/bg_witch.webp",
@@ -42,7 +47,7 @@ const Carousel = () => {
       gameIntro_pc: i18n("witchLove.introPC"),
       gameIntro_mobile: i18n("witchLove.introMobile"),
       playLink:
-        "https://d29juml4m9n88c.cloudfront.net/games/witchlove/?lang=en&curr=usd&hidefps=true",
+        "https://d29juml4m9n88c.cloudfront.net/games/witchlove/?lang=en&curr=usd&hidefps=true&useIFrame=true",
       addFavorite: "",
       gameImage1: "/Images/carousel/Witch_2.webp",
       gameImage2: "/Images/carousel/Witch_1.webp",
@@ -55,7 +60,7 @@ const Carousel = () => {
       gameIntro_pc: i18n("nekoMaid.introPC"),
       gameIntro_mobile: i18n("nekoMaid.introMobile"),
       playLink:
-        "https://d29juml4m9n88c.cloudfront.net/games/nekomaid/?lang=en&curr=usd&hidefps=true",
+        "https://d29juml4m9n88c.cloudfront.net/games/nekomaid/?lang=en&curr=usd&hidefps=true&useIFrame=true",
       addFavorite: "",
       gameImage1: "/Images/carousel/Neko_2.webp",
       gameImage2: "/Images/carousel/Neko_1.webp",
@@ -68,7 +73,7 @@ const Carousel = () => {
       gameIntro_pc: i18n("adventureOfSinbad.introPC"),
       gameIntro_mobile: i18n("adventureOfSinbad.introMobile"),
       playLink:
-        "https://d29juml4m9n88c.cloudfront.net/games/adventureofsinbad/?lang=en&curr=usd&hidefps=true",
+        "https://d29juml4m9n88c.cloudfront.net/games/adventureofsinbad/?lang=en&curr=usd&hidefps=true&useIFrame=true",
       addFavorite: "",
       gameImage1: "/Images/carousel/Sinbad_2.webp",
       gameImage2: "/Images/carousel/Sinbad_1.webp",
@@ -81,7 +86,7 @@ const Carousel = () => {
       gameIntro_pc: i18n("spin.introPC"),
       gameIntro_mobile: i18n("spin.introMobile"),
       playLink:
-        "https://d29juml4m9n88c.cloudfront.net/games/wheelp/?lang=en&curr=usd",
+        "https://d29juml4m9n88c.cloudfront.net/games/hooheyhowvideo/?lang=en&curr=usd&useIFrame=true",
       More2: "123",
       addFavorite: "",
       gameImage1: "/Images/carousel/gold2.webp",
@@ -95,7 +100,7 @@ const Carousel = () => {
       gameIntro_pc: i18n("treasureKing.introPC"),
       gameIntro_mobile: i18n("treasureKing.introMobile"),
       playLink:
-        "https://d29juml4m9n88c.cloudfront.net/games/treasureking/?lang=en&curr=usd",
+        "https://d29juml4m9n88c.cloudfront.net/games/treasureking/?lang=en&curr=usd&useIFrame=true",
       addFavorite: "",
       gameImage1: "/Images/carousel/dragon2.webp",
       gameImage2: "/Images/carousel/dragon1.webp",
@@ -108,7 +113,7 @@ const Carousel = () => {
       gameIntro_pc: i18n("blockchainGames.introPC"),
       gameIntro_mobile: i18n("blockchainGames.introMobile"),
       playLink:
-        "https://d29juml4m9n88c.cloudfront.net/games/blastxp/?lang=en&curr=usd",
+        "https://d29juml4m9n88c.cloudfront.net/games/blastxp/?lang=en&curr=usd&useIFrame=true",
       More1: "123",
       addFavorite: "",
       gameImage1: "/Images/carousel/block2.webp",
@@ -310,7 +315,7 @@ const Carousel = () => {
                 >
                   <div
                     className="pt-32 mt-[0%] max-[1024px]:w-[100%]
-                   max-[1024px]:absolute max-[1024px]:pt-0 max-[1024px]:z-[99] max-[1024px]:p-2 max-[1024px]:mt-[0%] max-[1024px]:bottom-[15%]"
+                   max-[1024px]:absolute max-[1024px]:pt-0 max-[1024px]:z-[99] max-[1024px]:p-2 max-[1024px]:mt-[0%] max-[1024px]:bottom-[18%]"
                   >
                     <p className="lg:text-base md:text-[20px] text-left text-white mb-[15px] max-[1024px]:mt-[5%] max-[1024px]:px-[10%] max-[1024px]:hidden">
                       {carousel.gameType}
@@ -412,11 +417,14 @@ const Carousel = () => {
       {showIframe && (
         <div className="fixed w-full h-full top-0 left-0 bottom-0 right-0 z-[99999]">
           {!isToolbarHidden && <NoticeScroll />}
-          <div className="absolute top-0 right-[50%] p-2">
+          <div className="absolute top-0 left-0 p-2">
             <button onClick={handleCloseIframe} className="text-white text-xl">
-              <SlClose className="text-white text-xl opacity-40 bg-[#00000057]" />
+              <SlClose className="text-white text-xl opacity-60 bg-[#00000057]" />
             </button>
           </div>
+          {isIOS ? (
+            null // iOS系統隱藏按鈕
+          ) : (
           <div className="absolute bottom-0 right-0 p-2">
             <button
               onClick={isFullscreen ? exitFullscreen : enterFullscreen} // 點擊時切換全螢幕模式
@@ -429,6 +437,7 @@ const Carousel = () => {
               )}
             </button>
           </div>
+          )}
 
           <iframe
             ref={iframeRef}
