@@ -315,7 +315,7 @@ const Carousel = () => {
                 >
                   <div
                     className="pt-32 mt-[0%] max-[1024px]:w-[100%]
-                   max-[1024px]:absolute max-[1024px]:pt-0 max-[1024px]:z-[99] max-[1024px]:p-2 max-[1024px]:mt-[0%] max-[1024px]:bottom-[18%]"
+                   max-[1024px]:absolute max-[1024px]:pt-0 max-[1024px]:z-[99] max-[1024px]:p-2 max-[1024px]:mt-[0%] max-[1024px]:bottom-[20%]"
                   >
                     <p className="lg:text-base md:text-[20px] text-left text-white mb-[15px] max-[1024px]:mt-[5%] max-[1024px]:px-[10%] max-[1024px]:hidden">
                       {carousel.gameType}
