@@ -54,18 +54,18 @@ const RightSidebar = ({ content, onClose, isRightSidebarOpen }) => {
     };
   }, [windowWidth, showIframe]);
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (isRightSideOpen && !event.target.closest(".right-sidebar")) {
-        handleCloseSidebar();
-      }
-    };
+  const handleClickOutside = (event) => {
+    if (isRightSideOpen && !event.target.closest(".right-sidebar")) {
+      handleCloseSidebar();
+    }
+  };
 
-    document.addEventListener("mousedown", handleClickOutside);
+  document.addEventListener("mousedown", handleClickOutside);
 
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [isRightSideOpen]);
+  return () => {
+    document.removeEventListener("mousedown", handleClickOutside);
+  };
+}, [isRightSideOpen]);
   useEffect(() => {
     const handleOrientationChange = () => {
       setTimeout(() => {
@@ -262,10 +262,16 @@ const RightSidebar = ({ content, onClose, isRightSidebarOpen }) => {
     const userAgent = window.navigator.userAgent.toLowerCase();
     setIsIOS(/iphone|ipad|ipod/.test(userAgent));
   }, []);
+  const handleWrapperClick = (event) => {
+    event.stopPropagation();
+    if (!event.target.closest(".right-sidebar")) {
+      onClose();
+    }
+  };
   return (
     <>
       {(isRightSideOpen || isRightSidebarOpen) && (
-        <div
+        <div onClick={handleWrapperClick}
           className="right-sidebar fixed h-full right-0 top-0 z-[9999] overflow-auto bg-rightsidebar-color w-[25%] px-6 py-4 
     max-[1024px]:w-full max-[1024px]:bg-[#9a47bb]"
         >
