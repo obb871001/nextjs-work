@@ -35,7 +35,7 @@ const TitleComponent = ({
                   selectedItem === item.label ? "text-[#F5DD49]" : "text-white"
                 } text-lg title-font max-[1024px]:text-base break-keep	`}
               >
-                {i18n(item.label)}
+                {item.label}
               </p>
               <div class="flex items-center justify-center">
                 <hr

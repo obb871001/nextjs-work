@@ -4,16 +4,7 @@ import CommonWrapper from "@/pages/components/Wrapper/CommonWrapper";
 import { useState } from "react";
 import { useTranslation } from "next-export-i18n";
 
-const selectTag = [
-  {
-    label: "Team",
-    flipped: false,
-  },
-  {
-    label: "Accreditation",
-    flipped: true,
-  },
-];
+
 
 const cardList = [
   {
@@ -78,6 +69,16 @@ const About = () => {
   const handleAccreditationClick = () => {
     setIsFlipped(true); // 點擊時翻轉卡片
   };
+  const selectTag = [
+    {
+      label: i18n("Team"),
+      flipped: false,
+    },
+    {
+      label: i18n("Accreditation"),
+      flipped: true,
+    },
+  ];
   return (
     <CommonWrapper>
       <section className="flex flex-col gap-[30px] justify-center pl-[12%] max-[1024px]:pl-[0%]">
