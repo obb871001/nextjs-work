@@ -24,7 +24,7 @@ const Carousel = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isRightSidebarOpen, setRightSidebarOpen] = useState(false); // 添加状态用于控制右侧菜单的显示和隐藏
   const handleItemClick = (itemId) => {
-     if (itemId === selectedItem) {
+    if (itemId === selectedItem) {
       setSelectedItem(null);
       setRightSidebarOpen(false); // 关闭右侧菜单
     } else {
@@ -151,10 +151,22 @@ const Carousel = () => {
   const [windowWidth, setWindowWidth] = useState(
     isBrowser ? window.innerWidth : 0
   );
+  const [isPortrait, setIsPortrait] = useState(
+    isBrowser ? window.innerWidth < window.innerHeight : true
+  );
+  const [defaultHeight, setDefaultHeight] = useState(
+    isBrowser && isPortrait ? window.innerWidth - 20 : 0
+  );
 
   useEffect(() => {
     const handleResize = () => {
+      const isCurrentlyPortrait = window.innerHeight > window.innerWidth;
+      setIsPortrait(isCurrentlyPortrait);
       setWindowWidth(window.innerWidth);
+
+      if (isCurrentlyPortrait) {
+        setDefaultHeight(window.innerWidth - 20);
+      }
     };
 
     window.addEventListener("resize", handleResize);
@@ -168,7 +180,7 @@ const Carousel = () => {
     if (showIframe && window.innerWidth > window.innerHeight) {
       const handleResize = () => {
         setInitialHeight(window.innerHeight);
-        setIsToolbarHidden(window.innerHeight >= initialHeight);
+        setIsToolbarHidden(window.innerHeight >= defaultHeight);
       };
 
       window.addEventListener("resize", handleResize);
@@ -179,12 +191,15 @@ const Carousel = () => {
     } else {
       setIsToolbarHidden(true);
     }
-  }, [initialHeight, showIframe, windowWidth]);
+  }, [initialHeight, showIframe, windowWidth, defaultHeight]);
 
   useEffect(() => {
     const handleOrientationChange = () => {
       setTimeout(() => {
-        if (window.innerWidth > window.innerHeight) {
+        if (
+          window.innerWidth > window.innerHeight &&
+          window.innerHeight < defaultHeight
+        ) {
           setIsToolbarHidden(false);
         }
       }, 200);
@@ -271,14 +286,14 @@ const Carousel = () => {
   }, []);
   useEffect(() => {
     const handleMessage = (event) => {
-      if (event.data.event === 'close') {
-        setShowIframe(false);// 做一些處理，例如關閉 iframe
+      if (event.data.event === "close") {
+        setShowIframe(false); // 做一些處理，例如關閉 iframe
       }
     };
-    window.addEventListener('message', handleMessage);
+    window.addEventListener("message", handleMessage);
     // 清除事件監聽器
     return () => {
-      window.removeEventListener('message', handleMessage);
+      window.removeEventListener("message", handleMessage);
     };
   }, []);
   return (
@@ -422,21 +437,19 @@ const Carousel = () => {
               <SlClose className="text-white text-xl opacity-60 bg-[#00000057]" />
             </button>
           </div>
-          {isIOS ? (
-            null // iOS系統隱藏按鈕
-          ) : (
-          <div className="absolute bottom-0 right-0 p-2">
-            <button
-              onClick={isFullscreen ? exitFullscreen : enterFullscreen} // 點擊時切換全螢幕模式
-              className="text-white text-4xl"
-            >
-              {isFullscreen ? (
-                <SlSizeActual className="text-white text-3xl bg-[#00000057]" />
-              ) : (
-                <SlSizeFullscreen className="text-white text-3xl bg-[#00000057]" />
-              )}
-            </button>
-          </div>
+          {isIOS ? null : ( // iOS系統隱藏按鈕
+            <div className="absolute bottom-0 right-0 p-2">
+              <button
+                onClick={isFullscreen ? exitFullscreen : enterFullscreen} // 點擊時切換全螢幕模式
+                className="text-white text-4xl"
+              >
+                {isFullscreen ? (
+                  <SlSizeActual className="text-white text-3xl bg-[#00000057]" />
+                ) : (
+                  <SlSizeFullscreen className="text-white text-3xl bg-[#00000057]" />
+                )}
+              </button>
+            </div>
           )}
 
           <iframe
