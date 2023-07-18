@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { TbArrowNarrowRight } from "react-icons/tb";
 import { BsFillSuitHeartFill } from "react-icons/bs";
-import YouTube from 'react-youtube';
+import YouTube from "react-youtube";
 import ReactStars from "react-stars";
 import Rating from "@mui/material/Rating";
 import StarIcon from "@mui/icons-material/Star";
@@ -19,17 +19,29 @@ const RightSidebar = ({ content, onClose, isRightSidebarOpen }) => {
   const [isRightSideOpen, setIsRightSideOpen] = useState(true);
   const [showIframe, setShowIframe] = useState(false);
   const [selectedGame, setSelectedGame] = useState(null);
-  const [showNotice, setShowNotice] = useState(false);
+  const [isToolbarHidden, setIsToolbarHidden] = useState(true);
   const [initialHeight, setInitialHeight] = useState(
     isBrowser ? window.innerHeight : 0
   );
   const [windowWidth, setWindowWidth] = useState(
     isBrowser ? window.innerWidth : 0
   );
+  const [isPortrait, setIsPortrait] = useState(
+    isBrowser ? window.innerWidth < window.innerHeight : true
+  );
+  const [defaultHeight, setDefaultHeight] = useState(
+    isBrowser && isPortrait ? window.innerWidth - 20 : 0
+  );
 
   useEffect(() => {
     const handleResize = () => {
+      const isCurrentlyPortrait = window.innerHeight > window.innerWidth;
+      setIsPortrait(isCurrentlyPortrait);
       setWindowWidth(window.innerWidth);
+
+      if (isCurrentlyPortrait) {
+        setDefaultHeight(window.innerWidth - 20);
+      }
     };
 
     window.addEventListener("resize", handleResize);
@@ -39,40 +51,30 @@ const RightSidebar = ({ content, onClose, isRightSidebarOpen }) => {
     };
   }, []);
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth > window.innerHeight) {
-        setShowNotice(true);
-      } else {
-        setShowNotice(false);
-      }
-    };
+    if (showIframe && window.innerWidth > window.innerHeight) {
+      const handleResize = () => {
+        setInitialHeight(window.innerHeight);
+        setIsToolbarHidden(window.innerHeight >= defaultHeight);
+      };
 
-    window.addEventListener("resize", handleResize);
+      window.addEventListener("resize", handleResize);
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, [windowWidth, showIframe]);
-  useEffect(() => {
-  const handleClickOutside = (event) => {
-    if (isRightSideOpen && !event.target.closest(".right-sidebar")) {
-      handleCloseSidebar();
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    } else {
+      setIsToolbarHidden(true);
     }
-  };
+  }, [initialHeight, showIframe, windowWidth, defaultHeight]);
 
-  document.addEventListener("mousedown", handleClickOutside);
-
-  return () => {
-    document.removeEventListener("mousedown", handleClickOutside);
-  };
-}, [isRightSideOpen]);
   useEffect(() => {
     const handleOrientationChange = () => {
       setTimeout(() => {
-        if (window.innerWidth > window.innerHeight) {
-          setShowNotice(true);
-        } else {
-          setShowNotice(false);
+        if (
+          window.innerWidth > window.innerHeight &&
+          window.innerHeight < defaultHeight
+        ) {
+          setIsToolbarHidden(false);
         }
       }, 200);
     };
@@ -247,14 +249,14 @@ const RightSidebar = ({ content, onClose, isRightSidebarOpen }) => {
   };
   useEffect(() => {
     const handleMessage = (event) => {
-      if (event.data.event === 'close') {
-        setShowIframe(false);// 做一些處理，例如關閉 iframe
+      if (event.data.event === "close") {
+        setShowIframe(false); // 做一些處理，例如關閉 iframe
       }
     };
-    window.addEventListener('message', handleMessage);
+    window.addEventListener("message", handleMessage);
     // 清除事件監聽器
     return () => {
-      window.removeEventListener('message', handleMessage);
+      window.removeEventListener("message", handleMessage);
     };
   }, []);
   const [isIOS, setIsIOS] = useState(false);
@@ -271,7 +273,8 @@ const RightSidebar = ({ content, onClose, isRightSidebarOpen }) => {
   return (
     <>
       {(isRightSideOpen || isRightSidebarOpen) && (
-        <div onClick={handleWrapperClick}
+        <div
+          onClick={handleWrapperClick}
           className="right-sidebar fixed h-full right-0 top-0 z-[9999] overflow-auto bg-rightsidebar-color w-[25%] px-6 py-4 
     max-[1024px]:w-full max-[1024px]:bg-[#9a47bb]"
         >
@@ -285,74 +288,81 @@ const RightSidebar = ({ content, onClose, isRightSidebarOpen }) => {
             {i18nCommon(content)}
           </h2>
           <div className=" flex flex-col items-center justify-center px-2">
-          {content === "Movie"
-              ? (
-                <div
-                  className="flex items-start justify-start p-3 rounded-lg w-full max-w-[350px] cursor-pointer my-1"
-                >
-                  <iframe width="350" height="350" src="https://www.youtube.com/embed/Vl-M1xquTgk" title="Eazy Gaming Introduction Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
-              )
-              : games
-                  .filter((game) => game.category === i18nCommon(content))
-                  .map((game, index) => (
-                    <div
-                      key={index}
-                      className="flex items-start justify-start bg-[#d4b3e2] p-3 rounded-lg w-full max-w-[350px] cursor-pointer my-1"
-                      onClick={() => handleOpenIframe(game)}
-                    >
-                      <div className="mr-1">
-                        <img
-                          src={game.imageUrl}
-                          alt=""
-                          className="w-[80px] h-[80px] rounded-lg"
-                        />
-                      </div>
-                      <div className="flex items-start justify-start mx-1">
-                        <div className="text-left">
-                          <div className="gameTitle text-xl title-font-bold">
-                            {game.title}
-                          </div>
-                          <div className="gameIntro text-sm">{game.intro}</div>
-                          <div className="star mt-1">
-                            <Rating
-                              style={{ fontSize: "20px", color: "#fee301" }}
-                              name="half-rating-read"
-                              defaultValue={game.rating}
-                              precision={0.5}
-                              readOnly
-                              emptyIcon={
-                                <StarIcon
-                                  style={{ opacity: 1 }}
-                                  fontSize="inherit"
-                                />
-                              }
-                            />
-                          </div>
+            {content === "Movie" ? (
+              <div className="flex items-start justify-start p-3 rounded-lg w-full max-w-[350px] cursor-pointer my-1">
+                <iframe
+                  width="350"
+                  height="350"
+                  src="https://www.youtube.com/embed/Vl-M1xquTgk"
+                  title="Eazy Gaming Introduction Video"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            ) : (
+              games
+                .filter((game) => game.category === i18nCommon(content))
+                .map((game, index) => (
+                  <div
+                    key={index}
+                    className="flex items-start justify-start bg-[#d4b3e2] p-3 rounded-lg w-full max-w-[350px] cursor-pointer my-1"
+                    onClick={() => handleOpenIframe(game)}
+                  >
+                    <div className="mr-1">
+                      <img
+                        src={game.imageUrl}
+                        alt=""
+                        className="w-[80px] h-[80px] rounded-lg"
+                      />
+                    </div>
+                    <div className="flex items-start justify-start mx-1">
+                      <div className="text-left">
+                        <div className="gameTitle text-xl title-font-bold">
+                          {game.title}
+                        </div>
+                        <div className="gameIntro text-sm">{game.intro}</div>
+                        <div className="star mt-1">
+                          <Rating
+                            style={{ fontSize: "20px", color: "#fee301" }}
+                            name="half-rating-read"
+                            defaultValue={game.rating}
+                            precision={0.5}
+                            readOnly
+                            emptyIcon={
+                              <StarIcon
+                                style={{ opacity: 1 }}
+                                fontSize="inherit"
+                              />
+                            }
+                          />
                         </div>
                       </div>
                     </div>
-                  ))}
+                  </div>
+                ))
+            )}
             <ShareButton />
           </div>
         </div>
       )}
       {showIframe && (
         <div className="fixed w-full h-full top-0 z-[99999]">
-          {showNotice && <NoticeScroll onlyPortrait />}
+          {!isToolbarHidden && <NoticeScroll />}
           <div className="absolute top-0 left-0 p-2">
             <button onClick={handleCloseIframe} className="text-white text-xl">
               <SlClose className="text-white text-xl opacity-60 bg-[#00000057]" />
             </button>
           </div>
-          {isIOS ? (
-            null // iOS系統隱藏按鈕
-          ) : (
-          <div className="absolute bottom-0 right-0 p-2">
-            <button onClick={handleFullScreen} className="text-white text-4xl">
-              <SlSizeFullscreen className="text-white text-3xl bg-[#00000057]" />
-            </button>
-          </div>
+          {isIOS ? null : ( // iOS系統隱藏按鈕
+            <div className="absolute bottom-0 right-0 p-2">
+              <button
+                onClick={handleFullScreen}
+                className="text-white text-4xl"
+              >
+                <SlSizeFullscreen className="text-white text-3xl bg-[#00000057]" />
+              </button>
+            </div>
           )}
           <iframe
             ref={iframeRef}
