@@ -271,71 +271,73 @@ const RightSidebar = ({ content, onClose, isRightSidebarOpen }) => {
   return (
     <>
       {(isRightSideOpen || isRightSidebarOpen) && (
-        <div onClick={handleWrapperClick}
-          className="right-sidebar fixed h-full right-0 top-0 z-[9999] overflow-auto bg-rightsidebar-color w-[25%] px-6 py-4 
-    max-[1024px]:w-full max-[1024px]:bg-[#9a47bb]"
-        >
-          <TbArrowNarrowRight
-            onClick={handleCloseSidebar}
-            className="text-white text-4xl cursor-pointer"
-          />
+        <section className="fixed top-0 right-0 w-full h-full z-[9999]">
+          <div onClick={handleWrapperClick}
+            className="right-sidebar fixed h-full right-0 top-0 z-[9999] overflow-auto bg-rightsidebar-color w-[25%] px-6 py-4 
+      max-[1024px]:w-full max-[1024px]:bg-[#9a47bb]"
+          >
+            <TbArrowNarrowRight
+              onClick={handleCloseSidebar}
+              className="text-white text-4xl cursor-pointer"
+            />
 
-          {/* <Search/> */}
-          <h2 className="title-font mb-2 text-xl py-2 text-white">
-            {i18nCommon(content)}
-          </h2>
-          <div className=" flex flex-col items-center justify-center px-2">
-          {content === "Movie"
-              ? (
-                <div
-                  className="flex items-start justify-start p-3 rounded-lg w-full max-w-[350px] cursor-pointer my-1"
-                >
-                  <iframe width="350" height="350" src="https://www.youtube.com/embed/Vl-M1xquTgk" title="Eazy Gaming Introduction Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
-              )
-              : games
-                  .filter((game) => game.category === i18nCommon(content))
-                  .map((game, index) => (
-                    <div
-                      key={index}
-                      className="flex items-start justify-start bg-[#d4b3e2] p-3 rounded-lg w-full max-w-[350px] cursor-pointer my-1"
-                      onClick={() => handleOpenIframe(game)}
-                    >
-                      <div className="mr-1">
-                        <img
-                          src={game.imageUrl}
-                          alt=""
-                          className="w-[80px] h-[80px] rounded-lg"
-                        />
-                      </div>
-                      <div className="flex items-start justify-start mx-1">
-                        <div className="text-left">
-                          <div className="gameTitle text-xl title-font-bold">
-                            {game.title}
-                          </div>
-                          <div className="gameIntro text-sm">{game.intro}</div>
-                          <div className="star mt-1">
-                            <Rating
-                              style={{ fontSize: "20px", color: "#fee301" }}
-                              name="half-rating-read"
-                              defaultValue={game.rating}
-                              precision={0.5}
-                              readOnly
-                              emptyIcon={
-                                <StarIcon
-                                  style={{ opacity: 1 }}
-                                  fontSize="inherit"
-                                />
-                              }
-                            />
+            {/* <Search/> */}
+            <h2 className="title-font mb-2 text-xl py-2 text-white">
+              {i18nCommon(content)}
+            </h2>
+            <div className=" flex flex-col items-center justify-center px-2">
+            {content === "Movie"
+                ? (
+                  <div
+                    className="flex items-start justify-start p-3 rounded-lg w-full max-w-[350px] cursor-pointer my-1"
+                  >
+                    <iframe width="350" height="350" src="https://www.youtube.com/embed/Vl-M1xquTgk" title="Eazy Gaming Introduction Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  </div>
+                )
+                : games
+                    .filter((game) => game.category === i18nCommon(content))
+                    .map((game, index) => (
+                      <div
+                        key={index}
+                        className="flex items-start justify-start bg-[#d4b3e2] p-3 rounded-lg w-full max-w-[350px] cursor-pointer my-1"
+                        onClick={() => handleOpenIframe(game)}
+                      >
+                        <div className="mr-1">
+                          <img
+                            src={game.imageUrl}
+                            alt=""
+                            className="w-[80px] h-[80px] rounded-lg"
+                          />
+                        </div>
+                        <div className="flex items-start justify-start mx-1">
+                          <div className="text-left">
+                            <div className="gameTitle text-xl title-font-bold">
+                              {game.title}
+                            </div>
+                            <div className="gameIntro text-sm">{game.intro}</div>
+                            <div className="star mt-1">
+                              <Rating
+                                style={{ fontSize: "20px", color: "#fee301" }}
+                                name="half-rating-read"
+                                defaultValue={game.rating}
+                                precision={0.5}
+                                readOnly
+                                emptyIcon={
+                                  <StarIcon
+                                    style={{ opacity: 1 }}
+                                    fontSize="inherit"
+                                  />
+                                }
+                              />
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  ))}
-            <ShareButton />
+                    ))}
+              <ShareButton />
+            </div>
           </div>
-        </div>
+        </section>
       )}
       {showIframe && (
         <div className="fixed w-full h-full top-0 z-[99999]">
