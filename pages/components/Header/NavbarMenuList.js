@@ -39,7 +39,7 @@ const NavbarMenuList = () => {
       ),
       id: "Home",
       label: "Home",
-      href: "/#",
+      href: `/?lang=${router.query.lang || "en"}`,
       onClick: () => {
         setMenuOpen(false); // 關閉左側選單
         handleItemClick(null); // 不顯示右側選單，整頁跳轉
@@ -118,6 +118,11 @@ const NavbarMenuList = () => {
       setSelectedItem(itemId);
       setRightSidebarOpen(true); // 打开右侧菜单
     }
+  };
+  const handleMenuItemClick = (href) => {
+    const langParam = router.query.lang || "en";
+    const targetURL = `${href}/?lang=${langParam}`;
+    router.push(targetURL);
   };
   useEffect(() => {
     const handleDocumentClick = (event) => {
@@ -205,7 +210,7 @@ const NavbarMenuList = () => {
                         {menuItems.map((menuItem) => (
                           <Link
                             key={menuItem.title}
-                            href={menuItem.href}
+                            href={`${menuItem.href}/?lang=${router.query.lang || "en"}`}
                             className="w-full"
                           >
                             <div

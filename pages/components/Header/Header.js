@@ -35,7 +35,11 @@ const Header = () => {
     // { title: "Collaborate", href: "/Collaborate" },
     { title: "Service", href: "/Service" },
   ];
-
+  const handleMenuItemClick = (href) => {
+    const langParam = router.query.lang || "en";
+    const targetURL = `${href}/?lang=${langParam}`;
+    router.push(targetURL);
+  };
   return (
     <header
       className={`fixed top-0 left-0 z-[9999] h-[90px] w-full ml-[12%] transition duration-500 max-[1024px]:ml-0 max-[1024px]:h-[68px]
@@ -46,7 +50,7 @@ const Header = () => {
           {/* <NavbarList setOpenNav={setOpenNav} openNav={openNav} /> */}
           <Link
             className="text-4xl font-bold text-white cursor-pointer mx-12"
-            href="/#"
+            href={`/?lang=${router.query.lang || "en"}`}
           >
             <img
               src="https://egslot.net/Images/logo/EG-LOGO.webp"
@@ -56,7 +60,7 @@ const Header = () => {
           </Link>
           <div className="flex max-[1024px]:hidden">
             {menuItems.map((menuItem) => (
-              <Link key={menuItem.title} href={menuItem.href}>
+              <Link key={menuItem.title} href={`${menuItem.href}/?lang=${router.query.lang || "en"}`}>
                 <div className="title-font text-white text-xl px-4 py-2">
                   {i18nNavbar(menuItem.title)}
                 </div>
