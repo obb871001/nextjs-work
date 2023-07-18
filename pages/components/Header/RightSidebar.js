@@ -274,7 +274,8 @@ const RightSidebar = ({ content, onClose, isRightSidebarOpen }) => {
     <>
       {(isRightSideOpen || isRightSidebarOpen) && (
         <section className="fixed top-0 right-0 w-full h-full z-[9999]">
-          <div onClick={handleWrapperClick}
+          <div 
+            onClick={handleWrapperClick}
             className="right-sidebar fixed h-full right-0 top-0 z-[9999] overflow-auto bg-rightsidebar-color w-[25%] px-6 py-4 
       max-[1024px]:w-full max-[1024px]:bg-[#9a47bb]"
           >
