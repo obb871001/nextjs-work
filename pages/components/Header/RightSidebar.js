@@ -108,7 +108,7 @@ const RightSidebar = ({ content, onClose, isRightSidebarOpen }) => {
       rating: 5,
       category: i18nCommon("HotGame"),
       iframeUrl:
-        "https://d29juml4m9n88c.cloudfront.net/games/witchlove/?lang=en&curr=usd&hidefps=true&useIFrame=true",
+        "https://d29juml4m9n88c.cloudfront.net/games/slot/witchlove/?lang=en&curr=usd&hidefps=true&useIFrame=true",
     },
     {
       title: i18n("NEKOMAID.title"),
@@ -117,7 +117,7 @@ const RightSidebar = ({ content, onClose, isRightSidebarOpen }) => {
       rating: 5,
       category: i18nCommon("HotGame"),
       iframeUrl:
-        "https://d29juml4m9n88c.cloudfront.net/games/nekomaid/?lang=en&curr=usd&hidefps=true&useIFrame=true",
+        "https://d29juml4m9n88c.cloudfront.net/games/slot/nekomaid/?lang=en&curr=usd&hidefps=true&useIFrame=true",
     },
     {
       title: i18n("ADVENTUREOFSINBAD.title"),
@@ -127,7 +127,7 @@ const RightSidebar = ({ content, onClose, isRightSidebarOpen }) => {
       rating: 5,
       category: i18nCommon("HotGame"),
       iframeUrl:
-        "https://d29juml4m9n88c.cloudfront.net/games/adventureofsinbad/?lang=en&curr=usd&hidefps=true&useIFrame=true",
+        "https://d29juml4m9n88c.cloudfront.net/games/slot/adventureofsinbad/?lang=en&curr=usd&hidefps=true&useIFrame=true",
     },
     {
       title: i18n("fishPawnCrabSpin.title"),
@@ -137,7 +137,7 @@ const RightSidebar = ({ content, onClose, isRightSidebarOpen }) => {
       rating: 5,
       category: i18nCommon("BeABanker"),
       iframeUrl:
-        "https://d29juml4m9n88c.cloudfront.net/games/hooheyhowvideo/?lang=en&curr=usd&useIFrame=true",
+        "https://d29juml4m9n88c.cloudfront.net/games/sicbo/hooheyhowvideo/?lang=en&curr=usd&useIFrame=true",
     },
     {
       title: i18n("xocDiaSpin.title"),
@@ -146,7 +146,7 @@ const RightSidebar = ({ content, onClose, isRightSidebarOpen }) => {
       rating: 4.5,
       category: i18nCommon("BeABanker"),
       iframeUrl:
-        "https://d29juml4m9n88c.cloudfront.net/games/xocdiavideo/?lang=en&curr=usd&useIFrame=true",
+        "https://d29juml4m9n88c.cloudfront.net/games/sicbo/xocdiavideo/?lang=en&curr=usd&useIFrame=true",
     },
     {
       title: i18n("sicBoSpin.title"),
@@ -155,7 +155,7 @@ const RightSidebar = ({ content, onClose, isRightSidebarOpen }) => {
       rating: 4.5,
       category: i18nCommon("BeABanker"),
       iframeUrl:
-        "https://d29juml4m9n88c.cloudfront.net/games/sicbovideo/?lang=en&curr=usd&useIFrame=true",
+        "https://d29juml4m9n88c.cloudfront.net/games/sicbo/sicbovideo/?lang=en&curr=usd&useIFrame=true",
     },
     {
       title: i18n("treasureKing.title"),
@@ -164,7 +164,7 @@ const RightSidebar = ({ content, onClose, isRightSidebarOpen }) => {
       rating: 5,
       category: i18nCommon("Fishing"),
       iframeUrl:
-        "https://d29juml4m9n88c.cloudfront.net/games/treasureking/?lang=en&curr=usd&useIFrame=true",
+        "https://d29juml4m9n88c.cloudfront.net/games/fishing/treasureking/?lang=en&curr=usd&useIFrame=true",
     },
     {
       title: i18n("blastX.title"),
@@ -174,7 +174,7 @@ const RightSidebar = ({ content, onClose, isRightSidebarOpen }) => {
       rating: 5,
       category: i18nCommon("Blockchain Games"),
       iframeUrl:
-        "https://d29juml4m9n88c.cloudfront.net/games/blastxp/?lang=en&curr=usd&useIFrame=true",
+        "https://d29juml4m9n88c.cloudfront.net/games/crash/blastxp/?lang=en&curr=usd&useIFrame=true",
     },
     {
       title: i18n("plinko.title"),
@@ -184,7 +184,7 @@ const RightSidebar = ({ content, onClose, isRightSidebarOpen }) => {
       rating: 4,
       category: i18nCommon("Blockchain Games"),
       iframeUrl:
-        "https://d29juml4m9n88c.cloudfront.net/games/plinkop/?lang=en&curr=usd&useIFrame=true",
+        "https://d29juml4m9n88c.cloudfront.net/games/crash/plinkop/?lang=en&curr=usd&useIFrame=true",
     },
     {
       title: i18n("hilo.title"),
@@ -194,7 +194,7 @@ const RightSidebar = ({ content, onClose, isRightSidebarOpen }) => {
       rating: 5,
       category: i18nCommon("Blockchain Games"),
       iframeUrl:
-        "https://d29juml4m9n88c.cloudfront.net/games/hilop/?lang=en&curr=usd&useIFrame=true",
+        "https://d29juml4m9n88c.cloudfront.net/games/crash/hilop/?lang=en&curr=usd&useIFrame=true",
     },
     {
       title: i18n("wheel.title"),
@@ -204,7 +204,7 @@ const RightSidebar = ({ content, onClose, isRightSidebarOpen }) => {
       rating: 5,
       category: i18nCommon("Blockchain Games"),
       iframeUrl:
-        "https://d29juml4m9n88c.cloudfront.net/games/wheelp/?lang=en&curr=usd&useIFrame=true",
+        "https://d29juml4m9n88c.cloudfront.net/games/crash/wheelp/?lang=en&curr=usd&useIFrame=true",
     },
     {
       title: i18n("dice.title"),
@@ -214,7 +214,7 @@ const RightSidebar = ({ content, onClose, isRightSidebarOpen }) => {
       rating: 5,
       category: i18nCommon("Blockchain Games"),
       iframeUrl:
-        "https://d29juml4m9n88c.cloudfront.net/games/dicep/?lang=en&curr=usd&useIFrame=true",
+        "https://d29juml4m9n88c.cloudfront.net/games/crash/dicep/?lang=en&curr=usd&useIFrame=true",
     },
   ];
   const iframeRef = useRef(null);

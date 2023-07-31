@@ -47,7 +47,7 @@ const Carousel = () => {
       gameIntro_pc: i18n("witchLove.introPC"),
       gameIntro_mobile: i18n("witchLove.introMobile"),
       playLink:
-        "https://d29juml4m9n88c.cloudfront.net/games/witchlove/?lang=en&curr=usd&hidefps=true&useIFrame=true",
+        "https://d29juml4m9n88c.cloudfront.net/games/slot/witchlove/?lang=en&curr=usd&hidefps=true&useIFrame=true",
       addFavorite: "",
       gameImage1: "/Images/carousel/Witch_2.webp",
       gameImage2: "/Images/carousel/Witch_1.webp",
@@ -60,7 +60,7 @@ const Carousel = () => {
       gameIntro_pc: i18n("nekoMaid.introPC"),
       gameIntro_mobile: i18n("nekoMaid.introMobile"),
       playLink:
-        "https://d29juml4m9n88c.cloudfront.net/games/nekomaid/?lang=en&curr=usd&hidefps=true&useIFrame=true",
+        "https://d29juml4m9n88c.cloudfront.net/games/slot/nekomaid/?lang=en&curr=usd&hidefps=true&useIFrame=true",
       addFavorite: "",
       gameImage1: "/Images/carousel/Neko_2.webp",
       gameImage2: "/Images/carousel/Neko_1.webp",
@@ -73,7 +73,7 @@ const Carousel = () => {
       gameIntro_pc: i18n("adventureOfSinbad.introPC"),
       gameIntro_mobile: i18n("adventureOfSinbad.introMobile"),
       playLink:
-        "https://d29juml4m9n88c.cloudfront.net/games/adventureofsinbad/?lang=en&curr=usd&hidefps=true&useIFrame=true",
+        "https://d29juml4m9n88c.cloudfront.net/games/slot/adventureofsinbad/?lang=en&curr=usd&hidefps=true&useIFrame=true",
       addFavorite: "",
       gameImage1: "/Images/carousel/Sinbad_2.webp",
       gameImage2: "/Images/carousel/Sinbad_1.webp",
@@ -86,7 +86,7 @@ const Carousel = () => {
       gameIntro_pc: i18n("spin.introPC"),
       gameIntro_mobile: i18n("spin.introMobile"),
       playLink:
-        "https://d29juml4m9n88c.cloudfront.net/games/hooheyhowvideo/?lang=en&curr=usd&useIFrame=true",
+        "https://d29juml4m9n88c.cloudfront.net/games/sicbo/hooheyhowvideo/?lang=en&curr=usd&useIFrame=true",
       More2: "123",
       addFavorite: "",
       gameImage1: "/Images/carousel/gold2.webp",
@@ -100,7 +100,7 @@ const Carousel = () => {
       gameIntro_pc: i18n("treasureKing.introPC"),
       gameIntro_mobile: i18n("treasureKing.introMobile"),
       playLink:
-        "https://d29juml4m9n88c.cloudfront.net/games/treasureking/?lang=en&curr=usd&useIFrame=true",
+        "https://d29juml4m9n88c.cloudfront.net/games/fishing/treasureking/?lang=en&curr=usd&useIFrame=true",
       addFavorite: "",
       gameImage1: "/Images/carousel/dragon2.webp",
       gameImage2: "/Images/carousel/dragon1.webp",
@@ -113,7 +113,7 @@ const Carousel = () => {
       gameIntro_pc: i18n("blockchainGames.introPC"),
       gameIntro_mobile: i18n("blockchainGames.introMobile"),
       playLink:
-        "https://d29juml4m9n88c.cloudfront.net/games/blastxp/?lang=en&curr=usd&useIFrame=true",
+        "https://d29juml4m9n88c.cloudfront.net/games/crash/blastxp/?lang=en&curr=usd&useIFrame=true",
       More1: "123",
       addFavorite: "",
       gameImage1: "/Images/carousel/block2.webp",
