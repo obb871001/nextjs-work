@@ -5,7 +5,13 @@ import { RxTriangleUp, RxTriangleDown } from "react-icons/rx";
 const ContactUs = () => {
   return (
     <section className="bg-[#202123] pt-[5.5rem] pb-[7.5rem] max-[640px]:py-[50px] flex flex-col items-center">
-      <div className="text-[40px] text-white mb-[40px]">LOGO</div>
+      <div className="text-[40px] text-white mb-[40px]">
+      <img
+              src="https://egslot.net/Images/logo/EG-LOGO.webp"
+              alt="Eazy Gaming"
+              className="w-[155px] h-[48px] max-[1024px]:w-[100px] max-[1024px]:h-[31px]"
+            />
+      </div>
       <section className="flex items-center justify-center mb-[40px] max-[640px]:grid max-[640px]:grid-cols-3 max-[640px]:gap-4">
         {CONTACT_LIST.map((contactList, index) => {
           return (
