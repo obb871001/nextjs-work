@@ -77,7 +77,7 @@ const ContactUs = () => {
         })}
       </section>
       <p className="text-[#848484] text-xs text-center my-[40px]">
-        Copyright © 2023 WorthySky. All Rights Reserved.
+        Copyright © 2023 Eazy Gaming. All Rights Reserved.
       </p>
       <section>
         <section className="bg-[#ff4d4f] rounded-3xl flex">

@@ -9,7 +9,7 @@ const TIP_CARD = [
   {
     main: "華麗的主題",
     content:
-      "WorthySky 致力還原實境一般的遊戲體驗。遊戲有美麗動人的荷官、栩栩如生的背景。大廳主題更會定期替換，保持新鮮感。",
+      "Eazy Gaming 致力還原實境一般的遊戲體驗。遊戲有美麗動人的荷官、栩栩如生的背景。大廳主題更會定期替換，保持新鮮感。",
   },
   {
     main: "卡牌認證",
@@ -24,7 +24,7 @@ const TIP_CARD = [
   {
     main: "縱向／橫向",
     content:
-      "WorthySky 的桌上遊戲在流動裝置上支援縱向及橫向模式。兩個模式均經精心設計，為玩家提供最佳娛樂體驗。",
+      "Eazy Gaming 的桌上遊戲在流動裝置上支援縱向及橫向模式。兩個模式均經精心設計，為玩家提供最佳娛樂體驗。",
   },
 ];
 
@@ -68,7 +68,7 @@ const RNGGames = () => {
                 百家樂
               </p>
               <p>
-                作為風靡全亞洲的遊戲，WorthySky 的百家樂以四張牌先發的方式進行。
+                作為風靡全亞洲的遊戲，Eazy Gaming 的百家樂以四張牌先發的方式進行。
               </p>
             </div>
             <div className="rounded-full border border-white w-[163px] h-[163px] flex items-center justify-center ml-[50px] max-[640px]:ml-[0]">

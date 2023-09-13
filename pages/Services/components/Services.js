@@ -60,7 +60,7 @@ const Services = () => {
           <BoxTitle
             white
             title="服務簡介"
-            content="WorthySky 提供全面的一站式服務，不論在產品質量、服務管理以及技術支援，我們的專業團隊經驗豐富，隨時能為客人提供接合及營運等各方面的支援服務。"
+            content="Eazy Gaming 提供全面的一站式服務，不論在產品質量、服務管理以及技術支援，我們的專業團隊經驗豐富，隨時能為客人提供接合及營運等各方面的支援服務。"
           />
           <section className="grid grid-cols-2 max-[640px]:grid-cols-1">
             {SKILL_LIST.map((skill, index) => {

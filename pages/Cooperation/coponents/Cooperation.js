@@ -29,7 +29,7 @@ const Cooperation = () => {
               此欄載有與我們緊密合作的媒體夥伴。如有興趣合作，請即發電郵至
               <span className="text-yellow-500 cursor-pointer hover:text-yellow-700 hover:border-b hover:border-yellow-700">
                 {" "}
-                WorthySky@sssggg.com
+                service@egslot.net
               </span>
             </p>
           </motion.div>
