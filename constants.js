@@ -1,10 +1,11 @@
-export const CONTACT_ICON = [
-  "line",
-  "facebook",
-  "youtube",
-  "telegram",
-  "instagram",
-];
+// export const CONTACT_ICON = [
+//   "telegram",
+//   "email",
+//   "line",
+//   "facebook",
+//   "youtube",
+//   "instagram",
+// ];
 export const COOPERATION = ["1", "2", "3"];
 
 export const CONTACT_LIST = [

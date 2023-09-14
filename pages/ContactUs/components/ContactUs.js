@@ -1,4 +1,5 @@
 import { CONTACT_ICON } from "@/constants";
+import ShareButton from "../../components/Footer/ShareButton";
 
 const ContactUs = () => {
   return (
@@ -19,7 +20,8 @@ const ContactUs = () => {
             通訊互動
           </p>
           <div className="grid grid-cols-2  md:w-[400px]">
-            {CONTACT_ICON.map((contact, index) => {
+            <ShareButton />
+            {/* {CONTACT_ICON.map((contact, index) => {
               return (
                 <div
                   key={index}
@@ -36,7 +38,7 @@ const ContactUs = () => {
                   </p>
                 </div>
               );
-            })}
+            })} */}
           </div>
         </section>
       </section>

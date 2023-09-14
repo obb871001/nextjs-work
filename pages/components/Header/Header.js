@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import NavbarList from "./NavbarList";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { Image } from 'antd';
 const Header = () => {
   const [styles, setStyle] = useState(false);
   const [openNav, setOpenNav] = useState(false);
@@ -31,7 +32,7 @@ const Header = () => {
     >
       <nav className="flex items-center justify-between h-full container mx-auto lg:px-[0] md:px-[20px] max-[640px]:px-[20px]">
         <Link className="text-4xl font-bold text-white cursor-pointer" href="/">
-          <img
+          <Image
                 src="https://egslot.net/Images/logo/EG-LOGO.webp"
                 alt="Eazy Gaming"
                 className="w-[155px] h-[48px] max-[1024px]:w-[100px] max-[1024px]:h-[31px]"
