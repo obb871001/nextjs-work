@@ -6,6 +6,7 @@ import { HiOutlineLightBulb } from "react-icons/hi";
 import { FaBoxOpen } from "react-icons/fa";
 import IconTextBox from "@/pages/components/IconTextBox/IconTextBox";
 import BoxTitle from "@/pages/components/IconTextBox/BoxTitle";
+import { Image } from 'antd';
 const iconStyle = "mb-[20px] text-[100px] max-[640px]:text-[70px]";
 const SKILL_LIST = [
   {
@@ -43,10 +44,17 @@ const SKILL_LIST = [
 const About = () => {
   return (
     <>
-      <main className="lg:h-[80vh] md:min-h-[35vh] max-[640px]:min-h-[35vh] w-full bg-[url(/Images/aboutUs/bg.jpeg)] flex items-center relative overflow-hidden">
+      <main className="lg:h-[80vh] md:min-h-[35vh] max-[640px]:min-h-[35vh] w-full bg-[url(/Images/aboutUs/bg.jpeg)] flex items-center relative overflow-hidden" 
+      style={{
+        backgroundImage: 'url(/Images/aboutUs/modal.png), url(/Images/aboutUs/bg.jpeg)',
+        backgroundPosition: '40vw 10vh, 50% 50%',
+        backgroundRepeat: 'no-repeat, no-repeat',
+        backgroundSize: 'contain, cover',
+        textShadow: '-1px 0 20px #000, 0 1px 20px #000, 1px 1px 20px #000, 0 -1px 20px #000',
+      }}>
         <section className="container mx-auto">
           <div className="text-white max-[640px]:text-center max-[640px]:px-[20px]">
-            <p className="text-[50px] font-medium mb-[20px] max-[640px]:text-2xl font-medium">
+            <p className="text-[50px] font-medium mb-[20px] max-[640px]:text-2xl">
               關於我們
             </p>
             <p className="w-[450px] max-[640px]:text-sm max-[640px]:w-auto">
@@ -55,7 +63,7 @@ const About = () => {
             </p>
           </div>
         </section>
-        <img
+        <Image
           alt="image"
           src="/Images/aboutUs/modal.png"
           className="absolute lg:bottom-[-5%] xl:bottom-[-15%] right-[0%] lg:w-[600px] xl:w-[900px] 2xl:w-[1050px] hidden lg:block object-cover"
@@ -92,7 +100,7 @@ const About = () => {
             在歐洲大部分司法管轄區的認證，合乎相關的法律及技術要求。"
             />
 
-            <img
+            <Image
               alt="image"
               src="/Images/aboutUs/prove.png"
               className="w-[272px] h-[272px] rounded-full border border-red-500 object-cover p-[30px]"
