@@ -6,7 +6,7 @@ import { HiOutlineLightBulb } from "react-icons/hi";
 import { FaBoxOpen } from "react-icons/fa";
 import IconTextBox from "@/pages/components/IconTextBox/IconTextBox";
 import BoxTitle from "@/pages/components/IconTextBox/BoxTitle";
-import { Image } from 'antd';
+
 const iconStyle = "mb-[20px] text-[100px] max-[640px]:text-[70px]";
 const SKILL_LIST = [
   {
@@ -63,7 +63,7 @@ const About = () => {
             </p>
           </div>
         </section>
-        <Image
+        <img
           alt="image"
           src="/Images/aboutUs/modal.png"
           className="absolute lg:bottom-[-5%] xl:bottom-[-15%] right-[0%] lg:w-[600px] xl:w-[900px] 2xl:w-[1050px] hidden lg:block object-cover"
@@ -100,7 +100,7 @@ const About = () => {
             在歐洲大部分司法管轄區的認證，合乎相關的法律及技術要求。"
             />
 
-            <Image
+            <img
               alt="image"
               src="/Images/aboutUs/prove.png"
               className="w-[272px] h-[272px] rounded-full border border-red-500 object-cover p-[30px]"

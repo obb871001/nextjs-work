@@ -2,7 +2,6 @@ import { CONTACT_ICON } from "@/constants";
 import { Button, Input } from "antd";
 import Link from "next/link";
 import ShareButton from "./ShareButton";
-import { Image } from 'antd';
 
 const INPUTLIST = [
   { title: "姓名" },
@@ -27,7 +26,7 @@ const ContactInput = () => {
     >
       <section className="container h-full mx-auto flex">
         <div className="max-w-[50%] w-full h-full bg-auto bg-right bg-no-repeat flex items-center justify-center bg-[url(/Images/footer/contact_red.svg)] lg:flex hidden">
-          <Image
+          <img
             alt="image"
             className="object-cover ml-[100px]"
             src="/Images/footer/modal.png"

@@ -1,14 +1,13 @@
 import { Button, Input } from "antd";
 import { CONTACT_ICON, CONTACT_LIST, COOPERATION } from "@/constants";
 import { RxTriangleUp, RxTriangleDown } from "react-icons/rx";
-import { Image } from 'antd';
 import ShareButton from "./ShareButton";
 
 const ContactUs = () => {
   return (
     <section className="bg-[#202123] pt-[5.5rem] pb-[7.5rem] max-[640px]:py-[50px] flex flex-col items-center">
       <div className="text-[40px] text-white mb-[40px]">
-      <Image
+      <img
             src="https://egslot.net/Images/logo/EG-LOGO.webp"
             alt="Eazy Gaming"
             className="w-[155px] h-[48px] max-[1024px]:w-[100px] max-[1024px]:h-[31px]"
