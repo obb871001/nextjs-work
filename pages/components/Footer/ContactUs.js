@@ -40,7 +40,7 @@ const ContactUs = () => {
           );
         })}
       </section>
-      <section className="flex items-center justify-center mb-[40px] max-[640px]:flex-col">
+      {/* <section className="flex items-center justify-center mb-[40px] max-[640px]:flex-col">
         <p className="text-[#848484] mr-[10px] max-[640px]:mb-[20px] max-[640px]:text-lg">
           訂閱電子通訊
         </p>
@@ -58,7 +58,7 @@ const ContactUs = () => {
             訂閱
           </Button>
         </div>
-      </section>
+      </section> */}
       <section className="flex items-center justify-center mb-[40px]">
         <ShareButton />
         {/* {CONTACT_ICON.map((icon, index) => {

@@ -1,4 +1,5 @@
 import { Button } from "antd";
+import Link from 'next/link';
 
 const GameIntroduce = ({ intro, gameBackground, gameIcon, gameModal }) => {
   return (
@@ -20,15 +21,17 @@ const GameIntroduce = ({ intro, gameBackground, gameIcon, gameModal }) => {
           <p className="text-white text-center px-[10px] mb-[20px] -translate-y-[100px] opacity-0 group-hover:opacity-100 group-hover:translate-y-[-100px] transition duration-1000">
             {intro}
           </p>
-          <Button
-            size="large"
-            className="w-[200px] -translate-y-[100px] opacity-0 group-hover:opacity-100 group-hover:translate-y-[-100px] transition duration-1000"
-            shape="round"
-            type="primary"
-            danger
-          >
-            了解更多
-          </Button>
+          <Link href="/PlayGame">
+            <Button
+              size="large"
+              className="w-[200px] -translate-y-[100px] opacity-0 group-hover:opacity-100 group-hover:translate-y-[-100px] transition duration-1000"
+              shape="round"
+              type="primary"
+              danger
+            >
+              了解更多
+            </Button>
+          </Link>
         </div>
       </div>
     </>

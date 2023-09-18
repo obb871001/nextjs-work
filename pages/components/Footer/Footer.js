@@ -5,7 +5,7 @@ import ContactUs from "./ContactUs";
 const Footer = () => {
   return (
     <footer>
-      <ContactInput />
+      {/* <ContactInput /> */}
       <ContactUs />
     </footer>
   );
