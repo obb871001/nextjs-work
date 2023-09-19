@@ -56,6 +56,13 @@ const SlotGames = () => {
               gameIcon="/Images/SlotGames/games/games1Icon.png"
               playGameLink="https://d29juml4m9n88c.cloudfront.net/games/slot/adventureofsinbad/?lang=en&curr=usd&hidefps=true&useIFrame=true&hideTxID=true"
             />
+            <GameIntroduce
+              intro="《足球寶貝》"
+              gameModal="url(/Images/SlotGames/games/games1Modal.png)"
+              gameBackground="url(/Images/SlotGames/games/games1.jpeg)"
+              gameIcon="/Images/SlotGames/games/games1Icon.png"
+              playGameLink="https://d29juml4m9n88c.cloudfront.net/games/slot/goallinebaby/?lang=zh-cht&curr=usd&hidefps=true&useIFrame=true&hideTxID=true"
+            />
           </section>
         </section>
       </section>

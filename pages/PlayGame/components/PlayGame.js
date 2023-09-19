@@ -1,9 +1,17 @@
+import { useState } from "react";
 import GameIntroduce from "@/pages/components/GameIntroduce/GameIntroduce";
 import BoxTitle from "@/pages/components/IconTextBox/BoxTitle";
 import { Button } from "antd";
 import { RiArrowDropRightLine } from "react-icons/ri";
+import { GoThreeBars } from "react-icons/go";
+import { FaPiggyBank, FaHistory } from "react-icons/fa";
+import { HiLogout } from "react-icons/hi";
+import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
+import useDeviceType from "../../../hook/useDeviceType";
 
 const PlayGame = () => {
+  const deviceType = useDeviceType();
+  const [showBar, setShowBar] = useState(true);
   return (
     <>
       <section class="sm:py-[80px] pt-[20px] py-[60px] max-w-[1344px] w-full lg:min-w-[1280px] mx-auto">
@@ -17,6 +25,41 @@ const PlayGame = () => {
         </div>
       </div>
       <div className="bg-game-background p-[10px] rounded-xl my-[20px] font-semibold text-light-white">
+      <section
+        className="relative w-full flex flex-col h-full"
+        id="game-iframe"
+      >
+        <iframe></iframe>
+        {deviceType === "Mobile" && (
+          <div
+            className={`${
+              showBar ? "h-[40px]" : "h-[0px]"
+            } fixed bottom-0 left-0 w-full grid grid-cols-5 text-light-white gamebox-shadow bg-game-background`}
+          >
+            {menu.map((item, index) => {
+              return (
+                <div
+                  onClick={item.func}
+                  key={index}
+                  className="flex items-center justify-center cursor-pointer hover:text-main-color transition duration-300"
+                >
+                  {item.icon}
+                </div>
+              );
+            })}
+          </div>
+        )}
+        {!showBar && deviceType === "Mobile" && (
+          <div
+            onClick={() => {
+              setShowBar(true);
+            }}
+            className="fixed h-[20px] w-[50px] rounded-t-lg bg-main-color flex items-center justify-center absolute-center !top-[99%]"
+          >
+            <AiFillEye className="text-light-white text-xl" />
+          </div>
+        )}
+      </section>
         <section className="flex ">
           <div
             style={{

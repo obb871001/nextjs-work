@@ -25,7 +25,7 @@ const Header = () => {
   }, []);
   return (
     <header
-      className={`fixed top-0 left-0 z-[9999] h-[105px] w-full transition duration-500 ${
+      className={`fixed top-0 left-0 z-[9999] h-[80px] w-full transition duration-500 ${
         styles && "bg-[rgba(0,0,0,0.45)]"
       }`}
     >
