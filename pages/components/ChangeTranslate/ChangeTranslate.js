@@ -11,7 +11,9 @@ const ChangeTranslate = () => {
     // 构建目标URL，并将语言参数添加或更新
     const urlParams = new URLSearchParams(router.query);
     urlParams.set("lang", newLanguage);
-    const targetURL = `${router.pathname}?${urlParams.toString()}${window.location.hash}`;
+    const targetURL = `${router.pathname}?${urlParams.toString()}${
+      window.location.hash
+    }`;
     router.push(targetURL);
   };
 
@@ -23,15 +25,11 @@ const ChangeTranslate = () => {
   }, [router.query.lang]);
 
   return (
-    <div className="flex items-center justify-center py-[25px] text-white">
+    <div className="flex items-center justify-center py-[25px]">
       {query?.lang === "zh" ? (
-        <LanguageSwitcher lang="en" onClick={() => handleLanguageChange("en")}>
-          切換至英文
-        </LanguageSwitcher>
+        <LanguageSwitcher lang="en">切換至英文</LanguageSwitcher>
       ) : (
-        <LanguageSwitcher lang="zh" onClick={() => handleLanguageChange("zh")}>
-          Switch to Chinese
-        </LanguageSwitcher>
+        <LanguageSwitcher lang="zh">Switch to Chinese</LanguageSwitcher>
       )}
     </div>
   );

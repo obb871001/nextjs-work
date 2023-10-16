@@ -2,22 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background-color: #0e031f !important;
+}
+
 .absolute-center {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
 .swiper-pagination-bullet {
-  width: 15px !important;
-  height: 15px !important;
+  width: 10px !important;
+  height: 10px !important;
   background: #848484 !important;
   opacity: 1 !important;
 }
 .swiper-pagination {
-  bottom: 50px !important;
+  bottom: 10px !important;
 }
 .swiper-pagination-bullet-active {
-  background-color: #ef3340 !important;
+  background-color: #fcea75 !important;
 }
 .text-myself-shadow {
   text-shadow: 2px 3px 5px #000;
@@ -86,13 +90,23 @@
     "Segoe UI Symbol", "Noto Color Emoji", cursive;
 }
 .title-font {
-  font-family: "TitleFont", Helvetica, 'PingFang SC', "Microsoft YaHei", "Comfortaa", "Noto Sans TC", sans-serif, cursive;
+  font-family: "TitleFont", Helvetica, "PingFang SC", "Microsoft YaHei",
+    "Comfortaa", "Noto Sans TC", sans-serif, cursive;
 }
 .title-font-bold {
-  font-family: "TitleBoldFont", Helvetica, 'PingFang SC', "Microsoft YaHei", "Comfortaa", "Noto Sans TC", sans-serif, cursive;
+  font-family: "TitleBoldFont", Helvetica, "PingFang SC", "Microsoft YaHei",
+    "Comfortaa", "Noto Sans TC", sans-serif, cursive;
 }
 @media (max-width: 1024px) {
-  .mobile-height{height: calc(100vh - 43px);}.mobile-height2{height: calc(100vh - 43px);}.mobile-navigation{position: initial;}
+  .mobile-height {
+    height: calc(100vh - 43px);
+  }
+  .mobile-height2 {
+    height: calc(100vh - 43px);
+  }
+  .mobile-navigation {
+    position: initial;
+  }
 }
 .contact-us-text::after {
   content: "";
@@ -177,8 +191,12 @@
 .flipped .front {
   transform: rotateY(180deg);
 }
-.flipped{display:none;}
-.cardShow{display:block;}
+.flipped {
+  display: none;
+}
+.cardShow {
+  display: block;
+}
 .flipped .back {
   transform: rotateY(0);
 }
@@ -195,4 +213,35 @@
 .back {
   background: pink;
   transform: rotateY(180deg);
+}
+.absolute-center-r {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+.absolute-center-b {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.fadeInOut {
+  animation: fadeInOut 3s infinite;
+}
+
+.text-overflow {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }

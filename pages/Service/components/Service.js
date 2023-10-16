@@ -3,6 +3,16 @@ import CommonWrapper from "@/pages/components/Wrapper/CommonWrapper";
 import React, { useRef } from "react";
 import CommonSwiper from "@/pages/components/CommonSwiper/CommonSwiper";
 import { useTranslation } from "next-export-i18n";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Pagination, Navigation, Autoplay, FreeMode } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import "swiper/css/effect-fade";
+import "swiper/css/autoplay";
+
 const carouselList = [
   {
     img: "service_API2",
@@ -66,42 +76,118 @@ const Service = () => {
   const { t } = useTranslation();
   const i18n = (key) => t(`service.${key}`);
 
+  const swiperRef = useRef(null);
+
+  const handleSlidePrev = () => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      swiperRef.current.swiper.slidePrev();
+    }
+  };
+
+  const handleSlideNext = () => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      swiperRef.current.swiper.slideNext();
+    }
+  };
+
   return (
-    <CommonWrapper className={`w-full`}>
-      <section className="flex flex-col gap-[30px] justify-center h-full pl-[12%] max-[1024px]:pl-[0%]">
+    <main className="md:w-[1240px] mx-auto py-[9%] min-[1800px]:pt-[8%] min-[2700px]:pt-[5%] max-[1024px]:pt-[17%] max-[1024px]:pl-0">
+      <section className="flex flex-col gap-[30px] justify-center max-[1024px]:pl-[0%]">
         <TitleComponent
           title={i18n("title")}
           content={i18n("content")}
           // content="Eazy Gaming 提供全面的一站式服務，不論在產品質量、服務管理以及技術支援，我們的專業團隊經驗豐富，隨時能為客人提供接合及營運等各方面的支援服務。 聯絡我們：service@egslot.net"
           selectTag={[]}
         />
-        <div className="flex gap-[10px] items-center relative overflow-hidden max-[1024px]:px-[10%]">
-          <div className="max-w-[1340px] px-[50px] text-white flex max-[1024px]:hidden">
-            <CommonSwiper
+        <div className="flex gap-[10px] items-center relative max-[1024px]:px-[10%]">
+          <div className="max-w-[1340px] px-[50px] text-white md:flex hidden relative">
+            <section className="absolute absolute-center h-full w-[105%] hidden md:flex items-center justify-between">
+              <div
+                onClick={handleSlidePrev}
+                className="text-3xl cursor-pointer text-white"
+              >
+                <IoIosArrowBack />
+              </div>
+              <div
+                onClick={handleSlideNext}
+                className="text-3xl cursor-pointer text-white"
+              >
+                <IoIosArrowForward />
+              </div>
+            </section>
+            <Swiper
+              className="mySwiper h-full w-full relative"
+              loop={true}
+              ref={swiperRef}
+              autoplay={{
+                delay: 5000,
+                disableOnInteraction: false,
+              }}
+              modules={[Autoplay, FreeMode]}
+              slidesPerView={4.2}
+              spaceBetween={30}
+              effect="fade"
+            >
+              {carouselList.map((item, index) => {
+                return (
+                  <SwiperSlide key={index}>
+                    <section className={`rounded-lg cursor-pointer`}>
+                      <img
+                        className={`w-[360px] h-[250px] max-[1024px]:w-[288px] max-[1024px]:h-[200px] object-cover`}
+                        src={`/Images/${`Service`}/${item.img}.png`}
+                      />
+                      <p className="text-[24px] title-font font-bold my-[5px] max-[1024px]:text-[18px]">
+                        {item.label}
+                      </p>
+                      <p className="text-[24px] title-font max-[1024px]:text-[18px]">
+                        {item.title}
+                      </p>
+                      {/* <p className="text-sm">{item.date}</p>  備份*/}
+                      <p className="text-sm"> {i18n(`PCIntro.${index + 1}`)}</p>
+                    </section>
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
+
+            {/* <CommonSwiper
               slidesPerView={4}
               customImagesClass={`!w-[300px] !object-contain`}
               folderName={`Service`}
               i18nName="service.PCIntro"
               carouselList={carouselList}
-            />
+            /> */}
           </div>
           <div
             className="bg-transparent absolute w-full h-full max-[1024px]:hidden"
             style={{ top: "27%" }}
           ></div>
 
-          <div className="max-w-[100%] px-[1%] text-white flex min-[1024px]:hidden">
-            <CommonSwiper
-              slidesPerView={1}
-              customImagesClass={`!w-[300px] !object-contain`}
-              folderName={`Service`}
-              i18nName="service.MobileIntro"
-              carouselList={carouselList_mobile}
-            />
+          <div className="max-w-[100%] px-[1%] text-white flex md:hidden flex-col gap-[50px]">
+            {carouselList?.map((item, index) => {
+              return (
+                <section key={index} className={`rounded-lg cursor-pointer`}>
+                  <img
+                    className={`w-[360px] h-[250px] max-[1024px]:w-[288px] max-[1024px]:h-[200px] object-cover !w-[300px] !object-contain`}
+                    src={`/Images/Service/${item.img}.png`}
+                  />
+                  <p className="text-[24px] title-font font-bold my-[5px] max-[1024px]:text-[18px]">
+                    {item.label}
+                  </p>
+                  <p className="text-[24px] title-font max-[1024px]:text-[18px]">
+                    {item.title}
+                  </p>
+                  {/* <p className="text-sm">{item.date}</p>  備份*/}
+                  <p className="text-sm text-center font-medium">
+                    {i18n(`PCIntro.${index + 1}`)}
+                  </p>
+                </section>
+              );
+            })}
           </div>
         </div>
       </section>
-    </CommonWrapper>
+    </main>
   );
 };
 

@@ -3,9 +3,10 @@ import { HiOutlineChevronDown } from "react-icons/hi";
 
 const ToDownScroll = () => {
   return (
-    <section className="absolute flex flex-col items-center justify-center absolute-center !top-[80%] cursor-pointer">
+    <section className="absolute md:flex flex-col items-center justify-center absolute-center !top-[80%] cursor-pointer">
       <p className="text-white text-xl">向下捲動</p>
       <motion.div
+        className="flex justify-center"
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 1.5, ease: "easeInOut", repeat: Infinity }}
       >

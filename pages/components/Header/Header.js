@@ -1,10 +1,11 @@
 import { RxHamburgerMenu } from "react-icons/rx";
-import { CgMenuLeft } from "react-icons/cg";
+import { CgMenu, CgMenuLeft } from "react-icons/cg";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { useTranslation } from "next-export-i18n";
-const Header = () => {
+import NavbarList from "./NavbarList";
+const Header = ({ fill }) => {
   const { t } = useTranslation();
   const i18nNavbar = (key) => t(`navbar.${key}`);
 
@@ -29,6 +30,7 @@ const Header = () => {
   }, []);
 
   const menuItems = [
+    { title: "Home", href: "/" },
     { title: "About", href: "/About" },
     // { title: "News", href: "/News" },
     // { title: "Media", href: "/Media" },
@@ -42,14 +44,17 @@ const Header = () => {
   };
   return (
     <header
-      className={`fixed top-0 left-0 z-[9999] h-[90px] w-full ml-[12%] transition duration-500 max-[1024px]:ml-0 max-[1024px]:h-[68px]
-    ${styles && "bg-[rgba(0,0,0,0.45)]"}`}
+      className={`fixed top-0 left-0 z-[9999] h-[90px] w-screen md:w-full transition duration-500 max-[1024px]:ml-0 max-[1024px]:h-[68px]
+      ${
+        fill
+          ? "bg-[#26182F] border-b border-b-[#857E99]"
+          : "bg-[rgba(0,0,0,0.45)]"
+      }`}
     >
-      <div className="flex items-center justify-start h-full container">
-        <nav className="flex items-center justify-start h-full container mx-auto lg:px-[0] md:px-[20px] max-[1024px]:px-0 max-[1024px]:justify-center">
-          {/* <NavbarList setOpenNav={setOpenNav} openNav={openNav} /> */}
+      <div className="flex items-center justify-between h-full container mx-auto px-[10px]">
+        <nav className="flex items-center justify-start h-full ">
           <Link
-            className="text-4xl font-bold text-white cursor-pointer mx-12"
+            className="text-4xl font-bold text-white cursor-pointer md:mx-12"
             href={`/?lang=${router.query.lang || "en"}`}
           >
             <img
@@ -60,7 +65,7 @@ const Header = () => {
           </Link>
           <div className="flex max-[1024px]:hidden">
             {menuItems.map((menuItem) => (
-              <Link key={menuItem.title} href={`${menuItem.href}/?lang=${router.query.lang || "en"}`}>
+              <Link key={menuItem.title} href={`${menuItem.href}`}>
                 <div className="title-font text-white text-xl px-4 py-2">
                   {i18nNavbar(menuItem.title)}
                 </div>
@@ -68,7 +73,14 @@ const Header = () => {
             ))}
           </div>
         </nav>
+        <CgMenu
+          onClick={() => {
+            setOpenNav(true);
+          }}
+          className="text-white text-4xl cursor-pointer"
+        />
       </div>
+      <NavbarList setOpenNav={setOpenNav} openNav={openNav} />
     </header>
   );
 };

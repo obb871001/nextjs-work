@@ -1,3 +1,9 @@
+import { AiFillHome } from "react-icons/ai";
+import { BsDice5Fill, BsFire } from "react-icons/bs";
+import { FaFish } from "react-icons/fa";
+import { RiMovieFill } from "react-icons/ri";
+import { SiBlockchaindotcom } from "react-icons/si";
+
 export const CONTACT_ICON = [
   "line",
   "facebook",

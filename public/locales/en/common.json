@@ -10,9 +10,16 @@
     "playnow": "Play Now",
     "More": "More",
     "Home": "Home",
-    "Hot": "Hot"
+    "Hot": "Hot",
+    "Spin": "Spin",
+    "Slot Games": "Slot Games"
   },
+  "video": {
+    "title": "Eazy Gaming Promo Video"
+  },
+
   "navbar": {
+    "Home": "Home",
     "About": "About",
     "Service": "Service"
   },
@@ -147,6 +154,61 @@
     },
     "bmm": {
       "content": "Our RNG games are certified by BMM, a leading global game testing agency. We meet all legal and technical requirements in most European jurisdictions."
+    }
+  },
+  "gameType": {
+    "games": {
+      "backToPrev": "Back To Previous",
+      "reloadGame": "Reload Game",
+      "moreGamePlatform": "More Game Type",
+      "witch": {
+        "title": "Witch's Love",
+        "intro": "Explore the mysterious power of love and step into the witch's cottage of 'Witch's Love™.' You will witness the birth of enchanting love! The witch, skilled in brewing various potions, has elevated her magical research to new heights, and the potency of the love potion captivates everyone who comes into contact with it. Are you ready to seek your love treasure in this captivating game"
+      },
+      "maid": {
+        "title": "Sweet Maids",
+        "intro": "Sweet Maids, Exclusive Experience!《Neko Maid™》 warmly invites you into their dream cafe, where the magic of happiness surrounds every dish of yours! These young, cheerful, and adorable maids will provide you with unparalleled care and satisfaction. They not only delight your taste buds but also bring charming performances during special events, infusing your meals with lots of love, immersing you in a sweet gaming experience."
+      },
+      "sinbad": {
+        "title": "Simbada Adventure",
+        "intro": "Embark on a voyage to discover the treasures of the seven seas! Sinbad will lead you through the seven seas, exploring the unknown and mystical underwater world! In《Adventure of Sinbad™》, you will overcome various dangers and monsters alongside Sinbad, experiencing her maturity, confidence, and pride, and facing all challenges with a daring attitude, ultimately uncovering rare treasures and becoming legendary adventurers for the ages!"
+      },
+      "wheel": {
+        "title": "Golden Wheel",
+        "intro": "《 Sic Bo Spin™ 》Challenge your luck and discover the path to becoming a winner from the three dice on the golden wheel. Carrying on the classic, the dice spinning on the golden wheel determines the outcome, with diverse betting strategies, experience the thrill of betting small for big wins."
+      },
+      "treasureking": {
+        "title": "Secret Sea Treasure",
+        "intro": "《Treasure King™》 is the ancient high-tech civilization that once ruled the Earth and now lies dormant in the deep sea. Its remnants were stumbled upon by chance, sparking a frenzy of exploration by countless adventurers, unearthing vast treasures and unknown technology. You will pilot a powerful submarine, embark on an adventurous journey, traverse beautiful yet perilous oceans, encounter peculiar underwater creatures, and unveil the mysteries of the ancient underwater civilization"
+      },
+      "blastx": {
+        "title": "Blast X",
+        "intro": "Claim Rewards Before the Rocket Takes Off!"
+      },
+      "plinko": {
+        "title": "Plinko",
+        "intro": "Hope the ball lands in the slot with the highest payout."
+      },
+      "hilo": {
+        "title": "Hi-Lo",
+        "intro": "Embrace the Thrilling Moment of Flipping Cards."
+      },
+      "dice": {
+        "title": "Dice",
+        "intro": "Roll the dice and see if your prediction comes true."
+      },
+      "sicbo": {
+        "title": "Sicbo",
+        "intro": "Win in your hands!"
+      },
+      "xocdia": {
+        "title": "Xoc Dia",
+        "intro": "Winner takes all!"
+      },
+      "fishprawncrab": {
+        "title": "Fish Prawn Crab",
+        "intro": "Be the top-ranked dealer!"
+      }
     }
   }
 }

@@ -9,16 +9,21 @@ import ToDownScroll from "./components/home/ToDownScroll";
 import Carousel from "./components/home/Carousel";
 import GameTypeChoose from "./components/home/GameTypeChoose";
 import FooterNew from "./components/Footer/FooterNew";
+import Body from "./GameLabby/components/Body";
+import GameIntro from "./components/home/gameIntro";
+import GameType from "./components/home/gameType";
+import Footer from "./components/Footer/Footer";
 // const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <>
+    <main>
       <Head>
         <meta
           property="og:image"
           content="../public/Images/logo/EGloading.png"
         />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           property="og:description"
           content="EAZY Gaming, leading the Global Gaming Market Trend!"
@@ -30,14 +35,65 @@ export default function Home() {
         <link rel="manifest" href="./manifest.json" />
       </Head>
       <Header />
-      <NavbarMenuList />
-      {/* <HomePage /> */}
+      <HomePage />
       {/* <Body /> */}
-      {/* <Video /> */}
-      {/* <ToDownScroll /> */}
-      <Carousel />
-      {/* <GameTypeChoose />*/}
-      <FooterNew />
-    </>
+      <Video />
+      <GameIntro navType="slot" />
+      <GameIntro
+        navType="spin"
+        wrapperClass="md:hidden"
+        backgroundProps={{
+          backgroundSize: "211% 100%",
+          backgroundPositionX: "-238px",
+        }}
+        charactorProps={{
+          left: "!left-[27%]",
+        }}
+        customList={[
+          {
+            prefix: "sicbo",
+          },
+          {
+            prefix: "xocdia",
+          },
+          {
+            prefix: "fishprawncrab",
+          },
+        ]}
+      />
+      <GameIntro
+        navType="blockchain"
+        wrapperClass="md:hidden"
+        backgroundProps={{
+          backgroundSize: "211% 100%",
+          backgroundPositionX: "-238px",
+        }}
+        charactorProps={{
+          left: "!left-[24%]",
+        }}
+        customList={[
+          {
+            prefix: "blastx",
+          },
+          {
+            prefix: "dice",
+          },
+          {
+            prefix: "hilo",
+          },
+          {
+            prefix: "plinko",
+          },
+          {
+            prefix: "wheel",
+          },
+        ]}
+      />
+
+      {/* <GameType /> */}
+      {/* <Carousel /> */}
+      <GameTypeChoose wrapperClass="" />
+      <Footer />
+    </main>
   );
 }
